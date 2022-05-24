@@ -7,6 +7,16 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     header("location: login.php");
     exit;
 }
+
+
+// We don't have the password or email info stored in sessions so instead we can get the results from the database.
+$stmt = $con->prepare('SELECT password, email FROM users WHERE id = ?');
+// In this case we can use the account ID to get the account info.
+$stmt->bind_param('i', $_SESSION['id']);
+$stmt->execute();
+$stmt->bind_result($password, $email);
+$stmt->fetch();
+$stmt->close();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -127,6 +137,23 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <div class="toggle" id="accountdetails"> 
           <h2> Your Account </h2>
             <h3> Update your Personal Details</h3>
+            <div>
+				<p>Your account details are below:</p>
+				<table>
+					<tr>
+						<td>Username:</td>
+						<td><?=$_SESSION['name']?></td>
+					</tr>
+					<tr>
+						<td>Password:</td>
+						<td><?=$password?></td>
+					</tr>
+					<tr>
+						<td>Email:</td>
+						<td><?=$email?></td>
+					</tr>
+				</table>
+			</div>
                 <?php include 'reset-password.php';?>
             <h3> Privacy and Security</h3>
         </div>
