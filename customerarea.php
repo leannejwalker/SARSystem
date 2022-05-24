@@ -134,11 +134,11 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 					</tr>
 					<tr>
 						<td>Password:</td>
-						<td><?=$password?></td>
+						<td><?=$_SESSION['password']?></td>
 					</tr>
 					<tr>
-						<td>Email:</td>
-						<td><?=$email?></td>
+						<td>Email Address:</td>
+						<td><?=$_SESSION['email']?></td>
 					</tr>
 				</table>
 			</div>
