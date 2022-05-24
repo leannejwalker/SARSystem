@@ -176,7 +176,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
           if (dropdownContent.style.display === "block") {
             dropdownContent.style.display = "none";
           } else {
-            dropdownContent.style.display = "block";
+            dropdownContent.style.display = "none";
           }
         });
       }
