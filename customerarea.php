@@ -142,7 +142,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 					</tr>
 				</table>
 			</div>
-                <?php include 'reset-password.php';?>
             <h3> Privacy and Security</h3>
         </div>
         <div class="toggle" id="repairsessions"> 
