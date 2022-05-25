@@ -21,3 +21,7 @@ RewriteRule ^ %1 [R,L]
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.php -f
 RewriteRule ^(.*?)/?$ $1.php [L]
+
+# redirect to .php-less link if requested directly
+RewriteCond %{THE_REQUEST} ^[A-Z]+\s.+\.php\sHTTP/.+
+RewriteRule ^(.+)\.php $1 [R=301,L]
