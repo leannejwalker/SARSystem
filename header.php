@@ -107,8 +107,8 @@ img{
         <div class="subnav">
 		  <button class="subnavbtn"><i class="fa-solid fa-handshake"></i> Borrow <i class="fa fa-caret-down"></i></button>
 			<div class="subnav-content">
-                <a href="share/my-borrowed-items.php">My Borrowed Items</a>
-				<a href="share/borrow-an-item.php">Borrow an Item</a>
+                <a href="my-borrowed-items.php">My Borrowed Items</a>
+				<a href="borrow-an-item.php">Borrow an Item</a>
 			</div>
 		</div>
         <div class="subnav">
