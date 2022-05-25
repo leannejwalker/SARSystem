@@ -1,95 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <style>
-    body {
-      font-family: "Lato", sans-serif;
+    .navbar {
+        overflow: hidden;
+        background-color: #333;
+        font-family: Arial;
     }
 
-    /* Fixed sidenav, full height */
-    .sidenav {
-      height: 100%;
-      width: 200px;
-      position: fixed;
-      z-index: 1;
-      top: 0;
-      left: 0;
-      background-color: #111;
-      overflow-x: hidden;
-      padding-top: 20px;
+    .navbar a {
+        float: left;
+        font-size: 16px;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
     }
 
-    /* Style the sidenav links and the dropdown button */
-    .sidenav a, .dropdown-btn {
-      padding: 6px 8px 6px 16px;
-      text-decoration: none;
-      font-size: 20px;
-      color: #818181;
-      display: block;
-      border: none;
-      background: none;
-      width: 100%;
-      text-align: left;
-      cursor: pointer;
-      outline: none;
+    .dropdown {
+        float: left;
+        overflow: hidden;
     }
 
-    /* On mouse-over */
-    .sidenav a:hover, .dropdown-btn:hover {
-      color: #f1f1f1;
+    .dropdown .dropbtn {
+        font-size: 16px;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit; /* Important for vertical align on mobile phones */
+        margin: 0; /* Important for vertical align on mobile phones */
     }
 
-    /* Main content */
-    .main {
-      margin-left: 200px; /* Same as the width of the sidenav */
-      font-size: 20px; /* Increased text to enable scrolling */
-      padding: 0px 10px;
+    /* Add a red background color to navbar links on hover */
+    .navbar a:hover, .dropdown:hover .dropbtn {
+        background-color: red;
     }
 
-    /* Add an active class to the active dropdown button */
-    .active {
-      background-color: green;
-      color: white;
+    /* Dropdown content (hidden by default) */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
     }
 
-    /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
-    .dropdown-container {
-      display: none;
-      background-color: #262626;
-      padding-left: 8px;
+    /* Links inside the dropdown */
+    .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
     }
 
-    /* Optional: Style the caret down icon */
-    .fa-caret-down {
-      float: right;
-      padding-right: 8px;
+    /* Add a grey background color to dropdown links on hover */
+    .dropdown-content a:hover {
+        background-color: #ddd;
     }
 
-    /* Some media queries for responsiveness */
-    @media screen and (max-height: 450px) {
-      .sidenav {padding-top: 15px;}
-      .sidenav a {font-size: 18px;}
-    }
-    
-    div.toggle{
-      display: none;
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {
+        display: block;
     }
 </style>
 <div class="navbar">
-		<img src="img/tmb.png" alt="The Mighty Blob">
-		<a href="index.html">Home</a>
-		<div class="subnav">
-		  <button class="subnavbtn">About <i class="fa fa-caret-down"></i></button>
+		<img src="img/sar.png" alt="Share and Repair">
+		<a href="account.php">Account Details</a>
+		
+        <div class="subnav">
+		  <button class="subnavbtn">Borrow<i class="fa fa-caret-down"></i></button>
 			<div class="subnav-content">
-				<a href="company.html">About The Mighty Blob</a>
-				<a href="faq.html">FAQs</a>
+                <a href="my-borrowed-items.php">My Borrowed Items</a>
+				<a href="borrow-an-item.php">Borrow an Item</a>
 			</div>
-		</div> 
-		<a href="repair.html">Repair</a>
-		<a href="shop.html">Shop</a>
+		</div>
+        <div class="subnav">
+		  <button class="subnavbtn">Repair<i class="fa fa-caret-down"></i></button>
+			<div class="subnav-content">
+				<a href="my-repair-sessions.php">My Repair Sessions</a>
+				<a href="book-a-repair.php">Book a Repair Session</a>
+			</div>
+		</div>
+        <div class="subnav">
+		  <button class="subnavbtn">How To<i class="fa fa-caret-down"></i></button>
+			<div class="subnav-content">
+				<a href="my-booked-howto.php">My Booked HowTos Sessions</a>
+				<a href="book-a-howto.php">Book a HowTo Session</a>
+			</div>
+		</div>
+        <div class="subnav">
+		  <button class="subnavbtn">Help<i class="fa fa-caret-down"></i></button>
+			<div class="subnav-content">
+                <a href="faq.php">FAQ</a>
+				<a href="support.php">Contact Support</a>
+			</div>
+		</div>
 
-
-		<a href="contact.html">Contact</a>
-
+		<a href="faq.php">FAQ</a>
 
 
 		<a class="fa" id="cart">&#xf07a;</a>
