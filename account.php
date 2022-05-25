@@ -18,7 +18,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <style>
-    div {
+    .accountdetails {
       width: 300px;
       border: 15px #F36F21;
       padding: 50px;
@@ -29,7 +29,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   <body>
     <?php include "header.php"?>
     <div class="main">
-        <div class="toggle" id="accountdetails"> 
+        <div id="accountdetails"> 
           <h2> Your Account </h2>
             <h3> Update your Personal Details</h3>
             <div>
