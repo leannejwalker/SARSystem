@@ -74,7 +74,7 @@ img{
   display: none;
   position: absolute;
   left: 1;
-  background-color: #F36F21;
+  background-color: rgb(65, 65, 65);
   z-index: 1;
 }
 
