@@ -21,7 +21,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   </style>
 
   <body>
-    <?php include "header.php"?>
+    <?php include "./header.php"?>
 
     
     <script>
