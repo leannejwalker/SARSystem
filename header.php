@@ -106,6 +106,9 @@ img{
   display: flex;
   flex-direction: column;
 }
+.sidenav{
+  position: relative;
+}
 </style>
 </head>
 <body>
