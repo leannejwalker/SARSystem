@@ -93,7 +93,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   </style>
 
   <body>
-    <div class="sidenav">
+    <!--<div class="sidenav">
       <a class = "trigger" href="#accountdetails">Your Account</a>
       <button class="dropdown-btn">Repair Sessions
         <i class="fa fa-caret-down"></i>
@@ -119,8 +119,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <a class = "trigger" href="#bookanevent">Book an Event</a>
       </div>
       <a href="logout.php" class="btn btn-danger ml-3">Sign Out</a>
-    </div>
-
+    </div> -->
+    <?php include "header.php"?>
     <div class="main">
         <div class="toggle" id="accountdetails"> 
           <h2> Your Account </h2>
