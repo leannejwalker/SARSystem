@@ -38,7 +38,9 @@ img{
 
 .navbar {
   overflow: hidden;
-  background-color: rgb(0, 0, 0); 
+  background-color: rgb(0, 0, 0);
+  position:fixed;
+  
 }
 
 .navbar a {
