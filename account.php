@@ -7,6 +7,10 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     header("location: login.php");
     exit;
 }
+//if(!isset($_SESSION["admin"]) || $_SESSION["admin"] !== true){
+  //header("location: admin.php");
+  //exit;
+//}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +18,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
   <head>
       <meta charset="UTF-8">
-      <title>Customer Area - Share and Repair</title>
+      <title>Your Account - Share and Repair</title>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <style>
