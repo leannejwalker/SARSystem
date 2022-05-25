@@ -100,24 +100,42 @@ img{
 <body>
 
 <div class="navbar">
-		<img src="img/tmb.png" alt="The Mighty Blob">
-		<a href="index.html">Home</a>
-		<div class="subnav">
-		  <button class="subnavbtn">About <i class="fa fa-caret-down"></i></button>
+		<img src="img/sar.png" alt="Share and Repair">
+		<a href="account.php">Account Details</a>
+		
+        <div class="subnav">
+		  <button class="subnavbtn">Borrow<i class="fa fa-caret-down"></i></button>
 			<div class="subnav-content">
-				<a href="company.html">About The Mighty Blob</a>
-				<a href="faq.html">FAQs</a>
+                <a href="my-borrowed-items.php">My Borrowed Items</a>
+				<a href="borrow-an-item.php">Borrow an Item</a>
 			</div>
-		</div> 
-		<a href="repair.html">Repair</a>
-		<a href="shop.html">Shop</a>
+		</div>
+        <div class="subnav">
+		  <button class="subnavbtn">Repair<i class="fa fa-caret-down"></i></button>
+			<div class="subnav-content">
+				<a href="my-repair-sessions.php">My Repair Sessions</a>
+				<a href="book-a-repair.php">Book a Repair Session</a>
+			</div>
+		</div>
+        <div class="subnav">
+		  <button class="subnavbtn">How To<i class="fa fa-caret-down"></i></button>
+			<div class="subnav-content">
+				<a href="my-booked-howto.php">My Booked HowTos Sessions</a>
+				<a href="book-a-howto.php">Book a HowTo Session</a>
+			</div>
+		</div>
+        <div class="subnav">
+		  <button class="subnavbtn">Help<i class="fa fa-caret-down"></i></button>
+			<div class="subnav-content">
+                <a href="faq.php">FAQ</a>
+				<a href="support.php">Contact Support</a>
+			</div>
+		</div>
 
-
-		<a href="contact.html">Contact</a>
+		<a href="faq.php">FAQ</a>
 
 
 		<a class="fa" id="cart">&#xf07a;</a>
-		&#xf2bd;
 	</div>
 </body>
 </html>
