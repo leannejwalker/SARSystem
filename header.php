@@ -66,7 +66,7 @@ img{
 }
 
 .navbar a:hover, .subnav:hover .subnavbtn {
-  background-color: rgb(65, 65, 65);
+  background-color: #F36F21;
 }
 
 .subnav-content {
@@ -74,7 +74,7 @@ img{
   display: none;
   position: absolute;
   left: 1;
-  background-color: rgb(65, 65, 65);
+  background-color: #F36F21;
   z-index: 1;
 }
 
