@@ -47,6 +47,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             <h3> Privacy and Security</h3>
         </div>
   </div>
+  <?php include "footer.php"?>
     <script>
 
     </script>
