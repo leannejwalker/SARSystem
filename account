@@ -1,6 +1,23 @@
+<?php
+// Initialize the session
+session_start();
+ 
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: login.php");
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
-<style>
+<script language="JavaScript" type="text/javascript" src="/js/jquery-3.6.0.js"></script>
+
+  <head>
+      <meta charset="UTF-8">
+      <title>Customer Area - Share and Repair</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <style>
     body {
       font-family: "Lato", sans-serif;
     }
@@ -73,26 +90,34 @@
     div.toggle{
       display: none;
     }
-</style>
-<div class="navbar">
-		<img src="img/tmb.png" alt="The Mighty Blob">
-		<a href="index.html">Home</a>
-		<div class="subnav">
-		  <button class="subnavbtn">About <i class="fa fa-caret-down"></i></button>
-			<div class="subnav-content">
-				<a href="company.html">About The Mighty Blob</a>
-				<a href="faq.html">FAQs</a>
-			</div>
-		</div> 
-		<a href="repair.html">Repair</a>
-		<a href="shop.html">Shop</a>
+  </style>
 
+  <body>
+    <!--<div class="sidenav">
+      <a class = "trigger" href="#accountdetails">Your Account</a>
+      <button class="dropdown-btn">Repair Sessions
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a class = "trigger" href="#repairsessions">Your Repair Sessions</a>
+        <a class = "trigger" href="#bookarepair">Book a Repair Session</a>
+      </div>
 
-		<a href="contact.html">Contact</a>
-
-
-
-		<a class="fa" id="cart">&#xf07a;</a>
-		&#xf2bd;
-	</div>
-</html>
+      <button class="dropdown-btn">Item Rentals
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a class = "trigger" href="#yourrentals">Your Rentals</a>
+        <a class = "trigger" href="#rentanitem">Rent an Item</a>
+      </div>
+      
+      <button class="dropdown-btn">Events
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a class = "trigger" href="#yourevents">Your Booked Events</a>
+        <a class = "trigger" href="#bookanevent">Book an Event</a>
+      </div>
+      <a href="logout.php" class="btn btn-danger ml-3">Sign Out</a>
+    </div> -->
+    <?php include "header.php"?>
