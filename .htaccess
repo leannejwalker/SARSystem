@@ -2,5 +2,4 @@ RewriteEngine On
 RewriteBase /
 
 # Redirect .php URLs to rewritten URLs
-RewriteCond %{REQUEST_FILENAME} !-f 
 RewriteRule ^(.+)\.php$ $1 [L,QSA,R=301]
