@@ -93,33 +93,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   </style>
 
   <body>
-    <!--<div class="sidenav">
-      <a class = "trigger" href="#accountdetails">Your Account</a>
-      <button class="dropdown-btn">Repair Sessions
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-container">
-        <a class = "trigger" href="#repairsessions">Your Repair Sessions</a>
-        <a class = "trigger" href="#bookarepair">Book a Repair Session</a>
-      </div>
-
-      <button class="dropdown-btn">Item Rentals
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-container">
-        <a class = "trigger" href="#yourrentals">Your Rentals</a>
-        <a class = "trigger" href="#rentanitem">Rent an Item</a>
-      </div>
-      
-      <button class="dropdown-btn">Events
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-container">
-        <a class = "trigger" href="#yourevents">Your Booked Events</a>
-        <a class = "trigger" href="#bookanevent">Book an Event</a>
-      </div>
-      <a href="logout.php" class="btn btn-danger ml-3">Sign Out</a>
-    </div> -->
     <?php include "header.php"?>
     <div class="main">
         <div class="toggle" id="accountdetails"> 
@@ -141,49 +114,12 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 						<td><?=$_SESSION['email']?></td>
 					</tr>
 				</table>
-			</div>
+		  	</div>
             <h3> Privacy and Security</h3>
-        </div>
-        <div class="toggle" id="repairsessions"> 
-          <h2> Your Repair Sessions </h2>
-        </div>
-        <div class="toggle" id="bookarepair"> 
-          <h2> Book a Repair Session </h2>
-        </div>
-        <div class="toggle" id="yourrentals"> 
-          <h2> Your Rentals </h2>
-        </div>
-        <div class="toggle" id="rentanitem"> 
-          <h2> Rent an Item </h2>
-        </div>
-        <div class="toggle" id="yourevents"> 
-          <h2> Your Booked Events </h2>
-        </div>
-        <div class="toggle" id="bookanevent"> 
-          <h2> Book an Event </h2>
         </div>
   </div>
     <script>
-      /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
-      var dropdown = document.getElementsByClassName("dropdown-btn");
-      var i;
-
-      for (i = 0; i < dropdown.length; i++) {
-        dropdown[i].addEventListener("click", function() {
-          this.classList.toggle("active");
-          var dropdownContent = this.nextElementSibling;
-          if (dropdownContent.style.display === "block") {
-            dropdownContent.style.display = "none";
-          } else {
-            dropdownContent.style.display = "none";
-          }
-        });
-      }
-      $("a").click(function(){
-      var myelement = $(this).attr("href")
-        $(myelement).slideToggle("fast");
-        $(".toggle:visible").not(myelement).hide();
-      });
+        
     </script>
   </body>
 </html>
