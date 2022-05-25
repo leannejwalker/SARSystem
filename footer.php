@@ -27,7 +27,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 </head>
 <body>
     <div class="footer">
-        &copy; Share and Repair <?php echo date("Y");?> <br> All Rights Reserved
+        &copy; Share and Repair <?php echo date("Y");?>
 </div>
 </body>
 </html>

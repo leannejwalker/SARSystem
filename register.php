@@ -3,8 +3,8 @@
 require_once "config.php";
  
 // Define variables and initialize with empty values
-$username = $password = $confirm_password = "";
-$username_err = $password_err = $confirm_password_err = "";
+$username = $email = $password = $confirm_password = "";
+$username_err = $email_err = $password_err = $confirm_password_err = "";
  
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -43,6 +43,37 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             mysqli_stmt_close($stmt);
         }
     }
+
+
+        // Validate email
+        if(empty(trim($_POST["email"]))){
+            $email_err = "Please enter your email address.";
+        } elseif(!preg_match("/^[a-zA-Z-' ]*$/",$name)) {
+            $email_err = "Only letters and white space allowed.";
+        } else{
+            // Prepare a select statement
+            $sql = "SELECT id FROM users WHERE email = ?";
+            
+            if($stmt = mysqli_prepare($link, $sql)){
+                // Bind variables to the prepared statement as parameters
+                mysqli_stmt_bind_param($stmt, "s", $param_email);
+                
+                // Set parameters
+                $param_email = trim($_POST["email"]);
+                
+                // Attempt to execute the prepared statement
+                if(mysqli_stmt_execute($stmt)){
+                    /* store result */
+                    mysqli_stmt_store_result($stmt);
+                    $username = trim($_POST["username"]);
+                    }
+                } else{
+                    echo "Oops! Something went wrong. Please try again later.";
+                }
+                // Close statement
+                mysqli_stmt_close($stmt);
+            }
+        }
     
     // Validate password
     if(empty(trim($_POST["password"]))){
