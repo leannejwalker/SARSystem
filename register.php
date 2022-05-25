@@ -43,8 +43,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             mysqli_stmt_close($stmt);
         }
     }
-
-
         // Validate email
         if(empty(trim($_POST["email"]))){
             $email_err = "Please enter your email address.";
@@ -65,7 +63,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 if(mysqli_stmt_execute($stmt)){
                     /* store result */
                     mysqli_stmt_store_result($stmt);
-                    $username = trim($_POST["username"]);
+                    $username = trim($_POST["email"]);
                     }
                 } else{
                     echo "Oops! Something went wrong. Please try again later.";
@@ -124,7 +122,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     
     // Close connection
     mysqli_close($link);
-}
+
+};
 ?>
  
 <!DOCTYPE html>
