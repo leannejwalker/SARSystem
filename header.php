@@ -89,7 +89,7 @@ img{
 
 .subnav-content a:hover {
   background-color: #F36F21;
-  color: black;
+  color: white;
 }
 
 .subnav:hover .subnav-content {
