@@ -16,12 +16,18 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://kit.fontawesome.com/059448ac20.js" crossorigin="anonymous"></script>
 <style>
-    
+    .footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
 </style>
 </head>
 <body>
-
-&copy; Share and Repair <?php echo date("Y");?> <br> All Rights Reserved
-
+    <div class="footer">
+        &copy; Share and Repair <?php echo date("Y");?> <br> All Rights Reserved
+</div>
 </body>
 </html>
