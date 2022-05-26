@@ -56,10 +56,10 @@ img{
   display: block;
 }
 
-.subnav#user {
+.subnav .subnavbtn#user {
   float: right;
   color: white;
-  text-align: center;
+  text-align: right;
   padding: 24px 24px;
   text-decoration: none;
 }
