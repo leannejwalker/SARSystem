@@ -41,7 +41,7 @@ img{
   background-color: rgb(0, 0, 0);
 }
 
-.subnavbtn#user {
+#user {
   float: right;
   color: white;
   text-align: right;
