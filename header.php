@@ -109,7 +109,6 @@ img{
 </style>
 </head>
 <body>
-
 <div class="navbar">
 		<img src="img/sar.png" alt="Share and Repair">
 		<a href="account.php">Account Details</a>
@@ -147,7 +146,7 @@ img{
 		</div>
 
     <div class="subnav">
-      <button class="subnavbtn" id="user"><?=$_SESSION['username']?><i class="fa-solid fa-circle-user"></i></button>
+      <button class="subnavbtn"><a class="fa" id="user"><?=$_SESSION['username']?>&#xf2bd</a></button>
 			<div class="subnav-content">
         <a href="account.php">Account Details</a>
 				<a href="logout.php">Log Out</a>
