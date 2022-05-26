@@ -41,6 +41,14 @@ img{
   background-color: rgb(0, 0, 0);
 }
 
+.subnavbtn#user {
+  float: right;
+  color: white;
+  text-align: right;
+  padding: 24px 24px;
+  text-decoration: none;
+}
+
 .navbar a {
   float: left;
   font-size: 16px;
@@ -54,14 +62,6 @@ img{
   float: left;
   overflow: hidden;
   display: block;
-}
-
-.subnavbtn#user {
-  float: right;
-  color: white;
-  text-align: right;
-  padding: 24px 24px;
-  text-decoration: none;
 }
 
 .subnav .subnavbtn {
