@@ -46,6 +46,9 @@ img{
   text-align: left;
   display: block;
 }
+.subnav-content#user{
+  right:0em;
+}
 
 .navbar a {
   float: left;
@@ -145,7 +148,7 @@ img{
 
     <div class="subnav" id="user">
       <button class="subnavbtn"> <?=$_SESSION['username']?> <i class="fa-solid fa-circle-user"></i></button>
-			<div class="subnav-content">
+			<div class="subnav-content" id="user">
         <a href="account.php">Account Details</a>
 				<a href="logout.php">Log Out</a>
 			</div>
