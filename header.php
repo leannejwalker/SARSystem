@@ -56,7 +56,7 @@ img{
   display: block;
 }
 
-#user {
+.subnav#user {
   float: right;
   color: white;
   text-align: center;
