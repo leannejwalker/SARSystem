@@ -43,7 +43,8 @@ img{
 
 .subnav#user {
   float: right;
-  text-align: right;
+  text-align: left;
+  display: block;
 }
 
 .navbar a {
