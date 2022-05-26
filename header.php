@@ -49,14 +49,6 @@ img{
   padding: 24px 24px;
   text-decoration: none;
 }
-.navbar a#cart {
-  float: right;
-  font-size: 16px;
-  color: white;
-  text-align: center;
-  padding: 24px 24px;
-  text-decoration: none;
-}
 
 .subnav {
   float: left;
