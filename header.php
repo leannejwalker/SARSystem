@@ -112,7 +112,7 @@ img{
 <body>
 <div class="navbar">
 		<img src="img/sar.png" alt="Share and Repair">
-		<a href="account.php">Account Details</a>
+		<!--<a href="account.php">Account Details</a>-->
 		
     <div class="subnav">
 		  <button class="subnavbtn"><i class="fa-solid fa-handshake"></i> Borrow <i class="fa fa-caret-down"></i></button>
