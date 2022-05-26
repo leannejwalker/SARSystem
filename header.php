@@ -64,6 +64,15 @@ img{
   display: block;
 }
 
+.subnav a#user {
+  float: right;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 24px 24px;
+  text-decoration: none;
+}
+
 .subnav .subnavbtn {
   font-size: 16px;  
   border: none;
@@ -113,11 +122,10 @@ img{
 <div class="navbar">
 		<img src="img/sar.png" alt="Share and Repair">
 		<a href="account.php">Account Details</a>
-		
-        <div class="subnav">
+		<div class="subnav">
 		  <button class="subnavbtn"><i class="fa-solid fa-handshake"></i> Borrow <i class="fa fa-caret-down"></i></button>
 			<div class="subnav-content">
-                <a href="my-borrowed-items.php">My Borrowed Items</a>
+        <a href="my-borrowed-items.php">My Borrowed Items</a>
 				<a href="borrow-an-item.php">Borrow an Item</a>
 			</div>
 		</div>
@@ -142,7 +150,13 @@ img{
 				<a href="support.php">Contact Support</a>
 			</div>
 		</div>
-		<!--<a class="fa" id="cart">&#xf07a;</a>-->
+
+    		<div class="subnav">
+		  <button class="subnavbtn"><a class="fa" id="user"><?=$_SESSION['username']?>&#xf2bd;</a></button>
+			<div class="subnav-content">
+        <a href="account.php">Account Details</a>
+				<a href="logout.php">Log Out</a>
+			</div>
 	</div>
 </body>
 </html>
