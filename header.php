@@ -145,8 +145,8 @@ img{
 			</div>
 		</div>
 
-    <div class="subnav">
-      <button class="subnavbtn"><a class="fa" id="user"><?=$_SESSION['username']?>&#xf2bd</a></button>
+    <div class="subnav" id="user">
+      <button class="subnavbtn"> <?=$_SESSION['username']?> <i class="fa-solid fa-circle-user"></i></button>
 			<div class="subnav-content">
         <a href="account.php">Account Details</a>
 				<a href="logout.php">Log Out</a>
