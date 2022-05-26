@@ -56,7 +56,7 @@ img{
   display: block;
 }
 
-.subnav .subnavbtn#user {
+.fa-solid, .fas i#user {
   float: right;
   color: white;
   text-align: right;
