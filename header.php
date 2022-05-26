@@ -64,9 +64,8 @@ img{
   display: block;
 }
 
-.subnav a#user {
+#user {
   float: right;
-  font-size: 16px;
   color: white;
   text-align: center;
   padding: 24px 24px;
@@ -151,8 +150,8 @@ img{
 			</div>
 		</div>
 
-    		<div class="subnav">
-		  <button class="subnavbtn"><a class="fa" id="user"><?=$_SESSION['username']?>&#xf2bd;</a></button>
+    	<div class="subnav">
+        <button class="subnavbtn"><?=$_SESSION['username']?><i class="fa-solid fa-circle-user" id="user"></i></button>
 			<div class="subnav-content">
         <a href="account.php">Account Details</a>
 				<a href="logout.php">Log Out</a>
