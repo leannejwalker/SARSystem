@@ -56,7 +56,7 @@ img{
   display: block;
 }
 
-.fa-solid, .fas i#user {
+.subnavbtn#user {
   float: right;
   color: white;
   text-align: right;
@@ -147,7 +147,7 @@ img{
 		</div>
 
     <div class="subnav">
-      <button class="subnavbtn"><?=$_SESSION['username']?><i class="fa-solid fa-circle-user" id="user"></i></button>
+      <button class="subnavbtn" id="user"><?=$_SESSION['username']?><i class="fa-solid fa-circle-user"></i></button>
 			<div class="subnav-content">
         <a href="account.php">Account Details</a>
 				<a href="logout.php">Log Out</a>
