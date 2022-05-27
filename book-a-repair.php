@@ -31,8 +31,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   </style>
 
   <body>
+  <?php include "header.php"?>
   <div class="main">
-    <?php include "header.php"?>
     <form action="insert.php" method="post">
       Value1: <input type="text" name = "field1" /><br/>
       Value2: <input type="text" name = "field2" /><br/>
