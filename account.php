@@ -82,7 +82,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   <style>
     .main#accountdetails{
       border: 1em solid #F36F21;
-      padding: (25, 25, 25, 25)
+      margin: 4em;
+      padding: 2em;
       border-radius: 3em;
     }
   </style>
