@@ -12,17 +12,17 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 require_once "config.php";
  
 // Define variables and initialize with empty values
-$password = $new_password = $confirm_password = "";
-$password = $new_password_err = $confirm_password_err = "";
+$new_password = $confirm_password = "";
+$new_password_err = $confirm_password_err = "";
  
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
  
-    if(empty(trim($_POST["password"]))){
+/*    if(empty(trim($_POST["password"]))){
         $password_err = "Please enter your current password.";
     } else{
         $password = trim($_POST["password"]);
-    }
+    }*/
    
     if(password_verify($password, $hashed_password)){
             // Validate new password
@@ -47,9 +47,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         // Password is not valid, display a generic error message
         $login_err = "Invalid password.";
     }
-        
     // Check input errors before updating the database
-    if(empty($password_err) && empty($new_password_err) && empty($confirm_password_err)){
+    if(empty($new_password_err) && empty($confirm_password_err)){
         // Prepare an update statement
         $sql = "UPDATE users SET password = ? WHERE id = ?";
         
