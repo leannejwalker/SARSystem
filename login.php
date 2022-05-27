@@ -102,11 +102,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             background-image: url('img/background.jpg');
         }
         .wrapper{
-            width: 360px; padding: 20px;
+            border: 0.1em solid #ffffff;
+            margin: 5em;
+            padding-bottom: 3em;
+            padding-left: 5em;
+            border-radius: 1em;
+            background: rgba(255, 255, 255, 0.7);
         }
     </style>
 </head>
 <body>
+<?php include "simple-header.php"?>
     <div class="wrapper">
         <h2>Login</h2>
         <p>Please fill in your credentials to login.</p>
