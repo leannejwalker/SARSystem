@@ -97,6 +97,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <div>
 		          <p>Username: <?=$_SESSION['username']?></p>
               <p>Email Address: <?=$_SESSION['email']?></p>
+              <p>Password: <a href="reset-password.php">Change Password</a></p>
 		      	</div>
             <h3> Privacy and Security</h3>
         </div>
