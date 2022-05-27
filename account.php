@@ -80,13 +80,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     </head>
   <style>
     .main#accountdetails{
-      border: 14px solid #ffffff;
+      border: 0.1em solid #ffffff;
       margin: 4em;
       margin-left: 15em;
       margin-right: 15em;
       padding-left: 5em;
       padding-bottom: 3em;
-      border-radius: 3em;
+      border-radius: 1em;
       background: rgba(255, 255, 255, 0.7);
     }
     body {
