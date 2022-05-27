@@ -80,12 +80,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <style>
-    #accountdetails {
-      width: 300px;
-      border: 15px #F36F21;
-      padding: 50px;
-      margin: 20px;
-    }
+      .main{
+          border: 1em solid #F36F21;
+      }
   </style>
 
   <body>
