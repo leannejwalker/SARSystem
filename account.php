@@ -80,15 +80,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <style>
-      .main{
-          border: 1em solid #F36F21;
-      }
+    .main#accountdetails{
+      border: 1em solid #F36F21;
+      padding: (25, 25, 25, 25)
+      border-radius: 3em;
+    }
   </style>
 
   <body>
     <?php include "header.php"?>
-    <div class="main">
-        <div id="accountdetails"> 
+    <div class="main" id="accountdetails">
+        <div> 
           <h2> Your Account </h2>
             <h3> Update your Personal Details</h3>
             <div>
