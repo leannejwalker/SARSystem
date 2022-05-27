@@ -22,8 +22,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   bottom: 0;
   width: 100%;
   text-align: center;
-    background-color: rgb(0, 0, 0);
-    font-color: white;
 }
 </style>
 </head>
