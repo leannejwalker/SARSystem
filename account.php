@@ -78,7 +78,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       <meta charset="UTF-8">
       <title>Your Account - Share and Repair</title>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     </head>
   <style>
     .main#accountdetails{
@@ -107,11 +106,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <div>
                 <div class="form-group">
                     <label>Username</label>
-                    <input type="text" name="username" class="form-control <?=$_SESSION['username']?>">
+                    <input type="text" name="username" class="form-control" readonly><?=$_SESSION['username']?>
                 </div>
                 <div class="form-group">
                     <label>Email</label>
-                    <input type="text" name="username" class="form-control <?=$_SESSION['email']?>">
+                    <input type="text" name="email" class="form-control" readonly><?=$_SESSION['email']?>
                 </div>
 		    </div>
             <h3> Privacy and Security</h3>
