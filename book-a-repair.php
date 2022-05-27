@@ -24,10 +24,21 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
   <body>
   <?php include "header.php"?>
-
+  <form action="insert.php" method="post">
+    Value1: <input type="text" name = "field1" /><br/>
+    Value2: <input type="text" name = "field2" /><br/>
+    Value3: <input type="text" name = "field3" /><br/>
+    Value4: <input type="text" name = "field4" /><br/>
+    Value5: <input type="text" name = "field5" /><br/>
+    
+    <input type="submit" />
+  </form>
     
     <script>
+      var date = new Date();
+      date.setDate(date.getDate() - 13);
 
+      console.log(date);
     </script>
   </body>
 </html>

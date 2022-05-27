@@ -23,7 +23,6 @@ img{
   float: left;
   position: relative;
   block-size: 3em;
-  padding: 8px;
   margin-left: 18px;
   margin-right:24px;
 }

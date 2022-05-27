@@ -28,6 +28,10 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     border-radius: 1em;
     background: rgba(255, 255, 255, 0.7);
   }
+
+
+
+  
   </style>
   <body>
   <?php include "header.php"?>
