@@ -4,7 +4,7 @@ session_start();
  
 // Check if the user is already logged in, if yes then redirect him to welcome page
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-    header("location: account.php");
+    header("location: my-repair-sessions.php");
     exit;
 }
  
@@ -26,4 +26,5 @@ $query = "INSERT INTO repairs (category, itemname, make, model, age, cost, dof, 
 
 $mysqli->query($query);
 $mysqli->close();
+
 ?>
