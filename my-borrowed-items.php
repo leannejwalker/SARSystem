@@ -17,7 +17,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <style>
-
+    body {
+    background-image: url('img/background.jpg');
+  }
   </style>
 
   <body>
