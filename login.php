@@ -55,6 +55,29 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     mysqli_stmt_bind_result($stmt, $id, $username, $hashed_password);
                     if(mysqli_stmt_fetch($stmt)){
                         if(password_verify($password, $hashed_password)){
+                            if($checked = true){
+                                $cookie = array(
+                                    'name'   => 'remember_me_token',
+                                    'value'  => 'Share and Repair',
+                                    'expire' => '604 800',  // One weeks
+                                    'domain' => '.brobdingnagian.co.uk',
+                                    'path'   => '/'
+                                );
+                                set_cookie($cookie);
+                           
+                            // Password is correct, so start a new session
+                            session_start();
+                            
+                            // Store data in session variables
+                            $_SESSION["loggedin"] = true;
+                            $_SESSION["id"] = $id;
+                            $_SESSION["username"] = $username;
+                            $_SESSION["cookie"] = $cookie                        
+                            
+                            // Redirect user to welcome page
+                            header("location: account.php");
+
+                            }else{
                             // Password is correct, so start a new session
                             session_start();
                             
@@ -62,9 +85,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["loggedin"] = true;
                             $_SESSION["id"] = $id;
                             $_SESSION["username"] = $username;                            
-                            
+                                                        
                             // Redirect user to welcome page
                             header("location: account.php");
+
+                            }
+
                         } else{
                             // Password is not valid, display a generic error message
                             $login_err = "Invalid username or password.";
@@ -100,6 +126,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     </style>
 </head>
 <body>
+    <script>$
+    $(document).ready(function() {
+          $('input[type="checkbox"]').click(function() {
+              if($(this).prop("checked") == true) {
+                  $checked = true
+              }
+              else if($(this).prop("checked") == false) {
+                $checked = false
+              }
+            });
+        });
+    </script>
     <div class="wrapper">
         <h2>Login</h2>
         <p>Please fill in your credentials to login.</p>
