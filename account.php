@@ -94,7 +94,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
     h1{
         text-align: left;
-        padding-top: 2em;
+        padding-top: 0.5em;
         text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
         color: #F36F21;
     }
