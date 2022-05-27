@@ -35,15 +35,37 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   <div class="main">
     <form action="insert.php" method="post">
 
-      Item Category: <input type="text" name = "category" /><br/>
+      Item Category: <select id="category" name="category">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="fiat">Fiat</option>
+        <option value="audi">Audi</option>
+      </select><br/>
       Item Name: <input type="text" name = "itemname" /><br/>
       Make: <input type="text" name = "make" /><br/>
       Model: <input type="text" name = "model" /><br/>
-      Age: <input type="text" name = "age" /><br/>
-      Cost of Item: <input type="text" name = "cost" /><br/>
+      Age: <select id="age" name="age">
+        <option value="new">Volvo</option>
+        <option value="young">Saab</option>
+        <option value="old">Fiat</option>
+        <option value="older">Audi</option>
+      </select><br/>
+      Cost of Item: <select id="cost" name="cost">
+        <option value="free">Volvo</option>
+        <option value="cheap">Saab</option>
+        <option value="mid">Fiat</option>
+        <option value="expensive">Audi</option>
+      </select><br/>
       Details of fault: <input type="text" name = "dof" /><br/>
-      Is the item out of warranty?: <input type="text" name = "warranty" /><br/>
-      Has the item been repaired before?: <input type="text" name = "prevrepair" /><br/>
+      Is the item out of warranty?: <select id="age" name="age">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select><br/>
+      Has the item been repaired before?: <select id="prevrepair" name="prevrepair">
+        <option value="yes">Yes, with Share and Repair</option>
+        <option value="yes">Yes, elsewhere</option>
+        <option value="no">No</option>
+      </select><br/>
       <input type="submit" />
     </form>
   </div>
