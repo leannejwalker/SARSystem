@@ -11,20 +11,20 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
 // Include config file
 require_once "config.php";
 
-$category = $mysqli->real_escape_string($_POST['category']);
-$itemname = $mysqli->real_escape_string($_POST['itemname']);
-$make = $mysqli->real_escape_string($_POST['make']);
-$model = $mysqli->real_escape_string($_POST['model']);
-$age = $mysqli->real_escape_string($_POST['age']);
-$cost = $mysqli->real_escape_string($_POST['cost']);
-$dof = $mysqli->real_escape_string($_POST['dof']);
-$oow = $mysqli->real_escape_string($_POST['oow']);
-$prevrepair = $mysqli->real_escape_string($_POST['prevrepair']);
+$category = $sql->real_escape_string($_POST['category']);
+$itemname = $sql->real_escape_string($_POST['itemname']);
+$make = $sql->real_escape_string($_POST['make']);
+$model = $sql->real_escape_string($_POST['model']);
+$age = $sql->real_escape_string($_POST['age']);
+$cost = $sql->real_escape_string($_POST['cost']);
+$dof = $sql->real_escape_string($_POST['dof']);
+$oow = $sql->real_escape_string($_POST['oow']);
+$prevrepair = $sql->real_escape_string($_POST['prevrepair']);
 
-$query = "INSERT INTO repairs (category, itemname, make, model, age, cost, dof, oow, prevrepair)
+$sql = "INSERT INTO repairs (category, itemname, make, model, age, cost, dof, oow, prevrepair)
             VALUES ('{$category}','{$itemname}','{$make}','{$model}','{$age}','{$cost}','{$dof}','{$oow}','{$prevrepair}')";
 
-$mysqli->query($query);
-$mysqli->close();
+$sql->query($query);
+$sql->close();
 
 ?>
