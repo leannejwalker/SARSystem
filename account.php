@@ -81,7 +81,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   </head>
   <style>
     .main#accountdetails{
-      border: 1em solid #F36F21;
+      border: 0.3em solid #ffffff;
       margin: 4em;
       padding: 3em;
       padding-left: 2em;
@@ -90,6 +90,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
     body {
     background-image: url('img/background.jpg');
+    background: rgba(255, 255, 255, 0.5);
   }
   </style>
   <body>
@@ -137,4 +138,4 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             <input type="submit" class="btn btn-primary" value="Submit">
                             <a class="btn btn-link ml-2" href="account.php">Cancel</a>
                         </div>
-                    </form>-->
+                    </form>#F36F21-->
