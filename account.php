@@ -90,10 +90,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       background: rgba(255, 255, 255, 0.7);
     }
     body {
-    background-image: url('img/background.jpg');
+        background-image: url('img/background.jpg');
     }
     h1{
-      text-align:center;
+        text-align:center;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    }
+    h2{
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     }
   </style>
   <body>
