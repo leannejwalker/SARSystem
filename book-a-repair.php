@@ -18,22 +18,31 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   </head>
   <style>
     body {
-    background-image: url('img/background.jpg');
-  }
+      background-image: url('img/background.jpg');
+    }
+    .main{
+      border: 0.1em solid #ffffff;
+      margin: 5em;
+      padding-bottom: 3em;
+      padding-left: 5em;
+      border-radius: 1em;
+      background: rgba(255, 255, 255, 0.7);
+    }
   </style>
 
   <body>
-  <?php include "header.php"?>
-  <form action="insert.php" method="post">
-    Value1: <input type="text" name = "field1" /><br/>
-    Value2: <input type="text" name = "field2" /><br/>
-    Value3: <input type="text" name = "field3" /><br/>
-    Value4: <input type="text" name = "field4" /><br/>
-    Value5: <input type="text" name = "field5" /><br/>
-    
-    <input type="submit" />
-  </form>
-    
+  <div class="main">
+    <?php include "header.php"?>
+    <form action="insert.php" method="post">
+      Value1: <input type="text" name = "field1" /><br/>
+      Value2: <input type="text" name = "field2" /><br/>
+      Value3: <input type="text" name = "field3" /><br/>
+      Value4: <input type="text" name = "field4" /><br/>
+      Value5: <input type="text" name = "field5" /><br/>
+
+      <input type="submit" />
+    </form>
+  </div>
     <script>
       var date = new Date();
       date.setDate(date.getDate() - 13);

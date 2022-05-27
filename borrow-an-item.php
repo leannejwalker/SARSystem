@@ -20,6 +20,14 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     body {
     background-image: url('img/background.jpg');
   }
+  .main{
+    border: 0.1em solid #ffffff;
+    margin: 5em;
+    padding-bottom: 3em;
+    padding-left: 5em;
+    border-radius: 1em;
+    background: rgba(255, 255, 255, 0.7);
+  }
   </style>
 
   <body>
