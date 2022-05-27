@@ -106,11 +106,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <div>
                 <div class="form-group">
                     <label>Username</label>
-                    <input type="text" name="username" class="form-control" readonly><?=$_SESSION['username']?>
+                    <input type="text" name="username" class="form-control" value="<?=$_SESSION['username']?>" readonly>
                 </div>
                 <div class="form-group">
                     <label>Email</label>
-                    <input type="text" name="email" class="form-control" readonly><?=$_SESSION['email']?>
+                    <input type="text" name="email" class="form-control" value="<?=$_SESSION['email']?>" readonly>
                 </div>
 		    </div>
             <h3> Privacy and Security</h3>
