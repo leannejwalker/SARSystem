@@ -83,7 +83,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     .main#accountdetails{
       border: 1em solid #F36F21;
       margin: 4em;
-      padding: 2em;
+      padding: 3em;
+      padding-left: 2em;
       border-radius: 3em;
     }
   </style>
@@ -96,12 +97,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <h3> Update your Personal Details</h3>
             <div>
 				<p>Your account details are below:</p>
-				<table>
-					<tr>
-						<td>Username:</td>
-						<td><?=$_SESSION['username']?></td>
-					</tr>
-					<tr>
+
+
+		<a>Username:</a>
+			<a><?=$_SESSION['username']?></a>
                     <h2>Reset Password</h2>
                     <p>Please fill out this form to reset your password.</p>
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post"> 
