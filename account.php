@@ -83,20 +83,24 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     .main#accountdetails{
       border: 0.3em solid #ffffff;
       margin: 4em;
-      padding: 3em;
-      padding-left: 2em;
+      padding-top: 3em;
+      padding-bottom: 3em;
+      padding: 5em;
       border-radius: 3em;
       background: rgba(255, 255, 255, 0.7);
     }
     body {
     background-image: url('img/background.jpg');
-  }
+    }
+    h1{
+      text-align:center;
+    }
   </style>
   <body>
     <?php include "header.php"?>
     <div class="main" id="accountdetails">
         <div> 
-          <h2> Your Account </h2>
+          <h1> Your Account </h1>
             <h3> Update your Personal Details</h3>
             <div>
 		          <p>Username: <?=$_SESSION['username']?></p>
