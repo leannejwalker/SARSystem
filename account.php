@@ -93,7 +93,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         background-image: url('img/background.jpg');
     }
     h1{
-        padding-right: 50%;
+        text-align: left;
         text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
         color: #F36F21;
     }
