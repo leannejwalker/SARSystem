@@ -80,7 +80,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     </head>
   <style>
     .main#accountdetails{
-      border: 0.3em solid #ffffff;
+      border: 14px solid #ffffff;
       margin: 4em;
       margin-left: 15em;
       margin-right: 15em;
