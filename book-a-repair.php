@@ -34,12 +34,16 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   <?php include "header.php"?>
   <div class="main">
     <form action="insert.php" method="post">
-      Value1: <input type="text" name = "field1" /><br/>
-      Value2: <input type="text" name = "field2" /><br/>
-      Value3: <input type="text" name = "field3" /><br/>
-      Value4: <input type="text" name = "field4" /><br/>
-      Value5: <input type="text" name = "field5" /><br/>
 
+      Item Category: <input type="text" name = "category" /><br/>
+      Item Name: <input type="text" name = "itemname" /><br/>
+      Make: <input type="text" name = "make" /><br/>
+      Model: <input type="text" name = "model" /><br/>
+      Age: <input type="text" name = "age" /><br/>
+      Cost of Item: <input type="text" name = "cost" /><br/>
+      Details of fault: <input type="text" name = "dof" /><br/>
+      Is the item out of warranty?: <input type="text" name = "warranty" /><br/>
+      Has the item been repaired before?: <input type="text" name = "prevrepair" /><br/>
       <input type="submit" />
     </form>
   </div>
