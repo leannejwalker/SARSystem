@@ -38,19 +38,20 @@ img{
 
 .navbar {
   overflow: hidden;
-  background-color: rgb(0, 0, 0); 
+  background-color: rgb(0, 0, 0);
+}
+
+.subnav#user {
+  float: right;
+  text-align: left;
+  display: block;
+}
+.subnav-content#user{
+  right:0em;
 }
 
 .navbar a {
   float: left;
-  font-size: 16px;
-  color: white;
-  text-align: center;
-  padding: 24px 24px;
-  text-decoration: none;
-}
-.navbar a#cart {
-  float: right;
   font-size: 16px;
   color: white;
   text-align: center;
@@ -109,40 +110,49 @@ img{
 </style>
 </head>
 <body>
-
 <div class="navbar">
 		<img src="img/sar.png" alt="Share and Repair">
-		<a href="account.php">Account Details</a>
+		<!--<a href="account.php">Account Details</a>-->
 		
-        <div class="subnav">
+    <div class="subnav">
 		  <button class="subnavbtn"><i class="fa-solid fa-handshake"></i> Borrow <i class="fa fa-caret-down"></i></button>
 			<div class="subnav-content">
-                <a href="my-borrowed-items.php">My Borrowed Items</a>
+        <a href="my-borrowed-items.php">My Borrowed Items</a>
 				<a href="borrow-an-item.php">Borrow an Item</a>
 			</div>
 		</div>
-        <div class="subnav">
+    
+    <div class="subnav">
 		  <button class="subnavbtn"><i class="fa-solid fa-wrench"></i> Repair <i class="fa fa-caret-down"></i></button>
 			<div class="subnav-content">
 				<a href="my-repair-sessions.php">My Repair Sessions</a>
 				<a href="book-a-repair.php">Book a Repair Session</a>
-			</div>
+		  </div>
 		</div>
-        <div class="subnav">
+    
+    <div class="subnav">
 		  <button class="subnavbtn"><i class="fa-solid fa-chalkboard-user"></i> How To <i class="fa fa-caret-down"></i></button>
 			<div class="subnav-content">
 				<a href="my-booked-howto.php">My Booked HowTos Sessions</a>
 				<a href="book-a-howto.php">Book a HowTo Session</a>
 			</div>
 		</div>
-        <div class="subnav">
+
+    <div class="subnav">
 		  <button class="subnavbtn"><i class="fa-solid fa-circle-info"></i> Help <i class="fa fa-caret-down"></i></button>
 			<div class="subnav-content">
-                <a href="faq.php">FAQ</a>
+        <a href="faq.php">FAQ</a>
 				<a href="support.php">Contact Support</a>
 			</div>
 		</div>
-		<!--<a class="fa" id="cart">&#xf07a;</a>-->
-	</div>
+
+    <div class="subnav" id="user">
+      <button class="subnavbtn"> <?=$_SESSION['username']?> <i class="fa-solid fa-circle-user"></i></button>
+			<div class="subnav-content" id="user">
+        <a href="account.php">Account Details</a>
+				<a href="logout.php">Log Out</a>
+			</div>
+    </div>
+</div>
 </body>
 </html>
