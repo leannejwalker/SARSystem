@@ -104,10 +104,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
           <h1> Your Account </h1>
             <h3> Update your Personal Details</h3>
             <div>
-		          <p>Username: <?=$_SESSION['username']?></p>
+                <div class="form-group">
+                    <label>Username</label>
+                    <input type="text" name="username" class="form-control <?=$_SESSION['username']?>">
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="text" name="username" class="form-control <?=$_SESSION['email']?>">
+                </div>
+		        <!--  <p>Username: <?=$_SESSION['username']?></p>
               <p>Email Address: <?=$_SESSION['email']?></p>
-              <p>Password: <a href="reset-password.php">Change Password</a></p>
-		      	</div>
+              <p>Password: <a href="reset-password.php">Change Password</a></p>-->
+		    </div>
             <h3> Privacy and Security</h3>
         </div>
     </div>
