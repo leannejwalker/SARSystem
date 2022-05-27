@@ -126,18 +126,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     </style>
 </head>
 <body>
-    <script>$
-    $(document).ready(function() {
-          $('input[type="checkbox"]').click(function() {
-              if($(this).prop("checked") == true) {
-                  $checked = true
-              }
-              else if($(this).prop("checked") == false) {
-                $checked = false
-              }
-            });
-        });
-    </script>
     <div class="wrapper">
         <h2>Login</h2>
         <p>Please fill in your credentials to login.</p>
@@ -160,7 +148,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <span class="invalid-feedback"><?php echo $password_err; ?></span>
             </div>
             <div class="form-group">
-            <input type="checkbox" id="rememberme">Remember me for 7 days
+            <input type="checkbox" id="rememberme" value="$cookie">Remember me for 7 days
             </div>
             <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Login">
