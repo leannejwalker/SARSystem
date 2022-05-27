@@ -13,6 +13,9 @@ body {
   box-sizing: inherit;
 
 }
+*, ::after, ::before{
+  box-sizing: inherit;
+}
 
 body::-webkit-scrollbar {
   display: none;
