@@ -33,7 +33,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   <body>
   <?php include "header.php"?>
   <div class="main">
-    <form action="insert.php" method="post">
+    <form action="new_repair.php" method="post">
       Item Category: <select id="category" name="category">
         <option>===SELECT AN OPTION===</option>
         <option value="aac">Art, Antiques and Collectables</option>
