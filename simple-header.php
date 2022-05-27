@@ -10,7 +10,7 @@ body {
   margin: 0;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  box-sizing: none;
+  box-sizing: inherit;
 
 }
 
