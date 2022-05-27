@@ -100,9 +100,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <?php include "header.php"?>
     <div class="main" id="accountdetails">
         <div> 
-            <h1> Your Account </h1>
-            <h2> Change Password </h2>
-            <h2>Reset Password</h2>
+            <h1>Your Account</h1>
+            <h2>Change Password</h2>
             <p>Please fill out this form to reset your password.</p>
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                 <div class="form-group">
