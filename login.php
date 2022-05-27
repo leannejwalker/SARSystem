@@ -55,29 +55,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     mysqli_stmt_bind_result($stmt, $id, $username, $hashed_password);
                     if(mysqli_stmt_fetch($stmt)){
                         if(password_verify($password, $hashed_password)){
-                            if($checked = true){
-                                $cookie = array(
-                                    'name'   => 'remember_me_token',
-                                    'value'  => 'Share and Repair',
-                                    'expire' => '604 800',  // One weeks
-                                    'domain' => '.brobdingnagian.co.uk',
-                                    'path'   => '/'
-                                );
-                                set_cookie($cookie);
-                           
-                            // Password is correct, so start a new session
-                            session_start();
-                            
-                            // Store data in session variables
-                            $_SESSION["loggedin"] = true;
-                            $_SESSION["id"] = $id;
-                            $_SESSION["username"] = $username;
-                            $_SESSION["cookie"] = $cookie                        
-                            
-                            // Redirect user to welcome page
-                            header("location: account.php");
 
-                            }else{
                             // Password is correct, so start a new session
                             session_start();
                             
@@ -88,8 +66,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                                                         
                             // Redirect user to welcome page
                             header("location: account.php");
-
-                            }
 
                         } else{
                             // Password is not valid, display a generic error message
@@ -148,7 +124,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <span class="invalid-feedback"><?php echo $password_err; ?></span>
             </div>
             <div class="form-group">
-            <input type="checkbox" id="rememberme" value="$cookie">Remember me for 7 days
+            <input type="checkbox" id="rememberme">Remember me for 7 days
             </div>
             <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Login">
