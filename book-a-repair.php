@@ -37,37 +37,43 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
       Item Category: <select id="category" name="category">
         <option>===SELECT AN OPTION===</option>
-        <option value="volvo">Volvo</option>
-        <option value="saab">Saab</option>
-        <option value="fiat">Fiat</option>
-        <option value="audi">Audi</option>
+        <option value="aac">Art, Antiques and Collectables</option>
+        <option value="faa">Fashion and Accessories</option>
+        <option value="elec">Electronics</option>
+        <option value="homeapp">Home Appliances</option>
+        <option value="tag">Toys and Games</option>
+        <option value="oag">Outdoor and Garden</option>
+        <option value="other">Other</option>
       </select><br/>
       Item Name: <input type="text" name = "itemname" /><br/>
       Make: <input type="text" name = "make" /><br/>
       Model: <input type="text" name = "model" /><br/>
       Age: <select id="age" name="age">
         <option>===SELECT AN OPTION===</option>
-        <option value="new">Volvo</option>
-        <option value="young">Saab</option>
-        <option value="old">Fiat</option>
-        <option value="older">Audi</option>
+        <option value="new">Under 1 year</option>
+        <option value="young">Between 1-2 years</option>
+        <option value="used">Between 3-5 years</option>
+        <option value="old">Between 6-10 years</option>
+        <option value="older">Between 11-20 years</option>
+        <option value="vold">Over 21 years</option>
       </select><br/>
       Cost of Item: <select id="cost" name="cost">
         <option>===SELECT AN OPTION===</option>
-        <option value="free">Volvo</option>
-        <option value="cheap">Saab</option>
-        <option value="mid">Fiat</option>
-        <option value="expensive">Audi</option>
+        <option value="free">Under £5</option>
+        <option value="cheap">Between £5-£10</option>
+        <option value="mid">Between £10-£50</option>
+        <option value="expensive">Between £50-£100</option>
+        <option value="a lot">Over £100</option>
       </select><br/>
       Details of fault: <input type="text" name = "dof" /><br/>
-      Is the item out of warranty?: <select id="age" name="age">
+      Is the item out of warranty?: <select id="oow" name="oow">
         <option>===SELECT AN OPTION===</option>
         <option value="yes">Yes</option>
         <option value="no">No</option>
       </select><br/>
       Has the item been repaired before?: <select id="prevrepair" name="prevrepair">
         <option>===SELECT AN OPTION===</option>
-        <option value="yes">Yes, with Share and Repair</option>
+        <option value="yessar">Yes, with Share and Repair</option>
         <option value="yes">Yes, elsewhere</option>
         <option value="no">No</option>
       </select><br/>
