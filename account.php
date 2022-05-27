@@ -86,11 +86,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       padding: 3em;
       padding-left: 2em;
       border-radius: 3em;
-      background: white;
+      background: rgba(255, 255, 255, 0.5);
     }
     body {
     background-image: url('img/background.jpg');
-    background: rgba(255, 255, 255, 0.5);
   }
   </style>
   <body>
