@@ -87,6 +87,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       padding-left: 2em;
       border-radius: 3em;
     }
+    body {
+    background-image: url('background.jpg');
+  }
   </style>
   <body>
     <?php include "header.php"?>
