@@ -28,18 +28,12 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     background: rgba(255, 255, 255, 0.7);
   }
   </style>
+  <body>
+  <?php include "header.php"?>
   <div class="main">
 
   </div>
-  <body>
-  <?php include "header.php"?>
-
-
-
-
-
-
-
+  
 
   
     <script>
