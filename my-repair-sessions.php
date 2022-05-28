@@ -10,8 +10,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 require_once "config.php";
 
-$sql("SELECT itemname, age, dof FROM repairs")
-$result = $link->query($sql);
+$sql = ("SELECT * FROM customers WHERE custId='" . $_GET["custId"] . "'"); // Fetch data from the table customers using id
+$result=mysqli_query($link,$sql);
+$singleRow = mysqli_fetch_assoc($result);
 
 ?>
 <!DOCTYPE html>
@@ -53,7 +54,45 @@ $result = $link->query($sql);
   <body>
   <?php include "header.php"?>
   <div class="main">
-    <table>
+
+
+  <div class="container mt-2">
+    <div class="row">
+        <div class="col-md-12">
+            <?php include 'get-data-by-id.php '; ?>
+            <div class="card">
+              <div class="card-header">
+               Get Data From Database in PHP Using Id
+              </div>
+              <div class="card-body">
+                <b>Item name</b> :- <span class="card-text"><?php echo $singleRow['itemname']; ?> </span><br>
+                <b>Age</b> :- <span class="card-text"><?php echo $singleRow['age']; ?></span><br>
+                <b>Details of fault</b> :- <span class="card-text"> <?php echo $singleRow['dof']; ?></span><br>
+              </div>
+            </div>
+        </div>
+    </div>        
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <!-- <table>
       <tr>
         <th>Item Name</th>
         <th>Age</th>
@@ -76,7 +115,7 @@ $result = $link->query($sql);
         <td>Johnson</td>
         <td>67</td>
       </tr>
-    </table>
+    </table>-->
   </div>
 
 
