@@ -10,7 +10,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 require_once "config.php";
 
-$sql = ("SELECT * FROM customers WHERE custId='" . $_GET["custId"] . "'"); // Fetch data from the table customers using id
+$sql = ("SELECT * FROM repairs WHERE $id='" . $_GET["user"] . "'"); // Fetch data from the table customers using id
 $result=mysqli_query($link,$sql);
 $singleRow = mysqli_fetch_assoc($result);
 
