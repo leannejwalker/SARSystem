@@ -10,7 +10,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 require_once "config.php";
 
-$sql("SELECT * FROM repairs")
+$sql("SELECT itemname, age, dof FROM repairs")
+$result = $link->query($sql);
 
 ?>
 <!DOCTYPE html>
@@ -54,17 +55,16 @@ $sql("SELECT * FROM repairs")
   <div class="main">
     <table>
       <tr>
-      <?//php echo "$itemname"?>
         <th>Item Name</th>
         <th>Age</th>
         <th>Details of Fault</th>
         <th>Status</th>
       </tr>
       <tr>
-        <td><?php echo $row1['itemname']; ?></td>
-        <td><?php echo $row2['age']; ?></td>
-        <td><?php echo $row3['dof']; ?></td>
-        <td><?php echo $row4['status']; ?></td>
+        <td><?php echo $row['itemname']; ?></td>
+        <td><?php echo $row['age']; ?></td>
+        <td><?php echo $row['dof']; ?></td>
+        <td><?php echo $row['status']; ?></td>
       </tr>
       <tr>
         <td>Eve</td>
