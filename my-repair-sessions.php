@@ -7,6 +7,11 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     header("location: login.php");
     exit;
 }
+
+require_once "config.php";
+
+$sql("SELECT * FROM repairs")
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -49,14 +54,17 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   <div class="main">
     <table>
       <tr>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Points</th>
+      <?//php echo "$itemname"?>
+        <th>Item Name</th>
+        <th>Age</th>
+        <th>Details of Fault</th>
+        <th>Status</th>
       </tr>
       <tr>
-        <td>Jill</td>
-        <td>Smith</td>
-        <td>50</td>
+        <td><?php echo $row1['itemname']; ?></td>
+        <td><?php echo $row2['age']; ?></td>
+        <td><?php echo $row3['dof']; ?></td>
+        <td><?php echo $row4['status']; ?></td>
       </tr>
       <tr>
         <td>Eve</td>
