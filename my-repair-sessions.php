@@ -60,42 +60,7 @@ $singleRow = mysqli_fetch_assoc($result);
   <body>
   <?php include "header.php"?>
   <div class="main">
-  <div class="container mt-2">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="card">
-              <div class="card-header">
-               Get Data From Database in PHP Using Id
-              </div>
-              <div class="card-body">
-                <b>Item name</b> :- <span class="card-text"><?php echo $singleRow['itemname']; ?> </span><br>
-                <b>Age</b> :- <span class="card-text"><?php echo $singleRow['age']; ?></span><br>
-                <b>Details of fault</b> :- <span class="card-text"> <?php echo $singleRow['dof']; ?></span><br>
-              </div>
-            </div>
-        </div>
-    </div>        
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   <!-- <table>
+    <table>
       <tr>
         <th>Item Name</th>
         <th>Age</th>
@@ -103,28 +68,15 @@ $singleRow = mysqli_fetch_assoc($result);
         <th>Status</th>
       </tr>
       <tr>
-        <td><?php echo $row['itemname']; ?></td>
-        <td><?php echo $row['age']; ?></td>
-        <td><?php echo $row['dof']; ?></td>
-        <td><?php echo $row['status']; ?></td>
+        <td><?php echo $singleRow['itemname']; ?></td>
+        <td><?php echo $singleRow['age']; ?></td>
+        <td><?php echo $singleRow['dof']; ?></td>
+        <td><?//php echo $singleRow['status']; ?></td>
       </tr>
-      <tr>
-        <td>Eve</td>
-        <td>Jackson</td>
-        <td>94</td>
-      </tr>
-      <tr>
-        <td>Adam</td>
-        <td>Johnson</td>
-        <td>67</td>
-      </tr>
-    </table>-->
+    </table>
   </div>
+  <script>
 
-
-  
-    <script>
-
-    </script>
+  </script>
   </body>
 </html>
