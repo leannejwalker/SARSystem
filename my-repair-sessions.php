@@ -60,12 +60,9 @@ $singleRow = mysqli_fetch_assoc($result);
   <body>
   <?php include "header.php"?>
   <div class="main">
-
-
   <div class="container mt-2">
     <div class="row">
         <div class="col-md-12">
-            <?php include 'get-data-by-id.php '; ?>
             <div class="card">
               <div class="card-header">
                Get Data From Database in PHP Using Id
