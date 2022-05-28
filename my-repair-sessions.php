@@ -14,7 +14,8 @@ $sql("SELECT users.id, repair.userid
 FROM users
 CROSS JOIN repairs
 ON users.id=repair.userid");
-
+?>
+<?php
 $sql = ("SELECT * FROM repairs WHERE $userid='" . ($_SESSION['username']) . "'"); // Fetch data from the table customers using their session ID.
 $result=mysqli_query($link,$sql);
 $singleRow = mysqli_fetch_assoc($result);
