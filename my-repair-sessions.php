@@ -19,7 +19,7 @@ $stmt = $link->prepare($sql);
 $stmt->bind_param($userid, $id);
 $stmt->execute();
 $result = $stmt->get_result(); // get the mysqli result
-$id = $result->fetch_assoc();*/
+$id = $result->fetch_assoc();
 
 
 /*$queries = [
