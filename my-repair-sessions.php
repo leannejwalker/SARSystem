@@ -21,7 +21,7 @@ $queries = [
 // Execute the multiple SQL queries
 foreach ($queries as $query) {
   $stmt = $link->prepare($query);
-  $stmt->execute();
+  $stmt->execute($query);
   $stmt->close();
 }
 
