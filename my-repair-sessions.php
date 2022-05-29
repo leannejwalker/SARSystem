@@ -10,12 +10,19 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 require_once "config.php";
 
-$sql = "SELECT * FROM users WHERE $userid= '"real_escape_string($_SESSION['username'])"'"; // SQL with parameters
-$stmt = $link->prepare($sql); 
-$stmt->bind_param("repair.$userid", $id);
+$sql ("SELECT users.id, repair.userid
+FROM users
+CROSS JOIN repairs
+ON users.id=repair.userid;
+UNION SELECT * FROM repairs WHERE $userid='" . ($_SESSION['username']) . "'");
+
+
+/*$sql = "SELECT id FROM users WHERE $id= '"real_escape_string($_SESSION['username'])"'"; // SQL with parameters
+$stmt = $link->prepare($sql);
+$stmt->bind_param($userid, $id);
 $stmt->execute();
 $result = $stmt->get_result(); // get the mysqli result
-$user = $result->fetch_assoc();
+$user = $result->fetch_assoc();*/
 
 
 /*$queries = [
