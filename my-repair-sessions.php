@@ -32,7 +32,7 @@ if ($stmt->affected_rows === 1) {
 echo "No data found";
 mysqli_close($link);
 
-
+}
 
 /*$sql ("SELECT users.id, repair.userid
 FROM users
