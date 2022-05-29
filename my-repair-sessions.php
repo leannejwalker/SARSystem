@@ -30,7 +30,7 @@ if ($stmt->affected_rows === 1) {
 
 // Kill the script.
 echo "No data found";
-exit();
+mysqli_close($link);
 
 
 
