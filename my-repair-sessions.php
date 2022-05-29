@@ -10,7 +10,20 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 require_once "config.php";
 
-$queries = [
+$sql = "SELECT * FROM users WHERE id=?"; // SQL with parameters
+$stmt = $conn->prepare($sql); 
+$stmt->bind_param("i", $id);
+$stmt->execute();
+$result = $stmt->get_result(); // get the mysqli result
+$user = $result->fetch_assoc();
+
+
+
+
+
+
+
+/*$queries = [
   "SELECT users.id, repair.userid
   FROM users
   CROSS JOIN repairs
@@ -33,7 +46,7 @@ if ($stmt->affected_rows === 1) {
 echo "No data found";
 mysqli_close($link);
 
-}
+}*/
 
 /*$sql ("SELECT users.id, repair.userid
 FROM users
@@ -101,9 +114,9 @@ exit();
           <th>Status</th>
         </tr>
         <tr>
-          <td><?php echo $singleRow['itemname']; ?></td>
-          <td><?php echo $singleRow['age']; ?></td>
-          <td><?php echo $singleRow['dof']; ?></td>
+          <td><?php echo $result['itemname']; ?></td>
+          <td><?php echo $result['age']; ?></td>
+          <td><?php echo $result['dof']; ?></td>
           <td><?//php echo $singleRow['status']; ?></td>
         </tr>
       </table>
