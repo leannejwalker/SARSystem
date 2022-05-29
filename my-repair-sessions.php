@@ -18,6 +18,16 @@ SELECT * FROM repairs WHERE $userid='" . ($_SESSION['username']) . "'"); // Fetc
 $result=mysqli_query($link,$sql);
 $singleRow = mysqli_fetch_assoc($result);
 
+
+if ($link->multi_query($sql) === TRUE) {
+  echo "Data found successfully";
+} else { // The user accessed the script directly
+
+// Kill the script.
+echo "Data cannot be found";
+exit();
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
