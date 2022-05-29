@@ -16,7 +16,7 @@ WHERE users.id=repair.userid;
 UNION SELECT itemname, age, dof  FROM repairs WHERE $userid='" . ($_SESSION['username']) . "'"];
 
 $stmt = $link->prepare($sql);
-$stmt->bind_param($userid, $id);
+$stmt->bind_param("users.$id, repair.$userid");
 $stmt->execute();
 $result = $stmt->get_result(); // get the mysqli result
 $id = $result->fetch_assoc();
