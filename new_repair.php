@@ -1,25 +1,28 @@
 <?php
-$username = "brobdingnagian";
+
+require_once "config.php";
+
+/*$username = "brobdingnagian";
 $password = "Qsvd24^54";
 $database = "brobdingnagian_co_uk_";
 
-$mysqli = new mysqli("localhost:3306", $username, $password, $database);
+$mysqli = new mysqli("localhost:3306", $username, $password, $database);*/
 
-$category = $mysqli->real_escape_string($_POST['category']);
-$itemname = $mysqli->real_escape_string($_POST['itemname']);
-$make = $mysqli->real_escape_string($_POST['make']);
-$model = $mysqli->real_escape_string($_POST['model']);
-$age = $mysqli->real_escape_string($_POST['age']);
-$cost = $mysqli->real_escape_string($_POST['cost']);
-$dof = $mysqli->real_escape_string($_POST['dof']);
-$oow = $mysqli->real_escape_string($_POST['oow']);
-$prevrepair = $mysqli->real_escape_string($_POST['prevrepair']);
+$category = $link->($_POST['category']);
+$itemname = $link->($_POST['itemname']);
+$make = $link->($_POST['make']);
+$model = $link->($_POST['model']);
+$age = $link->($_POST['age']);
+$cost = $link->($_POST['cost']);
+$dof = $link->($_POST['dof']);
+$oow = $link->($_POST['oow']);
+$prevrepair = $link->($_POST['prevrepair']);
 
-$mysqli = "INSERT INTO repairs (category, itemname, make, model, age, cost, dof, oow, prevrepair)
+$link = "INSERT INTO repairs (category, itemname, make, model, age, cost, dof, oow, prevrepair)
             VALUES ('{$category}','{$itemname}','{$make}','{$model}','{$age}','{$cost}','{$dof}','{$oow}','{$prevrepair}')";
 
-$mysqli->query($query);
-$mysqli->close();
+$link->query($query);
+$link->close();
 header("location: login.php");
 exit;
 ?>
