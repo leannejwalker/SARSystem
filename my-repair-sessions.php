@@ -10,10 +10,10 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 require_once "config.php";
 
-$sql("SELECT id FROM users
+$sql["SELECT id FROM users
 CROSS JOIN repairs
 WHERE users.id=repair.userid;
-UNION SELECT itemname, age, dof  FROM repairs WHERE $userid='" . ($_SESSION['username']) . "'");
+UNION SELECT itemname, age, dof  FROM repairs WHERE $userid='" . ($_SESSION['username']) . "'"];
 
 $stmt = $link->prepare($sql);
 $stmt->bind_param($userid, $id);
