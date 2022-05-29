@@ -23,6 +23,6 @@ $link = "INSERT INTO repairs (category, itemname, make, model, age, cost, dof, o
 
 $link->query($query);
 $link->close();
-header("location: login.php");
+header("location: my-borrowed-items.php");
 exit;
 ?>
