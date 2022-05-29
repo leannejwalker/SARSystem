@@ -56,16 +56,16 @@ exit();
 <!DOCTYPE html>
 <html lang="en">
 <script language="JavaScript" type="text/javascript" src="/js/jquery-3.6.0.js"></script>
-  <head>
-    <meta charset="UTF-8">
-    <title>My Repair Sessions - Share and Repair</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
-  <style>
-    body {
+<head>
+  <meta charset="UTF-8">
+  <title>My Repair Sessions - Share and Repair</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+  body {
     background-image: url('img/background.jpg');
-    }
-    .main{
+  }
+  .main{
       border: 0.1em solid #ffffff;
       margin: 5em;
       padding-bottom: 3em;
@@ -88,27 +88,24 @@ exit();
     tr:nth-child(even) {
       background-color: #f2f2f2;
     }
-  </style>
-  <body>
-  <?php include "header.php"?>
-  <div class="main">
-    <table>
-      <tr>
-        <th>Item Name</th>
-        <th>Age</th>
-        <th>Details of Fault</th>
-        <th>Status</th>
-      </tr>
-      <tr>
-        <td><?php echo $singleRow['itemname']; ?></td>
-        <td><?php echo $singleRow['age']; ?></td>
-        <td><?php echo $singleRow['dof']; ?></td>
-        <td><?//php echo $singleRow['status']; ?></td>
-      </tr>
-    </table>
-  </div>
-  <script>
-
-  </script>
-  </body>
+</style>
+<body>
+    <?php include "header.php"?>
+    <div class="main">
+      <table>
+        <tr>
+          <th>Item Name</th>
+          <th>Age</th>
+          <th>Details of Fault</th>
+          <th>Status</th>
+        </tr>
+        <tr>
+          <td><?php echo $singleRow['itemname']; ?></td>
+          <td><?php echo $singleRow['age']; ?></td>
+          <td><?php echo $singleRow['dof']; ?></td>
+          <td><?//php echo $singleRow['status']; ?></td>
+        </tr>
+      </table>
+    </div>
+</body>
 </html>
