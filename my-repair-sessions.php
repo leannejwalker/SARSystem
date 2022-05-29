@@ -10,7 +10,31 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 require_once "config.php";
 
-$sql ("SELECT users.id, repair.userid
+$queries = [
+  "SELECT users.id, repair.userid
+  FROM users
+  CROSS JOIN repairs
+  ON users.id=repair.userid",
+  "SELECT * FROM repairs WHERE $userid='" . ($_SESSION['username']) . "'"
+];
+
+// Execute the multiple SQL queries
+foreach ($queries as $query) {
+  $stmt = $link->prepare($query);
+  $stmt->execute();
+}
+
+if ($stmt->affected_rows === 1) {
+  echo "Data found successfully";
+} else { // The user accessed the script directly
+
+// Kill the script.
+echo "No data found";
+exit();
+
+
+
+/*$sql ("SELECT users.id, repair.userid
 FROM users
 CROSS JOIN repairs
 ON users.id=repair.userid;
@@ -26,7 +50,7 @@ if ($link->multi_query($sql) === TRUE) {
 // Kill the script.
 echo "Data cannot be found";
 exit();
-}
+}*/
 
 ?>
 <!DOCTYPE html>
