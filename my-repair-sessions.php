@@ -22,6 +22,7 @@ $queries = [
 foreach ($queries as $query) {
   $stmt = $link->prepare($query);
   $stmt->execute();
+  $stmt->close();
 }
 
 if ($stmt->affected_rows === 1) {
