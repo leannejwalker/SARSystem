@@ -13,7 +13,8 @@ require_once "config.php";
 $sql = ("SELECT users.id, repair.userid FROM users INNER JOIN repairs ON users.id=repair.userid");
 $sql .= ("SELECT * FROM repairs WHERE $userid='" . ($_SESSION['username']) . "'");
 $stmt = $link->prepare($sql);
-$stmt->store_result();
+$stmt->store_result(); 
+$stmt->execute();
 $result = $stmt->get_result();
 $user = $result->fetch_assoc();
 
