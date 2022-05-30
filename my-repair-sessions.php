@@ -15,7 +15,6 @@ $sql = ("SELECT users.id, repair.userid FROM users INNER JOIN repairs ON users.i
 $sql .= ("SELECT * FROM repairs WHERE $userid='" . ($_SESSION['username']) . "'");
 
 $result = mysqli_multi_query($link, $sql);
-$result = get_result();
 $singleRow = $result->get_result();
 
 //fetch_assoc()
