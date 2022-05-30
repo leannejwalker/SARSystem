@@ -10,9 +10,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 require_once "config.php";
 
-$sql = "SELECT users.id, repair.userid FROM users INNER JOIN repairs ON users.id=repair.userid";
+$sql = ("SELECT users.id, repair.userid FROM users INNER JOIN repairs ON users.id=repair.userid");
 
-$sql .= "SELECT * FROM repairs WHERE $userid='" . ($_SESSION['username']) . "'";
+$sql .= ("SELECT * FROM repairs WHERE $userid='" . ($_SESSION['username']) . "'");
 
 $result = mysqli_multi_query($link, $sql);
 
@@ -44,6 +44,7 @@ $singleRow = mysqli_fetch_assoc($result);
     border-spacing: 0;
     width: 100%;
     border: 1px solid #ddd;
+    margin-left: -4.5em;
     }
 
     th, td {
