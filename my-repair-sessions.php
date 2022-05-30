@@ -13,51 +13,8 @@ require_once "config.php";
 $sql = ("SELECT users.id, repair.userid FROM users INNER JOIN repairs ON users.id=repair.userid");
 
 $sql1 = mysqli_query("SELECT * FROM repairs WHERE $userid='" . ($_SESSION['username']) . "'");
-$result = mysqli_query($link,$sql1);
+$result = mysqli_result($link,$sql1);
 $singleRow = mysqli_fetch_assoc($result);
-
-/*$queries = [
-  "SELECT users.id, repair.userid
-  FROM users
-  CROSS JOIN repairs
-  ON users.id=repair.userid",
-  "SELECT * FROM repairs WHERE $userid='" . ($_SESSION['username']) . "'"
-];
-
-// Execute the multiple SQL queries
-foreach ($queries as $query) {
-  $stmt = $link->prepare($query);
-  $stmt->execute($query);
-  $stmt->close();
-}
-
-if ($stmt->affected_rows === 1) {
-  echo "Data found successfully";
-} else { // The user accessed the script directly
-
-// Kill the script.
-echo "No data found";
-mysqli_close($link);
-
-}*/
-
-/*$sql ("SELECT users.id, repair.userid
-FROM users
-CROSS JOIN repairs
-ON users.id=repair.userid;
-SELECT * FROM repairs WHERE $userid='" . ($_SESSION['username']) . "'"); // Fetch data from the table customers using their session ID.
-$result=mysqli_query($link,$sql);
-$singleRow = mysqli_fetch_assoc($result);
-
-
-if ($link->multi_query($sql) === TRUE) {
-  echo "Data found successfully";
-} else { // The user accessed the script directly
-
-// Kill the script.
-echo "Data cannot be found";
-exit();
-}*/
 
 ?>
 <!DOCTYPE html>
