@@ -10,16 +10,15 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 require_once "config.php";
 
-$sql("SELECT id, username FROM users
+$sql("SELECT users.id, repair.userid
+FROM users
 CROSS JOIN repairs
-WHERE users.id=repair.userid;
-UNION SELECT itemname, age, dof  FROM repairs WHERE $userid='" . ($_SESSION['username']) . "'");
+ON users.id=repair.userid");
 
-$stmt = $link->prepare($sql);
-$stmt->bind_param("$id", "$userid");
-$stmt->execute();
-$result = $stmt->get_result(); // get the mysqli result
-$result->fetch_assoc();*/
+$sql1 = ("SELECT * FROM repairs 
+WHERE $userid='" . ($_SESSION['username']) . "'");
+$result=mysqli_query($link,$sql);
+$singleRow = mysqli_fetch_assoc($result);
 
 /*$queries = [
   "SELECT users.id, repair.userid
