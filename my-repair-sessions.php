@@ -12,11 +12,9 @@ require_once "config.php";
 
 $sql = ("SELECT users.id, repair.userid FROM users INNER JOIN repairs ON users.id=repair.userid");
 
-$sql1 = mysqli_query("SELECT * FROM repairs WHERE $userid='" . ($_SESSION['username']) . "'");
+$sql1 = ("SELECT * FROM repairs WHERE $userid='" . ($_SESSION['username']) . "'");
 
-$result = $link->query($sql1);
-
-//$result = mysqli_query($link,$sql1);
+$result = mysqli_query($link, $sql, $sql1);
 
 $singleRow = mysqli_fetch_assoc($result);
 
