@@ -127,11 +127,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <h3>Account Overview</h3>
                 <div class="form-group">
                     <label>Username</label><br>
-                    <input type="text" name="username" class="form-control" value="<?=$_SESSION['username']?>" readonly>
+                    <input type="text" name="username" class="form-control" value="<?=$_SESSION['username']?>">
                 </div>
                 <div class="form-group">
                     <br><label>Email</label><br>
-                    <input type="text" name="email" class="form-control" value="<?=$_SESSION['email']?>" readonly>
+                    <input type="text" name="email" class="form-control" value="<?=$_SESSION['email']?>">
                 </div>
                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                     <div class="form-group">
