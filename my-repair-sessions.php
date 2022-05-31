@@ -11,9 +11,32 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 require_once "config.php";
 
 $sql = ("SELECT users.id, repair.userid FROM users INNER JOIN repairs ON users.id=repair.userid");
-$sql .= ("SELECT * FROM repairs WHERE $userid='" . ($_SESSION['username']) . "'")
-$result = mysqli_multi_query($link, $sql);
-$singleRow = mysqli_fetch_assoc($result);
+$sql .= ("SELECT * FROM repairs WHERE $userid='" . ($_SESSION['username']) . "'");
+
+
+if (mysqli_multi_query($link, $sql)) {
+  do {
+    // Store first result set
+    if ($result = mysqli_store_result($con)) {
+      while ($row = mysqli_fetch_row($result)) {
+        printf("%s\n", $row[0]);
+      }
+      mysqli_free_result($result);
+    }
+    // if there are more result-sets, the print a divider
+    if (mysqli_more_results($link)) {
+      printf("-------------\n");
+    }
+     //Prepare next result set
+  } while (mysqli_next_result($link));
+}
+
+
+
+
+//$result = mysqli_multi_query($link, $sql);
+//$stmt = mysqli_result(); 
+//$singleRow = mysqli_fetch_assoc($result);
 
 ?>
 <!DOCTYPE html>
