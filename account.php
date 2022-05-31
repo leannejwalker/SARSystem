@@ -79,7 +79,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
   <style>
-    .main#accountdetails{
+    .main{
       border: 0.1em solid #ffffff;
       margin: 4em;
       padding-left: 5em;
@@ -99,10 +99,20 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   </style>
   <body>
     <?php include "header.php"?>
-    <div class="main" id="accountdetails">
+    <div class="main">
         <div> 
-            <h1>Your Account</h1>
-            <h2>Change Password</h2>
+            <h1>Your Share and Repair Account</h1>
+            <p>Welcome to your Share and Repair account. If you are new, and would like a guide through the website, please click <a href="">here</a></p>
+            <h3>Account Overview</h3>
+            <div class="form-group">
+                <label>Username</label>
+                <input type="text" name="username" class="form-control" value="<?=$_SESSION['username']?>" readonly>
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="text" name="email" class="form-control" value="<//?=$_SESSION['email']?>" readonly>
+            </div>
+            <h3>Change Password</h3>
             <p>Please fill out this form to reset your password.</p>
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                 <div class="form-group">
@@ -120,21 +130,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     <a class="btn btn-link ml-2" href="account.php">Cancel</a>
                 </div>
             </form>
-        </div>
-          
-          
-          <!--<h3> Update your Personal Details</h3>
-            <div>
-                <div class="form-group">
-                    <label>Username</label>
-                    <input type="text" name="username" class="form-control" value="<//?=$_SESSION['username']?>" readonly>
-                </div>
-                <div class="form-group">
-                    <label>Email</label>
-                    <input type="text" name="email" class="form-control" value="<//?=$_SESSION['email']?>" readonly>
-                </div>
-		    </div>-->
-            <h3> Privacy and Security</h3>
+            <h3>Membership</h3>
+            <h3>Privacy and Security</h3>
         </div>
     </div>
     <?php include "footer.php"?>
