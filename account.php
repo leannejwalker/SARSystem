@@ -79,9 +79,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
   <style>
-    .main#header{
+    .main#together{
       border: 0.1em solid #ffffff;
-      margin: 1em;
+      margin: 4em;
       padding-left: 5em;
       padding-bottom: 1em;
       border-radius: 1em;
@@ -115,49 +115,50 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   </style>
   <body>
     <?php include "header.php"?>
-    <div class="main" id="header">
-        <div> 
-            <h1>Your Share and Repair Account</h1>
-            <p>Welcome to your Share and Repair account. If you are new, and would like a guide through the website, please click <a href=""><b>here</b></a></p>
-        </div>
-    </div>
-    <div class="main">
-        <div> 
-            <h3>Account Overview</h3>
-            <div class="form-group">
-                <label>Username</label>
-                <input type="text" name="username" class="form-control" value="<?=$_SESSION['username']?>" readonly>
+    <div class ="main" id="together">
+        <div class="main">
+            <div> 
+                <h1>Your Share and Repair Account</h1>
+                <p>Welcome to your Share and Repair account. If you are new, and would like a guide through the website, please click <a href=""><b>here</b></a></p>
             </div>
-            <div class="form-group">
-                <label>Email</label>
-                <input type="text" name="email" class="form-control" value="<?=$_SESSION['email']?>" readonly>
+        </div>
+        <div class="main">
+            <div> 
+                <h3>Account Overview</h3>
+                <div class="form-group">
+                    <label>Username</label>
+                    <input type="text" name="username" class="form-control" value="<?=$_SESSION['username']?>" readonly>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="text" name="email" class="form-control" value="<?=$_SESSION['email']?>" readonly>
+                </div>
+                <h3>Change Password</h3>
+                <p>Please fill out this form to reset your password.</p>
+                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+                    <div class="form-group">
+                        <label>New Password</label>
+                        <input type="password" name="new_password" class="form-control <?php echo (!empty($new_password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $new_password; ?>">
+                        <span class="invalid-feedback"><?php echo $new_password_err; ?></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Confirm Password</label>
+                        <input type="password" name="confirm_password" class="form-control <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>">
+                        <span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-primary" value="Submit">
+                        <a class="btn btn-link ml-2" href="account.php">Cancel</a>
+                    </div>
+                </form>
             </div>
-            <h3>Change Password</h3>
-            <p>Please fill out this form to reset your password.</p>
-            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-                <div class="form-group">
-                    <label>New Password</label>
-                    <input type="password" name="new_password" class="form-control <?php echo (!empty($new_password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $new_password; ?>">
-                    <span class="invalid-feedback"><?php echo $new_password_err; ?></span>
-                </div>
-                <div class="form-group">
-                    <label>Confirm Password</label>
-                    <input type="password" name="confirm_password" class="form-control <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>">
-                    <span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
-                </div>
-                <div class="form-group">
-                    <input type="submit" class="btn btn-primary" value="Submit">
-                    <a class="btn btn-link ml-2" href="account.php">Cancel</a>
-                </div>
-            </form>
         </div>
-    </div>
-    <div class="main">
-        <div> 
-            <h3>Membership</h3>
+        <div class="main">
+            <div> 
+                <h3>Membership</h3>
+            </div>
         </div>
-    </div>
-    <div class="main">
+        <div class="main">
         <div> 
             <h3>Privacy and Security</h3>
         </div>
