@@ -123,13 +123,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         }
         .btn-primary:hover{
             color: #fff;
-            background-color: #F36F21;
-            border-color: #F36F21;
+            background-color: #3A3684;
+            border-color: #3A3684;
         }
         .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
             color: #fff;
-            background-color: #F36F21;
-            border-color: #F36F21;
+            background-color: #3A3684;
+            border-color: #3A3684;
         }
     </style>
 </head>
