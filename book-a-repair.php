@@ -51,7 +51,9 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-  bac
+  background-color: #45a049;
+}
+
   </style>
 
   <body>
