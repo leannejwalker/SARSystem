@@ -102,7 +102,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <div class="main">
         <div> 
             <h1>Your Share and Repair Account</h1>
-            <p>Welcome to your Share and Repair account. If you are new, and would like a guide through the website, please click <a href="">here</a></p>
+            <p>Welcome to your Share and Repair account. If you are new, and would like a guide through the website, please click <a href=""><b>here</b></a></p>
+        </div>
+    </div>
+    <div class="main">
+        <div> 
             <h3>Account Overview</h3>
             <div class="form-group">
                 <label>Username</label>
@@ -110,7 +114,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             </div>
             <div class="form-group">
                 <label>Email</label>
-                <input type="text" name="email" class="form-control" value="<//?=$_SESSION['email']?>" readonly>
+                <input type="text" name="email" class="form-control" value="<?=$_SESSION['email']?>" readonly>
             </div>
             <h3>Change Password</h3>
             <p>Please fill out this form to reset your password.</p>
@@ -130,7 +134,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     <a class="btn btn-link ml-2" href="account.php">Cancel</a>
                 </div>
             </form>
+        </div>
+    </div>
+    <div class="main">
+        <div> 
             <h3>Membership</h3>
+        </div>
+    </div>
+    <div class="main">
+        <div> 
             <h3>Privacy and Security</h3>
         </div>
     </div>
