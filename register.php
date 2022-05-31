@@ -117,7 +117,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             overflow: hidden;
         }
         #login{
-            color: solid #F36F21;
+            background-color: solid #F36F21;
         }
     </style>
 </head>
