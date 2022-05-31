@@ -15,7 +15,7 @@ $sql .= ("SELECT * FROM repairs WHERE $userid='" . ($_SESSION['username']) . "'"
 
 mysqli_multi_query($link, $sql);
 $result = $link -> query($sql);
-$singleRow = $result -> fetch_assoc();
+$singleRow = mysqli_fetch_assoc($result);
 
 ?>
 <!DOCTYPE html>
