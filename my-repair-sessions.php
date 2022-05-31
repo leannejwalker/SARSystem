@@ -11,7 +11,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 require_once "config.php";
 
 $sql = ("SELECT users.id, repair.userid FROM users CROSS JOIN repairs ON users.id=repair.userid");
-$sql .= ("SELECT * FROM repairs WHERE $userid='" . ($_SESSION['username']) . "'");
+$sql .= ("SELECT itemname, age, dof FROM repairs WHERE $userid='" . ($_SESSION['username']) . "'");
 
 mysqli_multi_query($link, $sql);
 $result = $link -> query($sql);
