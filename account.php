@@ -85,8 +85,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       padding-bottom: 1em;
       border-radius: 1em;
     }
-    .main{
-      border: 0.1em solid #ffffff;
+    .main#orange{
+      border: 0.1em solid #F36F21;
       margin: 1em;
       padding-left: 5em;
       padding-bottom: 3em;
@@ -114,13 +114,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   <body>
     <?php include "header.php"?>
     <div class ="main" id="together">
-        <div class="main">
+        <div class="main" id="purple">
             <div> 
                 <h1>Your Share and Repair Account</h1>
                 <p>Welcome to your Share and Repair account. If you are new, and would like a guide through the website, please click <a href=""><b>here</b></a></p>
             </div>
         </div>
-        <div class="main">
+        <div class="main" id="orange">
             <div> 
                 <h3>Account Overview</h3>
                 <div class="form-group">
@@ -131,8 +131,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     <label>Email</label>
                     <input type="text" name="email" class="form-control" value="<?=$_SESSION['email']?>" readonly>
                 </div>
-                <h3>Change Password</h3>
-                <p>Please fill out this form to reset your password.</p>
                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                     <div class="form-group">
                         <label>New Password</label>
@@ -151,12 +149,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 </form>
             </div>
         </div>
-        <div class="main">
+        <div class="main" id="purple">
             <div> 
                 <h3>Membership</h3>
             </div>
         </div>
-        <div class="main">
+        <div class="main" id="orange">
         <div> 
             <h3>Privacy and Security</h3>
         </div>
