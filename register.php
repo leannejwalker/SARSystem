@@ -121,6 +121,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             background-color: #F36F21;
             border-color: #F36F21;
         }
+        .btn-primary:hover{
+            color: #fff;
+            background-color: #F36F21;
+            border-color: #F36F21;
+        }
     </style>
 </head>
 <body>
