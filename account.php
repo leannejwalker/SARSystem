@@ -81,7 +81,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   <style>
     .main#header{
       border: 0.1em solid #ffffff;
-      margin: 4em;
+      margin: 1em;
       padding-left: 5em;
       padding-bottom: 1em;
       border-radius: 1em;
@@ -89,7 +89,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
     .main{
       border: 0.1em solid #ffffff;
-      margin: 4em;
+      margin: 1em;
       padding-left: 5em;
       padding-bottom: 3em;
       border-radius: 1em;
@@ -97,7 +97,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
     .main#purple{
       border: 0.1em solid #ffffff;
-      margin: 4em;
+      margin: 1em;
       padding-left: 5em;
       padding-bottom: 3em;
       border-radius: 1em;
