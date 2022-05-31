@@ -79,7 +79,23 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
   <style>
+    .main#header{
+      border: 0.1em solid #ffffff;
+      margin: 4em;
+      padding-left: 5em;
+      padding-bottom: 1em;
+      border-radius: 1em;
+      background: rgba(255, 255, 255, 0.9);
+    }
     .main{
+      border: 0.1em solid #ffffff;
+      margin: 4em;
+      padding-left: 5em;
+      padding-bottom: 3em;
+      border-radius: 1em;
+      background: rgba(255, 255, 255, 0.9);
+    }
+    .main#purple{
       border: 0.1em solid #ffffff;
       margin: 4em;
       padding-left: 5em;
@@ -99,7 +115,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   </style>
   <body>
     <?php include "header.php"?>
-    <div class="main">
+    <div class="main" id="header">
         <div> 
             <h1>Your Share and Repair Account</h1>
             <p>Welcome to your Share and Repair account. If you are new, and would like a guide through the website, please click <a href=""><b>here</b></a></p>
