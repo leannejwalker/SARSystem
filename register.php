@@ -110,7 +110,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         }
         .wrapper{
             border: 0.1em solid #FFFFFF;
-            margin: 4em;
+            margin: 3em;
+            margin-top:4em;
             padding: 2em;
             border-radius: 1em;
             background: rgba(255, 255, 255, 0.9);
