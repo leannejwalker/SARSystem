@@ -116,8 +116,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             background: rgba(255, 255, 255, 0.9);
             overflow: hidden;
         }
-        .btn-primary#login {
-            background-color: solid #F36F21;
+        .btn-primary {
+            color: #fff;
+            background-color: #F36F21;
+            border-color: #F36F21;
         }
     </style>
 </head>
