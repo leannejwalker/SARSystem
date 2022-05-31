@@ -126,7 +126,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             background-color: #F36F21;
             border-color: #F36F21;
         }
-        .btn-primary:active{
+        .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
             color: #fff;
             background-color: #F36F21;
             border-color: #F36F21;
