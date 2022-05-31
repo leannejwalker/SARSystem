@@ -105,12 +105,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         }
         .wrapper{
             border: 0.1em solid #ffffff;
+            border: 0.1em solid #ffffff;
             margin: 5em;
-            padding: 3em;
-            padding-bottom: 3em;
-            padding-top: 3em;
+            padding: 2em;
             border-radius: 1em;
-            background: rgba(255, 255, 255, 0.7);
+            background: rgba(255, 255, 255, 0.9);
             overflow: hidden;
         }
     </style>
