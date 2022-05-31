@@ -108,6 +108,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
         color: #F36F21;
     }
+    label{
+        font-weight: bold;
+
+    }
   </style>
   <body>
     <?php include "header.php"?>
@@ -126,19 +130,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     <input type="text" name="username" class="form-control" value="<?=$_SESSION['username']?>" readonly>
                 </div>
                 <div class="form-group">
-                    <label>Email</label><br>
+                    <br><label>Email</label><br>
                     <input type="text" name="email" class="form-control" value="<?=$_SESSION['email']?>" readonly>
                 </div>
                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                     <div class="form-group">
-                        <label>New Password</label><br>
+                        <br><label>New Password</label><br>
                         <input type="password" name="new_password" class="form-control <?php echo (!empty($new_password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $new_password; ?>">
                         <span class="invalid-feedback"><?php echo $new_password_err; ?></span>
                     </div>
                     <div class="form-group">
-                        <label>Confirm Password</label><br>
+                        <br><label>Confirm Password</label><br>
                         <input type="password" name="confirm_password" class="form-control <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>">
-                        <span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
+                        <span class="invalid-feedback"><?php echo $confirm_password_err; ?></span><br>
                     </div>
                     <div class="form-group">
                         <input type="submit" class="btn btn-primary" value="Submit">
