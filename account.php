@@ -95,9 +95,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     .main#purple{
       border: 0.5em solid #3A3684;
       margin: 1em;
-      padding-left: 2em;
-      padding-top: 2em;
-      padding-bottom: 2em;
+      padding:2em;
       border-radius: 1em;
       background: rgba(255, 255, 255, 0.9);
     }
@@ -106,7 +104,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
     h1{
         text-align: left;
-        padding-top: 0.5em;
         text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
         color: #F36F21;
     }
