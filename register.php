@@ -109,8 +109,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             overflow: hidden;
         }
         .wrapper{
-            border: 0.1em solid #F36F21;
-            margin: 5em;
+            border: 0.1em solid #FFFFFF;
+            margin: 3em;
             padding: 2em;
             border-radius: 1em;
             background: rgba(255, 255, 255, 0.9);
