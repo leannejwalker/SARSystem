@@ -80,12 +80,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     </head>
   <style>
     .main#together{
-      border: 0.1em solid #ffffff;
       margin: 4em;
       padding-left: 5em;
       padding-bottom: 1em;
       border-radius: 1em;
-      background: rgba(255, 255, 255, 0.9);
     }
     .main{
       border: 0.1em solid #ffffff;
