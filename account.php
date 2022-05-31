@@ -71,12 +71,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<script language="JavaScript" type="text/javascript" src="/js/jquery-3.6.0.js"></script>
-
-  <head>
+    <head>
       <meta charset="UTF-8">
       <title>Your Account - Share and Repair</title>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script language="JavaScript" type="text/javascript" src="/js/jquery-3.6.0.js"></script>
     </head>
   <style>
     .main#together{
@@ -123,21 +122,21 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <div> 
                 <h3>Account Overview</h3>
                 <div class="form-group">
-                    <label>Username</label>
+                    <label>Username</label><br>
                     <input type="text" name="username" class="form-control" value="<?=$_SESSION['username']?>" readonly>
                 </div>
                 <div class="form-group">
-                    <label>Email</label>
+                    <label>Email</label><br>
                     <input type="text" name="email" class="form-control" value="<?=$_SESSION['email']?>" readonly>
                 </div>
                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                     <div class="form-group">
-                        <label>New Password</label>
+                        <label>New Password</label><br>
                         <input type="password" name="new_password" class="form-control <?php echo (!empty($new_password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $new_password; ?>">
                         <span class="invalid-feedback"><?php echo $new_password_err; ?></span>
                     </div>
                     <div class="form-group">
-                        <label>Confirm Password</label>
+                        <label>Confirm Password</label><br>
                         <input type="password" name="confirm_password" class="form-control <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>">
                         <span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
                     </div>
