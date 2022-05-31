@@ -89,6 +89,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       border: 0.5em solid #F36F21;
       margin: 1em;
       padding-left: 1em;
+      padding-bottom: 1em;
       border-radius: 1em;
       background: rgba(255, 255, 255, 0.9);
     }
@@ -96,6 +97,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       border: 0.5em solid #3A3684;
       margin: 1em;
       padding-left: 1em;
+      padding-bottom: 1em;
       border-radius: 1em;
       background: rgba(255, 255, 255, 0.9);
     }
