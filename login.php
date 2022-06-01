@@ -63,12 +63,23 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["id"] = $id;
                             $_SESSION["username"] = $username;                            
                             
-                            $sql = ("SELECT access_id FROM users");
-                            if($access_id="1"){
-                            // Redirect user to welcome page
-                            header("location: /admin_console/account.php");
-                            }else{
-                            header("location: account.php");
+                            $admin = $_POST['admin'];
+
+                            $sql = ("SELECT * FROM users WHERE access_id = '1'")
+                            $count = mysqli_num_rows($sql)
+
+                            if($count == 1) 
+                            {
+                            if (isset($admin))
+                                {
+                                    $_SESSION['username'] = $user;
+                                    header("location: admin_console/account.php");
+                                    exit;
+                                } else {
+                                    $_SESSION['username'] = $user;
+                                    header("location: account.php");
+                                    exit;
+                                }
                             }
 
                         } else{
