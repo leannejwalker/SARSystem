@@ -23,6 +23,6 @@ $sql = "INSERT INTO repairs (category, itemname, make, model, age, cost, dof, oo
 
 $link->query($sql);
 $link->close();
-header("location: my-borrowed-items.php");
+header("location: my-repair-sessions.php");
 exit;
 ?>
