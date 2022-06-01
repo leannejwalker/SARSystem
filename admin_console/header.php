@@ -111,6 +111,7 @@ h1{
   text-align: left;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   color: #F36F21;
+  font-size: 14px;
 }
 </style>
 </head>
