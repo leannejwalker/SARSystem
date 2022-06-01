@@ -68,20 +68,23 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
                             if($count == 1) 
                             {
-                                if ($access_id == 2)
+                                if (isset($admin_id))
                                 {
                                     $_SESSION['username'] = $username;
                                     header("location: /admin_console/account.php");
+                                    exit;
                                 }
                                 else if ($admin_id == 1)
                                 {
                                     $_SESSION['username'] = $username;
                                     header("location: /volunteer_network/accounts.php");
+                                    exit;
                                 }
                                 else
                                 {
                                     $_SESSION['username'] = $username;
                                     header("location: accounts.php");
+                                    exit;
                                 }
                             }
                             
