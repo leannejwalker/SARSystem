@@ -73,7 +73,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                                     $_SESSION['username'] = $username;
                                     header("location: /admin_console/account.php");
                                 }
-                                else if ($admin == 1)
+                                else if ($admin_id == 1)
                                 {
                                     $_SESSION['username'] = $username;
                                     header("location: /volunteer_network/accounts.php");
