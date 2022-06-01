@@ -55,6 +55,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     mysqli_stmt_bind_result($stmt, $id, $username, $hashed_password);
                     if(mysqli_stmt_fetch($stmt)){
                         if(password_verify($password, $hashed_password)){
+
                             // Password is correct, so start a new session
                             session_start();
                             
@@ -62,9 +63,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["loggedin"] = true;
                             $_SESSION["id"] = $id;
                             $_SESSION["username"] = $username;                            
-                            
+                                                        
                             // Redirect user to welcome page
                             header("location: account.php");
+
                         } else{
                             // Password is not valid, display a generic error message
                             $login_err = "Invalid username or password.";
@@ -93,13 +95,41 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-        body{ font: 14px sans-serif; }
-        .wrapper{ width: 360px; padding: 20px; }
+        body{
+            font: 14px sans-serif; 
+            background-image: url('img/background.jpg');
+            overflow: hidden;
+        }
+        .wrapper{
+            border: 0.5em solid #F36F21;
+            margin: 5em;
+            padding: 2em;
+            border-radius: 1em;
+            background: rgba(255, 255, 255, 0.9);
+            overflow: hidden;
+        }
+        .btn-primary {
+            color: #fff;
+            background-color: #F36F21;
+            border-color: #F36F21;
+        }
+        .btn-primary:hover{
+            color: #fff;
+            background-color: #3A3684;
+            border-color: #3A3684;
+        }
+        .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+            color: #fff;
+            background-color: #3A3684;
+            border-color: #3A3684;
+        }
     </style>
 </head>
 <body>
+<?php include "simple-header.php"?>
     <div class="wrapper">
         <h2>Login</h2>
         <p>Please fill in your credentials to login.</p>
@@ -120,6 +150,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <label>Password</label>
                 <input type="password" name="password" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>">
                 <span class="invalid-feedback"><?php echo $password_err; ?></span>
+            </div>
+            <div class="form-group">
+            <input type="checkbox" id="rememberme">Remember me for 7 days
             </div>
             <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Login">

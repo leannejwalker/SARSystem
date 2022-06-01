@@ -13,17 +13,21 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <script language="JavaScript" type="text/javascript" src="/js/jquery-3.6.0.js"></script>
   <head>
       <meta charset="UTF-8">
-      <title>Support - Share and Repair</title>
+      <title>My Borrowed Items - Share and Repair</title>
+      <link rel="icon" type="image/x-icon" href="img/favicon.ico">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <style>
-
+    body {
+    background-image: url('img/background.jpg');
+  }
   </style>
 
   <body>
   <?php include "header.php"?>
 
-    
+
+  
     <script>
 
     </script>
