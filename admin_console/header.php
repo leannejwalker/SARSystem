@@ -125,8 +125,10 @@ h1{
     <div class="subnav">
 		  <button class="subnavbtn"><i class="fa-solid fa-circle-user"></i> Users <i class="fa fa-caret-down"></i></button>
 			<div class="subnav-content">
-        <a href="allusers.php">All Users</a>
-				<a href="borrow-an-item.php">Add Users</a>
+        <a href="all-customers.php">All Customers</a>
+        <a href="all-repairers.php">All Repairers</a>
+        <a href="all-admins.php">All Administrators</a>
+				<a href="add-a-user.php">Add Users</a>
 			</div>
 		</div>
 

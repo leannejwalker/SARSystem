@@ -63,9 +63,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["loggedin"] = true;
                             $_SESSION["id"] = $id;
                             $_SESSION["username"] = $username;                            
-                                                        
+                            
+                            
+                            if($access_id="1"){
                             // Redirect user to welcome page
+                            header("location: /admin_console/account.php");
+                            }else{
                             header("location: account.php");
+                            }
 
                         } else{
                             // Password is not valid, display a generic error message

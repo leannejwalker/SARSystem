@@ -10,7 +10,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 require_once "config.php";
 
-$userid=$_SESSION['id'];
 $sql = ("SELECT * FROM users");
 $result = mysqli_query($link, $sql);
 $singleRow = mysqli_fetch_assoc($result);
@@ -24,7 +23,7 @@ $singleRow = mysqli_fetch_assoc($result);
 <script language="JavaScript" type="text/javascript" src="/js/jquery-3.6.0.js"></script>
 <head>
   <meta charset="UTF-8">
-  <title>My Repair Sessions - Share and Repair</title>
+  <title>All Users - Share and Repair</title>
   <link rel="icon" type="image/x-icon" href="img/favicon.ico">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -62,10 +61,10 @@ $singleRow = mysqli_fetch_assoc($result);
     <div class="main">
       <table>
         <tr>
-          <th>Item Name</th>
-          <th>Age</th>
-          <th>Details of Fault</th>
-          <th>Status</th>
+          <th>Username</th>
+          <th>Email Address</th>
+          <th>Phone Number</th>
+          <th></th>
         </tr>
         <?php
           foreach($result as $report) {
