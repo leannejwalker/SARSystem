@@ -120,14 +120,7 @@ h1{
 		<img href="https://shareandrepair.org.uk" src="/img/sar.png" alt="Share and Repair">
     <h1>Repair Network</h1>
 		<!--<a href="account.php">Account Details</a>-->
-		
-    <div class="subnav">
-		  <button class="subnavbtn"><i class="fa-solid fa-house"></i> Summary <i class="fa fa-caret-down"></i></button>
-			<div class="subnav-content">
-        <a href="my-borrowed-items.php">All Users</a>
-				<a href="borrow-an-item.php">Add Users</a>
-			</div>
-		</div>
+		<a href="summary.php"><i class="fa-solid fa-house"></i> Summary </a>
 
     <div class="subnav">
 		  <button class="subnavbtn"><i class="fa-solid fa-circle-user"></i> Users <i class="fa fa-caret-down"></i></button>
