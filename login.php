@@ -64,7 +64,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["username"] = $username;                            
                             
                             $sql = ("SELECT access_id FROM users");
-                            
+                            $access_id="access_id";
+
                             if($access_id==0){
                             // Redirect user to welcome page
                             header("location: account.php");
