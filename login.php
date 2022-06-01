@@ -65,7 +65,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             
                             $admin = $_POST['admin'];
 
-                            $sql = ("SELECT * FROM users WHERE access_id = '1'")
+                            $sql = ("SELECT * FROM users WHERE access_id = $access_id")
                             $count = mysqli_num_rows($sql)
 
                             if($count == 1) 
