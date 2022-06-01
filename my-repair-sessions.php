@@ -10,7 +10,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 require_once "config.php";
 
-$sql = ("SELECT users.id, repair.userid FROM users CROSS JOIN repairs ON users.id=repair.userid");
+$sql = ("SELECT users.id, repair.userid FROM users LEFT JOIN repairs ON users.id=repair.userid");
 $sql .= ("SELECT itemname, age, dof FROM repairs WHERE $userid='" . ($_SESSION['username']) . "'");
 
 mysqli_multi_query($link, $sql);
