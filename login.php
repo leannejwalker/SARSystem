@@ -68,8 +68,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $sql = ("SELECT * FROM users WHERE access_id = $access_id")
                             
                             if ($access_id == 1){
-
-                            if (isset($admin)){
+                                if (isset($admin)){
                                     $_SESSION['username'] = $user;
                                     header("location: admin_console/account.php");
                                     exit;
@@ -78,6 +77,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                                     header("location: account.php");
                                     exit;
                                 }
+                            }
 
                         } else{
                             // Password is not valid, display a generic error message
