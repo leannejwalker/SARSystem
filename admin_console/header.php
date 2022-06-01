@@ -107,11 +107,17 @@ img{
   display: flex;
   flex-direction: column;
 }
+h1{
+  text-align: left;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  color: #F36F21;
+}
 </style>
 </head>
 <body>
 <div class="navbar">
 		<img href="https://shareandrepair.org.uk" src="img/sar.png" alt="Share and Repair">
+    <h1>Repair Network</h1>
 		<!--<a href="account.php">Account Details</a>-->
 		
     <div class="subnav">
