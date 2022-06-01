@@ -125,7 +125,7 @@ h1{
     <div class="subnav">
 		  <button class="subnavbtn"><i class="fa-solid fa-circle-user"></i> Users <i class="fa fa-caret-down"></i></button>
 			<div class="subnav-content">
-        <a href="my-borrowed-items.php">All Users</a>
+        <a href="allusers.php">All Users</a>
 				<a href="borrow-an-item.php">Add Users</a>
 			</div>
 		</div>
