@@ -102,6 +102,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <option value="Yes, elsewhere">Yes, elsewhere</option>
         <option value="No">No</option>
       </select><br/>
+      <input type="text" name="userid" hidden readonly value=<?php echo $_SESSION['id'] ?>>
       <input type="submit" />
     </form>
   </div>
