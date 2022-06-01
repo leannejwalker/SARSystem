@@ -74,7 +74,7 @@ $singleRow = mysqli_fetch_assoc($result);
           <td><?php echo $report['username']; ?></td>
           <td><?php echo $report['email']; ?></td>
           <td><?php echo $report['phone']; ?></td>
-          <td><?//php echo $singleRow['status']; ?></td>
+          <td><a href="">More Details</a></td>
         </tr>
         <?php
           }
