@@ -74,7 +74,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <head>
       <meta charset="UTF-8">
       <title>Your Account - Share and Repair</title>
-      <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+      <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <script language="JavaScript" type="text/javascript" src="/js/jquery-3.6.0.js"></script>
     </head>
@@ -102,7 +102,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       background: rgba(255, 255, 255, 0.9);
     }
     body {
-        background-image: url('img/background.jpg');
+        background-image: url('/img/background.jpg');
     }
     h1{
         text-align: left;
