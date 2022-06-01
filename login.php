@@ -66,10 +66,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $admin = $_POST['admin'];
 
                             $sql = ("SELECT * FROM users WHERE access_id = $access_id")
-                            $count = mysqli_num_rows($sql)
-
-                            if($count == 1) 
-                            {
+                            
+                            ($access_id == 1)
+                            
                             if (isset($admin))
                                 {
                                     $_SESSION['username'] = $user;
