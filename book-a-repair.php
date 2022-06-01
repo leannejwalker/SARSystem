@@ -58,7 +58,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   <?php include "header.php"?>
   <div class="main">
     <form action="new_repair.php" method="post">
-      Item Category: <select id="category" name="category">
+      Item Category: <select id="category" name="category" required>
         <option>===SELECT AN OPTION===</option>
         <option value="aac">Art, Antiques and Collectables</option>
         <option value="faa">Fashion and Accessories</option>
@@ -68,10 +68,10 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <option value="oag">Outdoor and Garden</option>
         <option value="other">Other</option>
       </select><br/>
-      Item Name: <input type="text" name = "itemname" /><br/>
-      Make: <input type="text" name = "make" /><br/>
-      Model: <input type="text" name = "model" /><br/>
-      Age: <select id="age" name="age">
+      Item Name: <input type="text" name = "itemname" required/><br/>
+      Make: <input type="text" name = "make" required/><br/>
+      Model: <input type="text" name = "model" required/><br/>
+      Age: <select id="age" name="age" required>
         <option>===SELECT AN OPTION===</option>
         <option value="new">Under 1 year</option>
         <option value="young">Between 1-2 years</option>
@@ -80,7 +80,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <option value="older">Between 11-20 years</option>
         <option value="vold">Over 21 years</option>
       </select><br/>
-      Cost of Item: <select id="cost" name="cost">
+      Cost of Item: <select id="cost" name="cost" required>
         <option>===SELECT AN OPTION===</option>
         <option value="free">Under £5</option>
         <option value="cheap">Between £5-£10</option>
@@ -88,13 +88,13 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <option value="expensive">Between £50-£100</option>
         <option value="a lot">Over £100</option>
       </select><br/>
-      Details of fault: <input type="text" name = "dof" /><br/>
-      Is the item out of warranty?: <select id="oow" name="oow">
+      Details of fault: <input type="text" name = "dof" required/><br/>
+      Is the item out of warranty?: <select id="oow" name="oow" required>
         <option>===SELECT AN OPTION===</option>
         <option value="yes">Yes</option>
         <option value="no">No</option>
       </select><br/>
-      Has the item been repaired before?: <select id="prevrepair" name="prevrepair">
+      Has the item been repaired before?: <select id="prevrepair" name="prevrepair" required>
         <option>===SELECT AN OPTION===</option>
         <option value="yessar">Yes, with Share and Repair</option>
         <option value="yes">Yes, elsewhere</option>
