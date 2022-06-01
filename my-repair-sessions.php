@@ -14,6 +14,7 @@ $sql = ("SELECT * FROM users LEFT JOIN repairs ON users.id=repairs.userid WHERE 
 // $userid='". ($_SESSION['username']) . "'");
 $result = mysqli_query($link, $sql);
 $singleRow = mysqli_fetch_assoc($result);
+print_r($singleRow)
 
 ?>
 <!DOCTYPE html>
