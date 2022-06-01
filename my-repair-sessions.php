@@ -10,13 +10,12 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 require_once "config.php";
 
-$sql = $link->prepare("SELECT * FROM users LEFT JOIN repairs ON users.id=repairs.userid WHERE $userid=?");
-$sql->bind_param('s', $_SESSION["username"]);
-$sql->execute();
-$result = null;
-$singleRow = $sql->bind_result($result);
-$sql->fetch();
-print_r($result);
+$userid=$_SESSION['username'];
+$sql = ("SELECT * FROM users LEFT JOIN repairs ON users.id=repairs.userid WHERE users.id =".$userid."");
+$result = mysqli_query($link, $sql);
+$singleRow = mysqli_fetch_assoc($result);
+print_r($singleRow)
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
