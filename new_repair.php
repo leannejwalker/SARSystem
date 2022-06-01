@@ -17,7 +17,7 @@ $cost = $link->real_escape_string($_POST['cost']);
 $dof = $link->real_escape_string($_POST['dof']);
 $oow = $link->real_escape_string($_POST['oow']);
 $prevrepair = $link->real_escape_string($_POST['prevrepair']);
-$userid = $_SESSION['id'];
+$userid = $link->real_escape_string($_POST['userid']);
 
 $sql = "INSERT INTO repairs (category, itemname, make, model, age, cost, dof, oow, prevrepair, userid)
             VALUES ('$category','$itemname','$make','$model','$age','$cost','$dof','$oow','$prevrepair','$userid')";
