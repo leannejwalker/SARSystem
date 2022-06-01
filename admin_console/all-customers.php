@@ -10,7 +10,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 require_once "config.php";
 
-$sql = ("SELECT * FROM users");
+$sql = ("SELECT * FROM users WHERE access_id=0");
 $result = mysqli_query($link, $sql);
 $singleRow = mysqli_fetch_assoc($result);
 // print_r($singleRow);
