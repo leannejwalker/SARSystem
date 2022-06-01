@@ -8,20 +8,20 @@ $database = "brobdingnagian_co_uk_";
 
 $mysqli = new mysqli("localhost:3306", $username, $password, $database);*/
 
-$category = $link->($_POST['category']);
-$itemname = $link->($_POST['itemname']);
-$make = $link->($_POST['make']);
-$model = $link->($_POST['model']);
-$age = $link->($_POST['age']);
-$cost = $link->($_POST['cost']);
-$dof = $link->($_POST['dof']);
-$oow = $link->($_POST['oow']);
-$prevrepair = $link->($_POST['prevrepair']);
+$category = $link->real_escape_string($_POST['category']);
+$itemname = $link->real_escape_string($_POST['itemname']);
+$make = $link->real_escape_string($_POST['make']);
+$model = $link->real_escape_string($_POST['model']);
+$age = $link->real_escape_string($_POST['age']);
+$cost = $link->real_escape_string($_POST['cost']);
+$dof = $link->real_escape_string($_POST['dof']);
+$oow = $link->real_escape_string($_POST['oow']);
+$prevrepair = $link->real_escape_string($_POST['prevrepair']);
 
-$link = "INSERT INTO repairs (category, itemname, make, model, age, cost, dof, oow, prevrepair)
+$sql = "INSERT INTO repairs (category, itemname, make, model, age, cost, dof, oow, prevrepair)
             VALUES ('{$category}','{$itemname}','{$make}','{$model}','{$age}','{$cost}','{$dof}','{$oow}','{$prevrepair}')";
 
-$link->query($query);
+$link->query($sql);
 $link->close();
 header("location: my-borrowed-items.php");
 exit;
