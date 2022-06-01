@@ -64,11 +64,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["username"] = $username;                            
                             
                             $sql = ("SELECT access_id FROM users");
-                            if($access_id='1'){
+                            if($access_id=0){
                             // Redirect user to welcome page
-                            header("location: /admin_console/account.php");
-                            }else{
                             header("location: account.php");
+                            }else{
+                            header("location: /admin_console/account.php");
                             }
 
                         } else{
