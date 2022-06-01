@@ -122,6 +122,14 @@ h1{
 		<!--<a href="account.php">Account Details</a>-->
 		
     <div class="subnav">
+		  <button class="subnavbtn"><i class="fa-solid fa-circle-user"></i> Users <i class="fa fa-caret-down"></i></button>
+			<div class="subnav-content">
+        <a href="my-borrowed-items.php">All Users</a>
+				<a href="borrow-an-item.php">Add Users</a>
+			</div>
+		</div>
+
+    <div class="subnav">
 		  <button class="subnavbtn"><i class="fa-solid fa-handshake"></i> Borrow <i class="fa fa-caret-down"></i></button>
 			<div class="subnav-content">
         <a href="my-borrowed-items.php">My Borrowed Items</a>
