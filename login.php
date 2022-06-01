@@ -63,7 +63,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["id"] = $id;
                             $_SESSION["username"] = $username;                            
                             
-                            $sql = ("SELECT access_id FROM users");
+                            $sql = ("SELECT access_id FROM users WHERE username=$_SESSION['id']");
                             $access_id="access_id";
 
                             if($access_id==0){
