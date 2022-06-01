@@ -20,10 +20,11 @@ $prevrepair = $link->real_escape_string($_POST['prevrepair']);
 $userid = $_SESSION['id'];
 
 $sql = "INSERT INTO repairs (category, itemname, make, model, age, cost, dof, oow, prevrepair, userid)
-            VALUES ('{$category}','{$itemname}','{$make}','{$model}','{$age}','{$cost}','{$dof}','{$oow}','{$prevrepair}', '{$userid}')";
+            VALUES ('$category','$itemname','$make','$model','$age','$cost','$dof','$oow','$prevrepair','$userid')";
 
-$link->query($sql);
-$link->close();
-header("location: my-repair-sessions.php");
-exit;
+print_r($sql)
+// $link->query($sql);
+// $link->close();
+// header("location: my-repair-sessions.php");
+// exit;
 ?>
