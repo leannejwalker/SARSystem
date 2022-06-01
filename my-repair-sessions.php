@@ -65,12 +65,18 @@ print_r($singleRow)
           <th>Details of Fault</th>
           <th>Status</th>
         </tr>
+        <?php
+          foreach($result as $report) {
+        ?>
         <tr>
-          <td><?php echo $result['itemname']; ?></td>
-          <td><?php echo $result['age']; ?></td>
-          <td><?php echo $result['dof']; ?></td>
+          <td><?php echo $report['itemname']; ?></td>
+          <td><?php echo $report['age']; ?></td>
+          <td><?php echo $report['dof']; ?></td>
           <td><?//php echo $singleRow['status']; ?></td>
         </tr>
+        <?php
+          }
+        ?>
       </table>
     </div>
 </body>
