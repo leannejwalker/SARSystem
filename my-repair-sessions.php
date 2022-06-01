@@ -10,7 +10,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 require_once "config.php";
 
-$userid=$_SESSION['username'];
+$userid=$_SESSION['id'];
 $sql = ("SELECT * FROM users LEFT JOIN repairs ON users.id=repairs.userid WHERE users.id =".$userid."");
 $result = mysqli_query($link, $sql);
 $singleRow = mysqli_fetch_assoc($result);
