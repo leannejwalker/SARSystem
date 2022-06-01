@@ -61,23 +61,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             // Store data in session variables
                             $_SESSION["loggedin"] = true;
                             $_SESSION["id"] = $id;
-                            $_SESSION["username"] = $username;                            
-                            
-                            $admin = $_POST['admin'];
-
-                            $sql = ("SELECT * FROM users WHERE access_id = $access_id")
-                            
-                            if ($access_id == 1){
-                                if (isset($admin)){
-                                    $_SESSION['username'] = $user;
-                                    header("location: admin_console/account.php");
-                                    exit;
-                                } else {
-                                    $_SESSION['username'] = $user;
-                                    header("location: account.php");
-                                    exit;
-                                }
-                            }
+                            $_SESSION["username"] = $username;
 
                         } else{
                             // Password is not valid, display a generic error message
