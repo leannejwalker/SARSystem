@@ -116,7 +116,7 @@ h1{
 </head>
 <body>
 <div class="navbar">
-		<img href="https://shareandrepair.org.uk" src="img/sar.png" alt="Share and Repair">
+		<img href="https://shareandrepair.org.uk" src="/img/sar.png" alt="Share and Repair">
     <h1>Repair Network</h1>
 		<!--<a href="account.php">Account Details</a>-->
 		
