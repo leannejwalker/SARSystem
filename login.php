@@ -72,11 +72,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                                 }
                                 elseif ($_SESSION['access_id'] != 1)
                                 {
-                                    header("location: /volunteer_network/accounts.php");
+                                    header("location: /volunteer_network/account.php");
                                 }
-                                else ($_SESSION['access_id'] != 0)
+                                elseif ($_SESSION['access_id'] != 0)
                                 {
-                                    header("location: /customers/accounts.php");
+                                    header("location: /customers/account.php");
                                     exit;
                                 }
                             
