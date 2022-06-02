@@ -64,7 +64,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["username"] = $username;
 
                             $sql = ("SELECT access_id FROM users WHERE username = ".$username." AND access_id=".$access_id."");
-                            $count = mysqli_num_rows($sql);
 
                                 if ($_SESSION['access_id'] != 2)
                                 {
