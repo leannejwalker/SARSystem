@@ -78,16 +78,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                                     header("location: /customers/account.php");
                                     exit;
                                 }
-                            
-                            $access_id="access_id";
-
-                            if($access_id==0){
-                            // Redirect user to welcome page
-                            header("location: account.php");
-                            }else{
-                            header("location: /admin_console/account.php");
-                            }
-
                         } else{
                             // Password is not valid, display a generic error message
                             $login_err = "Invalid username or password.";
