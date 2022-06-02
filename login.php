@@ -63,7 +63,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["id"] = $id;
                             $_SESSION["username"] = $username;
 
-                            $sql = ("SELECT access_id FROM users WHERE access_id=".$access_id."");
+                            $sql = ("SELECT access_id FROM users WHERE  username = ".$USERNAME." AND access_id=".$access_id."");
                             $count = mysqli_num_rows($sql);
 
                                 if ($_SESSION['access_id'] != 2)
@@ -78,7 +78,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                                     header("location: /volunteer_network/accounts.php");
                                     exit;
                                 }
-                                else
+                                if ($_SESSION['access_id'] != 0)
                                 {
                                     $_SESSION['username'] = $username;
                                     header("location: accounts.php");
