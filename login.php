@@ -78,7 +78,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                                 }
                                 if ($_SESSION['access_id'] != 0)
                                 {
-                                    header("location: accounts.php");
+                                    header("location: /customers/accounts.php");
                                     exit;
                                 }
                             
