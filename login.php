@@ -63,12 +63,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["id"] = $id;
                             $_SESSION["username"] = $username;
 
-                            $sql = ("SELECT access_id FROM users WHERE username=$usename AND access_id=$access_id");
+                            $sql = ("SELECT access_id FROM users WHERE access_id=".$access_id."");
                             $count = mysqli_num_rows($sql);
 
                             if($count == 1) 
                             {
-                                if (isset($admin_id))
+                                if (!isset($admin_id))
                                 {
                                     $_SESSION['username'] = $username;
                                     header("location: /admin_console/account.php");
