@@ -60,7 +60,11 @@ $singleRow = mysqli_fetch_assoc($result);
       background-color: #5cb85c;
       color: white;
     }
-
+    a#myBtn{
+      color: -webkit-link;
+      cursor: pointer;
+      text-decoration: underline;
+    }
     /* Modal Body */
     .modal-body {padding: 2px 16px;}
 
@@ -107,7 +111,7 @@ $singleRow = mysqli_fetch_assoc($result);
           <td><?php echo $report['username']; ?></td>
           <td><?php echo $report['email']; ?></td>
           <td><?php echo $report['phone']; ?></td>
-          <td><a href="./" id="myBtn" >More Details</a></td>
+          <td><a id="myBtn" >More Details</a></td>
         </tr>
         <?php
           }
