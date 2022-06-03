@@ -154,7 +154,7 @@ h1{
 		  <button class="subnavbtn"><i class="fa-solid fa-wrench"></i> Repair <i class="fa fa-caret-down"></i></button>
 			<div class="subnav-content">
         <a href="/underconstruction/index.html">Today's Repair Sessions</a>
-			  <a href="/underconstruction/index.html">All Repair Sessions</a>
+			  <a href="all-repair-sessions.php">All Repair Sessions</a>
         <a href="/underconstruction/index.html">Create a Repair Session</a>
 		  </div>
 		</div>
