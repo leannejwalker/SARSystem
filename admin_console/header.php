@@ -128,43 +128,43 @@ h1{
         <a href="all-customers.php">All Customers</a>
         <a href="all-repairers.php">All Repairers</a>
         <a href="all-admins.php">All Administrators</a>
-				<a href="add-a-user.php">Add Users</a>
+				<a href="/underconstruction/index.html">Add Users</a>
 			</div>
 		</div>
 
     <div class="subnav">
 		  <button class="subnavbtn"><i class="fa-solid fa-handshake"></i> Borrow <i class="fa fa-caret-down"></i></button>
 			<div class="subnav-content">
-        <a href="my-borrowed-items.php">All Borrowed Items</a>
-				<a href="borrow-an-item.php">Currently Borrowed Items</a>
-				<a href="borrow-an-item.php">Create a Borrow</a>
+        <a href="/underconstruction/index.html">All Borrowed Items</a>
+				<a href="/underconstruction/index.html">Currently Borrowed Items</a>
+				<a href="/underconstruction/index.html">Create a Borrow</a>
 			</div>
 		</div>
 
     <div class="subnav">
 		  <button class="subnavbtn"><i class="fa-solid fa-books"></i> Library of Things <i class="fa fa-caret-down"></i></button>
 			<div class="subnav-content">
-        <a href="my-borrowed-items.php">All Library of Things Items</a>
-				<a href="borrow-an-item.php">Manage Library of Things Items</a>
-				<a href="borrow-an-item.php">Create Library of Things Item</a>
+        <a href="/underconstruction/index.html">All Library of Things Items</a>
+				<a href="/underconstruction/index.html">Manage Library of Things Items</a>
+				<a href="/underconstruction/index.html">Create Library of Things Item</a>
 			</div>
 		</div>
     
     <div class="subnav">
 		  <button class="subnavbtn"><i class="fa-solid fa-wrench"></i> Repair <i class="fa fa-caret-down"></i></button>
 			<div class="subnav-content">
-        <a href="book-a-repair.php">Today's Repair Sessions</a>
-			  <a href="my-repair-sessions.php">All Repair Sessions</a>
-        <a href="my-repair-sessions.php">Create a Repair Session</a>
+        <a href="/underconstruction/index.html">Today's Repair Sessions</a>
+			  <a href="/underconstruction/index.html">All Repair Sessions</a>
+        <a href="/underconstruction/index.html">Create a Repair Session</a>
 		  </div>
 		</div>
     
     <div class="subnav">
 		  <button class="subnavbtn"><i class="fa-solid fa-chalkboard-user"></i> How To <i class="fa fa-caret-down"></i></button>
 			<div class="subnav-content">
-				<a href="my-booked-howto.php">All How To Sessions</a>
-        <a href="book-a-howto.php">Reserve a How To Session</a>
-				<a href="book-a-howto.php">Create a How To Session</a>
+				<a href="/underconstruction/index.html">All How To Sessions</a>
+        <a href="/underconstruction/index.html">Reserve a How To Session</a>
+				<a href="/underconstruction/index.html">Create a How To Session</a>
 
 			</div>
 		</div>
