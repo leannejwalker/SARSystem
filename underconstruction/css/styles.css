@@ -21,7 +21,7 @@ p{
 	text-align: center;
 	font-size: 21px;
 }
-#button{
+input#button{
 	width: 50%;
 	float:none;
 	color: #fff;
