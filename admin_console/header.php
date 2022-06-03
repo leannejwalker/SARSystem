@@ -135,32 +135,37 @@ h1{
     <div class="subnav">
 		  <button class="subnavbtn"><i class="fa-solid fa-handshake"></i> Borrow <i class="fa fa-caret-down"></i></button>
 			<div class="subnav-content">
-        <a href="my-borrowed-items.php">My Borrowed Items</a>
-				<a href="borrow-an-item.php">Borrow an Item</a>
+        <a href="my-borrowed-items.php">All Borrowed Items</a>
+				<a href="borrow-an-item.php">Currently Borrowed Items</a>
+				<a href="borrow-an-item.php">Create a Borrow</a>
+			</div>
+		</div>
+
+    <div class="subnav">
+		  <button class="subnavbtn"><i class="fa-solid fa-books"></i> Library of Things <i class="fa fa-caret-down"></i></button>
+			<div class="subnav-content">
+        <a href="my-borrowed-items.php">All Library of Things Items</a>
+				<a href="borrow-an-item.php">Manage Library of Things Items</a>
+				<a href="borrow-an-item.php">Create Library of Things Item</a>
 			</div>
 		</div>
     
     <div class="subnav">
 		  <button class="subnavbtn"><i class="fa-solid fa-wrench"></i> Repair <i class="fa fa-caret-down"></i></button>
 			<div class="subnav-content">
-				<a href="my-repair-sessions.php">My Repair Sessions</a>
-				<a href="book-a-repair.php">Book a Repair Session</a>
+        <a href="book-a-repair.php">Today's Repair Sessions</a>
+			  <a href="my-repair-sessions.php">All Repair Sessions</a>
+        <a href="my-repair-sessions.php">Create a Repair Session</a>
 		  </div>
 		</div>
     
     <div class="subnav">
 		  <button class="subnavbtn"><i class="fa-solid fa-chalkboard-user"></i> How To <i class="fa fa-caret-down"></i></button>
 			<div class="subnav-content">
-				<a href="my-booked-howto.php">My Booked HowTos Sessions</a>
-				<a href="book-a-howto.php">Book a HowTo Session</a>
-			</div>
-		</div>
+				<a href="my-booked-howto.php">All How To Sessions</a>
+        <a href="book-a-howto.php">Reserve a How To Session</a>
+				<a href="book-a-howto.php">Create a How To Session</a>
 
-    <div class="subnav">
-		  <button class="subnavbtn"><i class="fa-solid fa-circle-info"></i> Help <i class="fa fa-caret-down"></i></button>
-			<div class="subnav-content">
-        <a href="faq.php">FAQ</a>
-				<a href="support.php">Contact Support</a>
 			</div>
 		</div>
 
