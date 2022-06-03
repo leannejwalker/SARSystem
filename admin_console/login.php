@@ -1,11 +1,11 @@
 <?php
 // Initialize the session
 session_start();
-
+ 
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
     header("location: account.php");
 }
- 
+
 // Check if the user is already logged in, if yes then redirect him to welcome page
 /*$sql = ("SELECT access_id FROM users WHERE username = ".$username." AND access_id=".$access_id."");
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
