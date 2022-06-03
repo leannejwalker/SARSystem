@@ -182,5 +182,14 @@ h1{
 	display: flex;
 	justify-content: space-evenly;
 }
+button{
+	width: 50%;
+	float:none;
+	color: #fff;
+	background-color: #F36F21;
+	border-color: #F36F21;
+	border-radius: 12px;
+	text-align: center;
+}
 	
 }
