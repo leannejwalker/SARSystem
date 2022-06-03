@@ -13,9 +13,9 @@ require_once "config.php";
 $sql = ("SELECT * FROM repairs LEFT JOIN users ON repairs.userid=users.id");
 $result = mysqli_query($link, $sql);
 $singleRow = mysqli_fetch_assoc($result);
-print_r($singleRow);
-print_r($result);
-print_r($userid);
+//print_r($singleRow);
+//print_r($result);
+//print_r($userid);
 
 ?>
 <!DOCTYPE html>
@@ -61,6 +61,7 @@ print_r($userid);
     <div class="main">
       <table>
         <tr>
+          <th>Username</th>
           <th>Item Name</th>
           <th>Age</th>
           <th>Details of Fault</th>
