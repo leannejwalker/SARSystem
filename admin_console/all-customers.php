@@ -111,7 +111,7 @@ $singleRow = mysqli_fetch_assoc($result);
           <td><?php echo $report['username']; ?></td>
           <td><?php echo $report['email']; ?></td>
           <td><?php echo $report['phone']; ?></td>
-          <td><a id="myBtn" >More Details</a></td>
+          <td><a type="button" id="myBtn" >More Details</a></td>
         </tr>
         <?php
           }
