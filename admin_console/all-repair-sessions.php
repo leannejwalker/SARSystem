@@ -10,12 +10,12 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 require_once "config.php";
 
-$sql = ("SELECT * FROM repairs");
+$sql = ("SELECT * FROM repairs LEFT JOIN users ON repairs.userid=users.id");
 $result = mysqli_query($link, $sql);
 $singleRow = mysqli_fetch_assoc($result);
-// print_r($singleRow);
-// print_r($result);
-// print_r($userid);
+print_r($singleRow);
+print_r($result);
+print_r($userid);
 
 ?>
 <!DOCTYPE html>
@@ -70,6 +70,7 @@ $singleRow = mysqli_fetch_assoc($result);
           foreach($result as $report) {
         ?>
         <tr>
+          <td><?php echo $report['username']; ?></td>
           <td><?php echo $report['itemname']; ?></td>
           <td><?php echo $report['age']; ?></td>
           <td><?php echo $report['dof']; ?></td>
