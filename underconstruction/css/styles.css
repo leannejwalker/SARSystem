@@ -182,7 +182,7 @@ h1{
 	display: flex;
 	justify-content: space-evenly;
 }
-button{
+.button{
 	width: 50%;
 	float:none;
 	color: #fff;
