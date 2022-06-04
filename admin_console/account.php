@@ -68,8 +68,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Close connection
     mysqli_close($link);
 }
-$sql = ("SELECT access_id FROM users WHERE username = ".$username." AND access_id=".$access_id."");
-print_r($access_id)
+
+print_r($username)
+print_r($id)
 ?>
 <!DOCTYPE html>
 <html lang="en">
