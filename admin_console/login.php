@@ -5,7 +5,8 @@ session_start();
 // Include config file
 require_once "config.php";
  
-if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+//isset($_SESSION["loggedin"]) && 
+if($_SESSION["loggedin"] === true){
     header("location: account.php");
 }
  
