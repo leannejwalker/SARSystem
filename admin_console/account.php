@@ -10,6 +10,12 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 // Include config file
 require_once "config.php";
+
+$sql = ("SELECT * FROM users");
+$result = mysqli_query($link, $sql);
+$singleRow = mysqli_fetch_assoc($result);
+print_r($username);
+print_r($id);
  
 // Define variables and initialize with empty values
 $new_password = $confirm_password = "";
@@ -68,9 +74,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Close connection
     mysqli_close($link);
 }
-
-print_r($username)
-print_r($id)
 ?>
 <!DOCTYPE html>
 <html lang="en">
