@@ -7,8 +7,6 @@ require_once "config.php";
  
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
     header("location: account.php");
-    print_r($username)
-    print_r($id)
     exit;
 }
  
@@ -59,6 +57,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
                             // Password is correct, so start a new session
                             session_start();
+
+                            print_r($username)
+                            print_r($id)
                             
                             // Store data in session variables
                             $_SESSION["loggedin"] = true;
