@@ -2,29 +2,12 @@
 // Initialize the session
 session_start();
 
+// Include config file
+require_once "config.php";
+ 
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
     header("location: account.php");
 }
- 
-// Check if the user is already logged in, if yes then redirect him to welcome page
-/*$sql = ("SELECT access_id FROM users WHERE username = ".$username." AND access_id=".$access_id."");
-if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-    if ($_SESSION['access_id'] != 2)
-    {
-        header("location: /admin_console/account.php");
-    }
-    elseif ($_SESSION['access_id'] != 1)
-    {
-        header("location: /volunteer_network/account.php");
-    }
-    elseif ($_SESSION['access_id'] != 0)
-    {
-        header("location: /customers/account.php");
-    exit;
-    }
-}*/
-// Include config file
-require_once "config.php";
  
 // Define variables and initialize with empty values
 $username = $password = "";
