@@ -1,15 +1,13 @@
 <?php
 // Initialize the session
 session_start();
- 
-// Check if the user is already logged in, if yes then redirect him to welcome page
-if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-    header("location: account.php");
-    exit;
-}
- 
+
 // Include config file
 require_once "config.php";
+ 
+if(!isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+    header("location: account.php");
+}
  
 // Define variables and initialize with empty values
 $username = $password = "";
@@ -62,10 +60,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             // Store data in session variables
                             $_SESSION["loggedin"] = true;
                             $_SESSION["id"] = $id;
-                            $_SESSION["username"] = $username;                            
-                                                        
-                            // Redirect user to welcome page
-                            header("location: account.php");
+                            $_SESSION["username"] = $username;
 
                         } else{
                             // Password is not valid, display a generic error message
@@ -95,8 +90,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body{
             font: 14px sans-serif; 
@@ -104,13 +99,27 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             overflow: hidden;
         }
         .wrapper{
-            border: 0.1em solid #ffffff;
+            border: 0.5em solid #F36F21;
             margin: 5em;
-            padding-bottom: 3em;
-            padding-left: 5em;
+            padding: 2em;
             border-radius: 1em;
-            background: rgba(255, 255, 255, 0.7);
+            background: rgba(255, 255, 255, 0.9);
             overflow: hidden;
+        }
+        .btn-primary {
+            color: #fff;
+            background-color: #F36F21;
+            border-color: #F36F21;
+        }
+        .btn-primary:hover{
+            color: #fff;
+            background-color: #3A3684;
+            border-color: #3A3684;
+        }
+        .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+            color: #fff;
+            background-color: #3A3684;
+            border-color: #3A3684;
         }
     </style>
 </head>
