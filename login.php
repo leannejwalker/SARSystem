@@ -7,7 +7,7 @@ require_once "config.php";
  
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
     header("location: account.php");
-    die();
+    exit;
 }
  
 // Define variables and initialize with empty values
