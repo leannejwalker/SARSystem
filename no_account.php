@@ -5,16 +5,11 @@ session_start();
 // Check if the user is logged in, if not then redirect him to login page
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     header("location: login.php");
+    exit;
 }
 
 // Include config file
 require_once "config.php";
-
-$sql = ("SELECT * FROM users");
-$result = mysqli_query($link, $sql);
-$singleRow = mysqli_fetch_assoc($result);
-print_r($username);
-print_r($id);
  
 // Define variables and initialize with empty values
 $new_password = $confirm_password = "";
@@ -26,16 +21,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validate new password
     if(empty(trim($_POST["new_password"]))){
         $new_password_err = "Please enter the new password.";     
-    } elseif(strlen(trim($_POST["new_password"])) < 6){
-        $new_password_err = "Password must have atleast 6 characters.";
-    } else{
-        $new_password = trim($_POST["new_password"]);
+        } elseif(strlen(trim($_POST["new_password"])) < 6){
+            $new_password_err = "Password must have atleast 6 characters.";
+        } else{
+            $new_password = trim($_POST["new_password"]);
     }
     
     // Validate confirm password
     if(empty(trim($_POST["confirm_password"]))){
         $confirm_password_err = "Please confirm the password.";
-    } else{
+     } else{
         $confirm_password = trim($_POST["confirm_password"]);
         if(empty($new_password_err) && ($new_password != $confirm_password)){
             $confirm_password_err = "Password did not match.";
@@ -79,7 +74,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <head>
       <meta charset="UTF-8">
       <title>Your Account - Share and Repair</title>
-      <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+      <link rel="icon" type="image/x-icon" href="img/favicon.ico">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <script language="JavaScript" type="text/javascript" src="/js/jquery-3.6.0.js"></script>
     </head>
@@ -107,7 +102,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       background: rgba(255, 255, 255, 0.9);
     }
     body {
-        background-image: url('/img/background.jpg');
+        background-image: url('img/background.jpg');
     }
     h1{
         text-align: left;
