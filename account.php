@@ -136,14 +136,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 ?>
                 <div class="form-group">
                     <br><label>First Name</label><br>
-                    <input type="text" name="email" class="form-control" value="<?php echo $report['fname']; ?>">
+                    <input type="text" name="fname" class="form-control" value="<?php echo $report['fname']; ?>">
                 </div>
                 <div class="form-group">
                     <br><label>Last Name</label><br>
-                    <input type="text" name="email" class="form-control" value="<?php echo $report['lname']; ?>">
+                    <input type="text" name="lname" class="form-control" value="<?php echo $report['lname']; ?>">
                 </div>
                 <div class="form-group">
-                    <label>Username</label><br>
+                    <br><label>Username</label><br>
                     <input type="text" name="username" class="form-control" value="<?php echo $report['username']; ?>" style="background-color: grey; opacity: 0.4;" readonly>
                 </div>
                 <div class="form-group">
@@ -152,7 +152,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 </div>
                 <div class="form-group">
                     <br><label>Telephone or Mobile number</label><br>
-                    <input type="text" name="email" class="form-control" value="<?php echo $report['phone']; ?>">
+                    <input type="text" name="phone" class="form-control" value="<?php echo $report['phone']; ?>">
                 </div>
                 <?php
                     }
