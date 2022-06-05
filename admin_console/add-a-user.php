@@ -66,7 +66,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
       <a style="color:red;">*</a>Telephone or Mobile number: <input type="text" name="tel" required><br/>
     
       <br/>
-      <a style="color:red;">*</a>Required Access Type: <select id="access" name="access" onchange="yesnoCheck(this);" required>
+      <a style="color:red;">*</a>Required Access Type: <select id="access" name="access" onchange="yesnoCheck(this)" required>
         <option>===SELECT AN OPTION===</option>
         <option id="admin" value="admin">Administrator</option>
         <option id="repairer" value="repairer">Repairer</option>
