@@ -30,6 +30,7 @@ $singleRow = mysqli_fetch_assoc($result);
 <style>
   body {
     background-image: url('img/background.jpg');
+    overflow: auto;
   }
   .main{
     border: 0.1em solid #ffffff;
@@ -102,9 +103,9 @@ $singleRow = mysqli_fetch_assoc($result);
     cursor: pointer;
   }
 
-  body.modal-content {
+  /* body.modal-content {
   overflow-y: hidden;
-  }
+  } */
 
   img{
     float: left;
