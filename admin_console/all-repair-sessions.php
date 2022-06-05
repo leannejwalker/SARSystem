@@ -87,7 +87,6 @@ $singleRow = mysqli_fetch_assoc($result);
           <td><?php echo $report['itemname']; ?></td>
           <td><?php echo $report['age']; ?></td>
           <td><?php echo $report['dof']; ?></td>
-          <td><?//php echo $singleRow['status']; ?></td>
         </tr>
         <?php
           }
