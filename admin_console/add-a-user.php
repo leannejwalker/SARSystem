@@ -66,11 +66,11 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
       <a style="color:red;">*</a>Telephone or Mobile number: <input type="text" name="tel" pattern="[+ 0-9]{11}" required><br/>
     
       <br/>
-      <a style="color:red;">*</a>Required Access Type: <select id="access" name="access" onchange="yesnoCheck(this)" required>
+      <a style="color:red;">*</a>Required Access Type: <select id="access_id" name="access" onchange="yesnoCheck(this)" required>
         <option>===SELECT AN OPTION===</option>
-        <option id="admin" value="admin">Administrator</option>
-        <option id="repairer" value="repairer">Repairer</option>
-        <option id="user" value="user">User</option>
+        <option id="admin" value="2">Administrator</option>
+        <option id="repairer" value="1">Repairer</option>
+        <option id="user" value="0">User</option>
       </select><br/>
       
         <div id="ifUser" style="display: none;">
