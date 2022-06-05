@@ -11,8 +11,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 require_once "config.php";
 
 $currentid=$_SESSION['id'];
-$sql = ("SELECT * FROM users WHERE id="$currentid"");
-$result = mysqli_query($link, $sql);
+$sql1 = ("SELECT * FROM users WHERE id="$currentid"");
+$result = mysqli_query($link, $sql1);
 $singleRow = mysqli_fetch_assoc($result);
  
 // Define variables and initialize with empty values
