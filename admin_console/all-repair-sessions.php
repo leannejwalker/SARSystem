@@ -59,6 +59,8 @@ $singleRow = mysqli_fetch_assoc($result);
 <body>
     <?php include "header.php"?>
     <div class="main">
+    <input type="text" id="search" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+      <table id="listrepairs">
       <table>
         <tr>
           <th>Username</th>
@@ -82,5 +84,25 @@ $singleRow = mysqli_fetch_assoc($result);
         ?>
       </table>
     </div>
+    <script>
+    function myFunction() {
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("search");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("listrepairs");
+      tr = table.getElementsByTagName("tr");
+      for (i = 0, 1, 2, 3; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0, 1, 2, 3];
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }       
+      }
+    }
+    </script>
 </body>
 </html>

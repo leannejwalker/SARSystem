@@ -98,8 +98,8 @@ $singleRow = mysqli_fetch_assoc($result);
       filter = input.value.toUpperCase();
       table = document.getElementById("custtable");
       tr = table.getElementsByTagName("tr");
-      for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td")[0];
+      for (i = 0, 1, 2; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0, 1, 2];
         if (td) {
           txtValue = td.textContent || td.innerText;
           if (txtValue.toUpperCase().indexOf(filter) > -1) {
