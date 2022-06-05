@@ -15,8 +15,8 @@ $email = $link->real_escape_string($_POST['email']);
 $phone = $link->real_escape_string($_POST['phone']);
 $access_id = $link->real_escape_string($_POST['access_id']);
 
-$sql = "INSERT INTO users (fname, lname, email, phone, access_id)
-            VALUES ('$fname','$lname','$email','$phone' '$access_id')";
+$sql = "INSERT INTO users (fname, lname, email, phone, access_id, username)
+            VALUES ('$fname','$lname','$email','$phone','$access_id','$username')";
 
 // print_r($sql)
 $link->query($sql);
