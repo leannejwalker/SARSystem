@@ -59,51 +59,24 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   <?php include "header.php"?>
   <div class="main">
     <form action="new_repair.php" method="post">
-    <a style="color:red;">*</a>Item Category: <select id="category" name="category" required>
+      <a style="color:red;">*</a>First Name:<input type="text" name = "fname" required/><br/>
+      <a style="color:red;">*</a>Last Name: <input type="text" name = "lname" required/><br/>
+      <a style="color:red;">*</a>Username: <select type="text" name="username" required><br/>
+      <a style="color:red;">*</a>Email Address: <input type="text" name = "email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required/><br/>
+      <a style="color:red;">*</a>Telephone or Mobile number: <select type="text" name="tel" required><br/>
+    
+      <br/>
+      <a style="color:red;">*</a>Required Access Type: <select id="access" name="access" required>
         <option>===SELECT AN OPTION===</option>
-        <option value="Art, Antiques and Collectables">Art, Antiques and Collectables</option>
-        <option value="Fashion and Accessories">Fashion and Accessories</option>
-        <option value="Electronics">Electronics</option>
-        <option value="Home Appliances">Home Appliances</option>
-        <option value="Toys and Games">Toys and Games</option>
-        <option value="Outdoor and Garden">Outdoor and Garden</option>
-        <option value="Other">Other</option>
+        <option value="admin">Administrator</option>
+        <option value="repairer">Repairer</option>
+        <option value="user">User</option>
       </select><br/>
-      <a style="color:red;">*</a>Item Name: <input type="text" name = "itemname" required/><br/>
-      <a style="color:red;">*</a>Make: <input type="text" name = "make" required/><br/>
-      <a style="color:red;">*</a>Model: <input type="text" name = "model" required/><br/>
-      <a style="color:red;">*</a>Age: <select id="age" name="age" required>
-        <option>===SELECT AN OPTION===</option>
-        <option value="Under 1 year">Under 1 year</option>
-        <option value="Between 1-2 years">Between 1-2 years</option>
-        <option value="Between 3-5 years">Between 3-5 years</option>
-        <option value="Between 6-10 years">Between 6-10 years</option>
-        <option value="Between 11-20 years">Between 11-20 years</option>
-        <option value="Over 21 years">Over 21 years</option>
-        <option value="I'd rather not say">I'd rather not say</option>
-      </select><br/>
-      <a style="color:red;">*</a>Cost of Item: <select id="cost" name="cost" required>
-        <option>===SELECT AN OPTION===</option>
-        <option value="Under £5">Under £5</option>
-        <option value="Between £5-£10">Between £5-£10</option>
-        <option value="Between £10-£50">Between £10-£50</option>
-        <option value="Between £50-£100">Between £50-£100</option>
-        <option value="Over £100">Over £100</option>
-        <option value="I'd rather not say">I'd rather not say</option>
-      </select><br/>
-      <a style="color:red;">*</a>Details of fault: <input type="text" name = "dof" required/><br/>
-      <a style="color:red;">*</a>Is the item out of warranty?: <select id="oow" name="oow" required>
+      <a style="color:red;">*</a>Are they a Member?: <select id="member" name="member" required>
         <option>===SELECT AN OPTION===</option>
         <option value="Yes">Yes</option>
         <option value="No">No</option>
       </select><br/>
-      <a style="color:red;">*</a>Has the item been repaired before?: <select id="prevrepair" name="prevrepair" required>
-        <option>===SELECT AN OPTION===</option>
-        <option value="Yes, with Share and Repair">Yes, with Share and Repair</option>
-        <option value="Yes, elsewhere">Yes, elsewhere</option>
-        <option value="No">No</option>
-      </select><br/>
-      <input style="display: none;" type="text" name="userid" hidden readonly value=<?php echo $_SESSION['id'] ?>>
       <input type="submit" />
     </form>
   </div>
