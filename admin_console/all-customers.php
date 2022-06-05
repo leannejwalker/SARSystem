@@ -121,7 +121,7 @@ $singleRow = mysqli_fetch_assoc($result);
           <td><?php echo $report['fname']; ?></td>
           <td><?php echo $report['lname']; ?></td>
           <td><?php echo $report['username']; ?></td><!--Access type later on when merge-->
-          <td><button id="moredetails">Open Modal</button></td>
+          <td><button id="moredetails">More Details</button></td>
         </tr>
         <?php
           }
@@ -131,7 +131,7 @@ $singleRow = mysqli_fetch_assoc($result);
 
     <div id="detailsmodal" class="modal">
       <div class="modal-content">
-        <span class="close">&times;</span>
+        <?php include "simple-modal-header.php"?>
         <p>Some text in the Modal..</p>
       </div>
     </div>
@@ -155,7 +155,7 @@ $singleRow = mysqli_fetch_assoc($result);
           }       
         }
       }
-          // Get the modal
+      // Get the modal
       var modal = document.getElementById("detailsmodal");
 
       // Get the button that opens the modal
