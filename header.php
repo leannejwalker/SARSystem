@@ -147,10 +147,10 @@ img{
 		</div>
 
     <?php
-      foreach($result as $report) {
+      foreach($result as $printresult) {
     ?>
     <div class="subnav" id="user">
-      <button class="subnavbtn"><?php echo $report['fname']; ?> <?php echo $report['lname']; ?> <i class="fa-solid fa-circle-user"></i></button>
+      <button class="subnavbtn"><?php echo $printresult['fname']; ?> <?php echo $printresult['lname']; ?> <i class="fa-solid fa-circle-user"></i></button>
 			<div class="subnav-content" id="user">
         <a href="account.php">Account Details</a>
 				<a href="logout.php">Log Out</a>
