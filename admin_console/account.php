@@ -5,17 +5,15 @@ session_start();
 // Check if the user is logged in, if not then redirect him to login page
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     header("location: login.php");
-    exit;
 }
 
 // Include config file
 require_once "config.php";
 
-$sql = ("SELECT * FROM users");
-$result = mysqli_query($link, $sql);
+$currentid=$_SESSION['id'];
+$sql1 = ("SELECT * FROM users WHERE id=".$currentid."");
+$result = mysqli_query($link, $sql1);
 $singleRow = mysqli_fetch_assoc($result);
-print_r($username);
-print_r($id);
  
 // Define variables and initialize with empty values
 $new_password = $confirm_password = "";
@@ -132,14 +130,34 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <div class="main" id="orange">
             <div> 
                 <h3>Account Overview</h3>
+
+                <?php
+                    foreach($result as $report) {
+                ?>
                 <div class="form-group">
-                    <label>Username</label><br>
-                    <input type="text" name="username" class="form-control" value="<?=$_SESSION['username']?>">
+                    <br><label>First Name</label><br>
+                    <input type="text" name="fname" class="form-control" value="<?php echo $report['fname']; ?>">
+                </div>
+                <div class="form-group">
+                    <br><label>Last Name</label><br>
+                    <input type="text" name="lname" class="form-control" value="<?php echo $report['lname']; ?>">
+                </div>
+                <div class="form-group">
+                    <br><label>Username</label><br>
+                    <input type="text" name="username" class="form-control" value="<?php echo $report['username']; ?>" style="background-color: grey; opacity: 0.4;" readonly>
                 </div>
                 <div class="form-group">
                     <br><label>Email</label><br>
-                    <input type="text" name="email" class="form-control" value="<?=$_SESSION['email']?>">
+                    <input type="text" name="email" class="form-control" value="<?php echo $report['email']; ?>">
                 </div>
+                <div class="form-group">
+                    <br><label>Telephone or Mobile number</label><br>
+                    <input type="text" name="phone" class="form-control" value="<?php echo $report['phone']; ?>">
+                </div>
+                <?php
+                    }
+                ?>
+
                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                     <div class="form-group">
                         <br><label>New Password</label><br>
@@ -156,6 +174,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         <a class="btn btn-link ml-2" href="account.php">Cancel</a>
                     </div>
                 </form>
+
+
             </div>
         </div>
         <div class="main" id="purple">
