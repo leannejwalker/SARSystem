@@ -74,7 +74,7 @@ $singleRow = mysqli_fetch_assoc($result);
         <tr>
           <th>First Name</th>
           <th>Last Name</th>
-          <th>Username</th>
+          <th>Username</th><!--Access type later on when merge-->
           <th></th>
         </tr>
         <?php
@@ -83,7 +83,7 @@ $singleRow = mysqli_fetch_assoc($result);
         <tr>
           <td><?php echo $report['fname']; ?></td>
           <td><?php echo $report['lname']; ?></td>
-          <td><?php echo $report['username']; ?></td>
+          <td><?php echo $report['username']; ?></td><!--Access type later on when merge-->
           <td><a href="">More Details</a></td>
         </tr>
         <?php
