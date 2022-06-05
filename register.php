@@ -68,6 +68,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         
         // Prepare an insert statement
         $sql = "INSERT INTO users (username, password) VALUES (?, ?)";
+
+        $fname = $link->real_escape_string($_POST['fname']);
+        $lname = $link->real_escape_string($_POST['lname']);
+        $email = $link->real_escape_string($_POST['email']);
+        $phone = $link->real_escape_string($_POST['phone']);
+        $access_id == 0;
+    
+        $sql1 = "INSERT INTO users (fname, lname, email, phone, access_id)
+                    VALUES ('$fname','$lname','$email','$phone','$access_id')";
          
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
@@ -89,8 +98,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             mysqli_stmt_close($stmt);
         }
     }
-    
-    // Close connection
+     // Close connection
     mysqli_close($link);
 }
 ?>
@@ -140,11 +148,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <h2>Sign Up</h2>
         <p>Please fill this form to create an account.</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+        <a style="color:red;">*</a>First Name:<input type="text" name = "fname" class='fname' id='fname' required/><br/>
+        <a style="color:red;">*</a>Last Name: <input type="text" name = "lname" required/><br/>
             <div class="form-group">
                 <label>Username</label>
                 <input type="text" name="username" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
                 <span class="invalid-feedback"><?php echo $username_err; ?></span>
-            </div>    
+            </div>
+            <a style="color:red;">*</a>Email Address: <input type="text" name = "email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required/><br/>
+            <a style="color:red;">*</a>Telephone or Mobile number: <input type="text" name="tel" pattern="[+ 0-9]{11}" required><br/>
             <div class="form-group">
                 <label>Password</label>
                 <input type="password" name="password" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $password; ?>" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
