@@ -73,7 +73,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <option id="user" value="0">User</option>
       </select><br/>
       
-        <div id="ifUser" style="display: none;">
+        <div id="access_id" style="display: none;">
             <a style="color:red;">*</a><label for="member"> Are they a Member?: </label><select id="member" name="member" required>
                 <option>===SELECT AN OPTION===</option>
                 <option value="Yes">Yes</option>
