@@ -51,9 +51,11 @@ img{
   float: right;
   text-align: left;
   display: block;
+  z-index: 1;
 }
 .subnav-content#userpanel{
   right:0em;
+  z-index: 1;
 }
 
 .navbar a {
