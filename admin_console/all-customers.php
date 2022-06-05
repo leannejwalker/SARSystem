@@ -72,7 +72,7 @@ $singleRow = mysqli_fetch_assoc($result);
         <tr>
           <td><?php echo $report['fname']; ?></td>
           <td><?php echo $report['lname']; ?></td>
-          <td><?php echo $report['usename']; ?></td>
+          <td><?php echo $report['username']; ?></td>
           <td><a href="">More Details</a></td>
         </tr>
         <?php
