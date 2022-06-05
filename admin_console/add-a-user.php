@@ -59,11 +59,11 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   <?php include "header.php"?>
   <div class="main">
     <form action="new_repair.php" method="post">
-      <a style="color:red;">*</a>First Name:<input type="text" name = "fname" required/><br/>
+      <a style="color:red;">*</a>First Name:<input type="text" name = "fname" class='fname' id='fname' required/><br/>
       <a style="color:red;">*</a>Last Name: <input type="text" name = "lname" required/><br/>
       <a style="color:red;">*</a>Username: <input type="text" name="username" required><br/>
       <a style="color:red;">*</a>Email Address: <input type="text" name = "email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required/><br/>
-      <a style="color:red;">*</a>Telephone or Mobile number: <input type="text" name="tel" required><br/>
+      <a style="color:red;">*</a>Telephone or Mobile number: <input type="text" name="tel" pattern="/^\+[0-9]([0-9]{3})([0-9]{3})([0-9]{4})$/" required><br/>
     
       <br/>
       <a style="color:red;">*</a>Required Access Type: <select id="access" name="access" onchange="yesnoCheck(this)" required>
@@ -80,17 +80,24 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 <option value="No">No</option>
             </select><br/>
         </div>
+        <input type="checkbox" id="welcome" name="welcome" value="yes">
+        <label for="welcome"> Do you want to send <div class='printfname' id='printfname'></div> a welcome email?</label><br>
         <input type="submit" />
     </form>
   </div>
     <script>
-      function yesnoCheck(that) {
-    if (that.value == "user") {
-        document.getElementById("ifUser").style.display = "block";
-    } else {
-        document.getElementById("ifUser").style.display = "none";
+    function yesnoCheck(that) {
+        if (that.value == "user") {
+            document.getElementById("ifUser").style.display = "block";
+        } else {
+            document.getElementById("ifUser").style.display = "none";
+        }
+    }   
+    var inputBox = document.getElementById('fname');
+
+    inputBox.onkeyup = function(){
+        document.getElementById('printfname').innerHTML = inputBox.value;
     }
-}
     </script>
   </body>
 </html>
