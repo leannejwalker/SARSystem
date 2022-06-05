@@ -58,7 +58,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   <body>
   <?php include "header.php"?>
   <div class="main">
-    <form action="new_user.php" method="post">
+    <form action="new_user.php" method="post" id="adduser">
       <a style="color:red;">*</a>First Name:<input type="text" name = "fname" class='fname' id='fname' required/><br/>
       <a style="color:red;">*</a>Last Name: <input type="text" name = "lname" required/><br/>
       <a style="color:red;">*</a>Username: <input type="text" name="username" required><br/>
@@ -67,7 +67,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     
       <br/>
       <a style="color:red;">*</a>Required Access Type: <select id="access_id" name="access" onchange="yesnoCheck(this)" required>
-        <option selected="true" hidden>===SELECT AN OPTION===</option>
+        <option selected="true" disabled>===SELECT AN OPTION===</option>
         <option id="admin" value="2">Administrator</option>
         <option id="repairer" value="1">Repairer</option>
         <option id="user" value="0">User</option>
@@ -75,7 +75,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
       
         <div id="ifUser" style="display: none;">
             <a style="color:red;">*</a><label for="member"> Are they a Member? </label><select id="member" name="member" onchange="yesnoCheck(this)" required>
-                <option disabled>===SELECT AN OPTION===</option>
+                <option value="" selected="true" disabled>===SELECT AN OPTION===</option>
                 <option value="No">No Membership</option>
                 <option value="Regular">Bath Library of Things Gift Membership</option>
                 <option value="Super">Bath Library of Things Gift Membership</option>
@@ -94,6 +94,17 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             document.getElementById("ifUser").style.display = "none";
         }
     }
+
+    $("#adduser").submit(function(event){
+        // var valDDL = $(this).val();  
+        //event.preventDefault();
+         var valDDL = $("#ifUser").val();
+         if(valDDL=="")
+         {
+            event.preventDefault();
+         } 
+    });
+
     var inputBox = document.getElementById('fname');
 
     inputBox.onkeyup = function(){
