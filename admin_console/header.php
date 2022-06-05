@@ -8,7 +8,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     exit;
 }
 $currentid=$_SESSION['id'];
-$sql = ("SELECT * FROM users WHERE id=".$currentid."");
+$sql = ("SELECT fname, lname FROM users WHERE id=".$currentid."");
 $result1 = mysqli_query($link, $sql);
 $singleRow1 = mysqli_fetch_assoc($result1);
 
