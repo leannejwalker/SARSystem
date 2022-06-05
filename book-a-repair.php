@@ -59,7 +59,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   <div class="main">
     <form action="new_repair.php" method="post">
     <a style="color:red;">*</a>Item Category: <select id="category" name="category" required>
-        <option disabled>===SELECT AN OPTION===</option>
+        <option selected="true" disabled>===SELECT AN OPTION===</option>
         <option value="Art, Antiques and Collectables">Art, Antiques and Collectables</option>
         <option value="Fashion and Accessories">Fashion and Accessories</option>
         <option value="Electronics">Electronics</option>
@@ -72,7 +72,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
       <a style="color:red;">*</a>Make: <input type="text" name = "make" required/><br/>
       <a style="color:red;">*</a>Model: <input type="text" name = "model" required/><br/>
       <a style="color:red;">*</a>Age: <select id="age" name="age" required>
-        <option disabled>===SELECT AN OPTION===</option>
+        <option selected="true" disabled>===SELECT AN OPTION===</option>
         <option value="Under 1 year">Under 1 year</option>
         <option value="Between 1-2 years">Between 1-2 years</option>
         <option value="Between 3-5 years">Between 3-5 years</option>
@@ -82,7 +82,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <option value="I'd rather not say">I'd rather not say</option>
       </select><br/>
       <a style="color:red;">*</a>Cost of Item: <select id="cost" name="cost" required>
-        <option disabled>===SELECT AN OPTION===</option>
+        <option selected="true" disabled>===SELECT AN OPTION===</option>
         <option value="Under £5">Under £5</option>
         <option value="Between £5-£10">Between £5-£10</option>
         <option value="Between £10-£50">Between £10-£50</option>
@@ -92,12 +92,12 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
       </select><br/>
       <a style="color:red;">*</a>Details of fault: <input type="text" name = "dof" required/><br/>
       <a style="color:red;">*</a>Is the item out of warranty?: <select id="oow" name="oow" required>
-        <option disabled>===SELECT AN OPTION===</option>
+        <option selected="true" disabled>===SELECT AN OPTION===</option>
         <option value="Yes">Yes</option>
         <option value="No">No</option>
       </select><br/>
       <a style="color:red;">*</a>Has the item been repaired before?: <select id="prevrepair" name="prevrepair" required>
-        <option disabled>===SELECT AN OPTION===</option>
+        <option selected="true" disabled>===SELECT AN OPTION===</option>
         <option value="Yes, with Share and Repair">Yes, with Share and Repair</option>
         <option value="Yes, elsewhere">Yes, elsewhere</option>
         <option value="No">No</option>
