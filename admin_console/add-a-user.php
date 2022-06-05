@@ -58,7 +58,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   <body>
   <?php include "header.php"?>
   <div class="main">
-    <form action="new_repair.php" method="post">
+    <form action="new_user.php" method="post">
       <a style="color:red;">*</a>First Name:<input type="text" name = "fname" class='fname' id='fname' required/><br/>
       <a style="color:red;">*</a>Last Name: <input type="text" name = "lname" required/><br/>
       <a style="color:red;">*</a>Username: <input type="text" name="username" required><br/>
