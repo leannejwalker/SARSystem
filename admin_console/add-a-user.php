@@ -67,7 +67,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     
       <br/>
       <a style="color:red;">*</a>Required Access Type: <select id="access_id" name="access" onchange="yesnoCheck(this)" required>
-        <option selected="true" disabled>===SELECT AN OPTION===</option>
+        <option value="" selected="true" disabled>===SELECT AN OPTION===</option>
         <option id="admin" value="2">Administrator</option>
         <option id="repairer" value="1">Repairer</option>
         <option id="user" value="0">User</option>
@@ -94,6 +94,16 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             document.getElementById("ifUser").style.display = "none";
         }
     }
+
+    $("#adduser").submit(function(event){
+        // var valDDL = $(this).val();  
+        //event.preventDefault();
+         var valDDL = $("#access_id").val();
+         if(valDDL=="")
+         {
+            event.preventDefault();
+         } 
+    });
 
     $("#adduser").submit(function(event){
         // var valDDL = $(this).val();  
