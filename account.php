@@ -10,8 +10,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 // Include config file
 require_once "config.php";
 
-$userid=$_SESSION['id'];
-$sql = ("SELECT * FROM users WHERE id="$userid"");
+$currentid=$_SESSION['id'];
+$sql = ("SELECT * FROM users WHERE id="$currentid"");
 $result = mysqli_query($link, $sql);
 $singleRow = mysqli_fetch_assoc($result);
  
