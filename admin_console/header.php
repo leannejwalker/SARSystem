@@ -7,6 +7,11 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   header("location: login.php");
     exit;
 }
+$currentid=$_SESSION['id'];
+$sql = ("SELECT * FROM users WHERE id=".$currentid."");
+$result = mysqli_query($link, $sql);
+$singleRow = mysqli_fetch_assoc($result);
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -168,14 +173,19 @@ h1{
 
 			</div>
 		</div>
-
+    <?php
+      foreach($result as $report) {
+    ?>
     <div class="subnav" id="user">
-      <button class="subnavbtn"> <?=$_SESSION['username']?> <i class="fa-solid fa-circle-user"></i></button>
+      <button class="subnavbtn"><?php echo $report['fname']; ?> <?php echo $report['lname']; ?> <i class="fa-solid fa-circle-user"></i></button>
 			<div class="subnav-content" id="user">
         <a href="account.php">Account Details</a>
 				<a href="logout.php">Log Out</a>
 			</div>
     </div>
+    <?php
+      }
+    ?>
 </div>
 </body>
 </html>
