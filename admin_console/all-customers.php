@@ -83,7 +83,6 @@ $singleRow = mysqli_fetch_assoc($result);
   .modal-content {
     background-color: #fefefe;
     margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
   }
@@ -102,9 +101,11 @@ $singleRow = mysqli_fetch_assoc($result);
     text-decoration: none;
     cursor: pointer;
   }
-  body.modal-open {
+
+  body.modal-content {
   overflow-y: hidden;
   }
+
   img{
     float: left;
     position: relative;
