@@ -63,7 +63,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
       <a style="color:red;">*</a>Last Name: <input type="text" name = "lname" required/><br/>
       <a style="color:red;">*</a>Username: <input type="text" name="username" required><br/>
       <a style="color:red;">*</a>Email Address: <input type="text" name = "email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required/><br/>
-      <a style="color:red;">*</a>Telephone or Mobile number: <input type="text" name="tel" pattern="/^\+[0-9]([0-9]{3})([0-9]{3})([0-9]{4})$/" required><br/>
+      <a style="color:red;">*</a>Telephone or Mobile number: <input type="tel" name="tel" required><br/>
     
       <br/>
       <a style="color:red;">*</a>Required Access Type: <select id="access" name="access" onchange="yesnoCheck(this)" required>
