@@ -133,7 +133,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <h3>Account Overview</h3>
                 <div class="form-group">
                     <label>Username</label><br>
-                    <input type="text" name="username" class="form-control" value="<?=$_SESSION['username']?>">
+                    <input type="text" name="username" class="form-control" value="<?=$_SESSION['username']?>" style="background-color: grey;" readonly>
                 </div>
                 <div class="form-group">
                     <br><label>Email</label><br>
