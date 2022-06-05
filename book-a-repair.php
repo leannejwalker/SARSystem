@@ -57,9 +57,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   <body>
   <?php include "header.php"?>
   <div class="main">
-    <form action="new_repair.php" method="post">
+    <form action="new_repair.php" method="post" id="getrepaired">
     <a style="color:red;">*</a>Item Category: <select id="category" name="category" required>
-        <option selected="true" disabled>===SELECT AN OPTION===</option>
+        <option value="" selected="true" disabled>===SELECT AN OPTION===</option>
         <option value="Art, Antiques and Collectables">Art, Antiques and Collectables</option>
         <option value="Fashion and Accessories">Fashion and Accessories</option>
         <option value="Electronics">Electronics</option>
@@ -111,6 +111,57 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
       date.setDate(date.getDate() - 13);
 
       console.log(date);
+
+
+      $("#getrepaired").submit(function(event){
+        // var valDDL = $(this).val();  
+        //event.preventDefault();
+         var valDDL = $("#category").val();
+         if(valDDL=="")
+         {
+            event.preventDefault();
+         } 
+    });
+
+    $("#getrepaired").submit(function(event){
+        // var valDDL = $(this).val();  
+        //event.preventDefault();
+         var valDDL = $("#age").val();
+         if(valDDL=="")
+         {
+            event.preventDefault();
+         } 
+    });
+
+    $("#getrepaired").submit(function(event){
+        // var valDDL = $(this).val();  
+        //event.preventDefault();
+         var valDDL = $("#cost").val();
+         if(valDDL=="")
+         {
+            event.preventDefault();
+         } 
+    });
+
+    $("#getrepaired").submit(function(event){
+        // var valDDL = $(this).val();  
+        //event.preventDefault();
+         var valDDL = $("#oow").val();
+         if(valDDL=="")
+         {
+            event.preventDefault();
+         } 
+    });
+
+    $("#getrepaired").submit(function(event){
+        // var valDDL = $(this).val();  
+        //event.preventDefault();
+         var valDDL = $("#prevrepair").val();
+         if(valDDL=="")
+         {
+            event.preventDefault();
+         }
+    });
     </script>
   </body>
 </html>

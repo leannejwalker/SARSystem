@@ -55,11 +55,22 @@ $singleRow = mysqli_fetch_assoc($result);
     tr:nth-child(even) {
       background-color: #f2f2f2;
     }
+    #myInput {
+      background-image: url('/css/searchicon.png');
+      background-position: 10px 10px;
+      background-repeat: no-repeat;
+      width: 100%;
+      font-size: 16px;
+      padding: 12px 20px 12px 40px;
+      border: 1px solid #ddd;
+      margin-bottom: 12px;
+    }
 </style>
 <body>
     <?php include "header.php"?>
     <div class="main">
-      <table>
+    <input type="text" id="search" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+      <table id="custtable">
         <tr>
           <th>First Name</th>
           <th>Last Name</th>
@@ -80,5 +91,25 @@ $singleRow = mysqli_fetch_assoc($result);
         ?>
       </table>
     </div>
+    <script>
+    function myFunction() {
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("search");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("custtable");
+      tr = table.getElementsByTagName("tr");
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }       
+      }
+    }
+    </script>
 </body>
 </html>
