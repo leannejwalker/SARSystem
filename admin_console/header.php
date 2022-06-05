@@ -47,12 +47,12 @@ img{
   text-align: left;
 }
 
-.subnav#user {
+.subnav#userpanel {
   float: right;
   text-align: left;
   display: block;
 }
-.subnav-content#user{
+.subnav-content#userpanel{
   right:0em;
 }
 
@@ -176,9 +176,9 @@ h1{
     <?php
       foreach($result1 as $report1) {
     ?>
-    <div class="subnav" id="user">
+    <div class="subnav" id="userpanel">
       <button class="subnavbtn"><?php echo $report1['fname']; ?> <?php echo $report1['lname']; ?> <i class="fa-solid fa-circle-user"></i></button>
-			<div class="subnav-content" id="user">
+			<div class="subnav-content" id="userpanel">
         <a href="account.php">Account Details</a>
 				<a href="logout.php">Log Out</a>
 			</div>
