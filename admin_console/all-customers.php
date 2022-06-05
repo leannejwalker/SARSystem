@@ -32,39 +32,76 @@ $singleRow = mysqli_fetch_assoc($result);
     background-image: url('img/background.jpg');
   }
   .main{
-      border: 0.1em solid #ffffff;
-      margin: 5em;
-      padding-bottom: 3em;
-      padding-left: 5em;
-      border-radius: 1em;
-      background: rgba(255, 255, 255, 0.7);
-    }
-    table {
+    border: 0.1em solid #ffffff;
+    margin: 5em;
+    padding-bottom: 3em;
+    padding-left: 5em;
+    border-radius: 1em;
+    background: rgba(255, 255, 255, 0.7);
+  }
+  table {
     border-collapse: collapse;
     border-spacing: 0;
     width: 100%;
     border: 1px solid #ddd;
     margin-left: -4.5em;
-    }
+  }
 
-    th, td {
-      text-align: left;
-      padding: 16px;
-    }
+  th, td {
+    text-align: left;
+    padding: 16px;
+  }
 
-    tr:nth-child(even) {
-      background-color: #f2f2f2;
-    }
-    #myInput {
-      background-image: url('/css/searchicon.png');
-      background-position: 10px 10px;
-      background-repeat: no-repeat;
-      width: 100%;
-      font-size: 16px;
-      padding: 12px 20px 12px 40px;
-      border: 1px solid #ddd;
-      margin-bottom: 12px;
-    }
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  #myInput {
+    background-image: url('/css/searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+  }
+     /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+    /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
 </style>
 <body>
     <?php include "header.php"?>
@@ -84,32 +121,65 @@ $singleRow = mysqli_fetch_assoc($result);
           <td><?php echo $report['fname']; ?></td>
           <td><?php echo $report['lname']; ?></td>
           <td><?php echo $report['username']; ?></td><!--Access type later on when merge-->
-          <td><a href="">More Details</a></td>
+          <td><button id="moredetails">Open Modal</button></td>
         </tr>
         <?php
           }
         ?>
       </table>
     </div>
+
+    <div id="detailsmodal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Some text in the Modal..</p>
+      </div>
+    </div>
+
     <script>
-    function myFunction() {
-      var input, filter, table, tr, td, i, txtValue;
-      input = document.getElementById("search");
-      filter = input.value.toUpperCase();
-      table = document.getElementById("custtable");
-      tr = table.getElementsByTagName("tr");
-      for (i = 0, 1, 2; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td")[0, 1, 2];
-        if (td) {
-          txtValue = td.textContent || td.innerText;
-          if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            tr[i].style.display = "";
-          } else {
-            tr[i].style.display = "none";
-          }
-        }       
+      function myFunction() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("search");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("custtable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0, 1, 2; i < tr.length; i++) {
+          td = tr[i].getElementsByTagName("td")[0, 1, 2];
+          if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+            } else {
+              tr[i].style.display = "none";
+            }
+          }       
+        }
       }
-    }
+          // Get the modal
+      var modal = document.getElementById("detailsmodal");
+
+      // Get the button that opens the modal
+      var btn = document.getElementById("moredetails");
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks on the button, open the modal
+      btn.onclick = function() {
+        modal.style.display = "block";
+      }
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
     </script>
-</body>
+  </body>
 </html>
