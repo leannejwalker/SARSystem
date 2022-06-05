@@ -84,8 +84,9 @@ $singleRow = mysqli_fetch_assoc($result);
   .modal-content {
     background-color: #fefefe;
     margin: 15% auto; /* 15% from the top and centered */
-    border: 14px solid #F36F21;
+    border: 0.5em solid #F36F21;
     width: 80%; /* Could be more or less, depending on screen size */
+    border-radius: 1em;
   }
 
   /* The Close Button */
