@@ -61,9 +61,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <form action="new_repair.php" method="post">
       <a style="color:red;">*</a>First Name:<input type="text" name = "fname" required/><br/>
       <a style="color:red;">*</a>Last Name: <input type="text" name = "lname" required/><br/>
-      <a style="color:red;">*</a>Username: <select type="text" name="username" required><br/>
+      <a style="color:red;">*</a>Username: <input type="text" name="username" required><br/>
       <a style="color:red;">*</a>Email Address: <input type="text" name = "email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required/><br/>
-      <a style="color:red;">*</a>Telephone or Mobile number: <select type="text" name="tel" required><br/>
+      <a style="color:red;">*</a>Telephone or Mobile number: <input type="text" name="tel" required><br/>
     
       <br/>
       <a style="color:red;">*</a>Required Access Type: <select id="access" name="access" required>
