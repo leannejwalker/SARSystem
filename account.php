@@ -11,7 +11,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 require_once "config.php";
 
 $currentid=$_SESSION['id'];
-$sql1 = ("SELECT * FROM users WHERE id="$currentid"");
+$sql1 = ("SELECT * FROM users WHERE id=".$currentid."");
 $result = mysqli_query($link, $sql1);
 $singleRow = mysqli_fetch_assoc($result);
  
