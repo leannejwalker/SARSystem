@@ -72,7 +72,6 @@ $singleRow = mysqli_fetch_assoc($result);
     <div class="main">
     <input type="text" id="search" onkeyup="myFunction()" placeholder="Search for repairs.." title="Type in a repair">
       <table id="listrepairs">
-      <table>
         <tr>
           <th>Username</th>
           <th>Item Name</th>
