@@ -102,6 +102,22 @@ $singleRow = mysqli_fetch_assoc($result);
     text-decoration: none;
     cursor: pointer;
   }
+  body.modal-open {
+  overflow-y: hidden;
+  }
+  img{
+    float: left;
+    position: relative;
+    block-size: 3em;
+    margin-left: 18px;
+    margin-right:24px;
+  }
+
+  .navbar {
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+  }
+
 </style>
 <body>
     <?php include "header.php"?>
@@ -131,7 +147,10 @@ $singleRow = mysqli_fetch_assoc($result);
 
     <div id="detailsmodal" class="modal">
       <div class="modal-content">
-        <?php include "simple-modal-header.php"?>
+        <div class="navbar">
+          <img href="https://shareandrepair.org.uk" src="img/sar.png" alt="Share and Repair">
+          <span class="close">&times;</span>
+        </div>
         <p>Some text in the Modal..</p>
       </div>
     </div>
