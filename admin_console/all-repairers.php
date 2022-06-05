@@ -61,9 +61,9 @@ $singleRow = mysqli_fetch_assoc($result);
     <div class="main">
       <table>
         <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
           <th>Username</th>
-          <th>Email Address</th>
-          <th>Phone Number</th>
           <th></th>
         </tr>
         <?php
