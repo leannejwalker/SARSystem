@@ -55,11 +55,22 @@ $singleRow = mysqli_fetch_assoc($result);
     tr:nth-child(even) {
       background-color: #f2f2f2;
     }
+    #myInput {
+      background-image: url('/css/searchicon.png');
+      background-position: 10px 10px;
+      background-repeat: no-repeat;
+      width: 100%;
+      font-size: 16px;
+      padding: 12px 20px 12px 40px;
+      border: 1px solid #ddd;
+      margin-bottom: 12px;
+    }
+
 </style>
 <body>
     <?php include "header.php"?>
     <div class="main">
-    <input type="text" id="search" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+    <input type="text" id="search" onkeyup="myFunction()" placeholder="Search for repairs.." title="Type in a repair">
       <table id="listrepairs">
       <table>
         <tr>
