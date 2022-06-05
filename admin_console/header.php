@@ -9,8 +9,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 }
 $currentid=$_SESSION['id'];
 $sql = ("SELECT fname, lname FROM users WHERE id=".$currentid."");
-$result1 = mysqli_query($link, $sql);
-$singleRow1 = mysqli_fetch_assoc($result1);
+$result = mysqli_query($link, $sql);
+$singleRow = mysqli_fetch_assoc($result);
 
 ?>
 <!DOCTYPE html>
@@ -174,10 +174,10 @@ h1{
 			</div>
 		</div>
     <?php
-      foreach($result1 as $report1) {
+      foreach($result as $report) {
     ?>
     <div class="subnav" id="user">
-      <button class="subnavbtn"><?php echo $report1['fname']; ?> <?php echo $report1['lname']; ?> <i class="fa-solid fa-circle-user"></i></button>
+      <button class="subnavbtn"><?php echo $report['fname']; ?> <?php echo $report['lname']; ?> <i class="fa-solid fa-circle-user"></i></button>
 			<div class="subnav-content" id="user">
         <a href="account.php">Account Details</a>
 				<a href="logout.php">Log Out</a>
