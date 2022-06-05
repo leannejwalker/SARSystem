@@ -66,25 +66,32 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
       <a style="color:red;">*</a>Telephone or Mobile number: <input type="text" name="tel" required><br/>
     
       <br/>
-      <a style="color:red;">*</a>Required Access Type: <select id="access" name="access" required>
+      <a style="color:red;">*</a>Required Access Type: <select id="access" name="access" onchange="yesnoCheck(this);" required>
         <option>===SELECT AN OPTION===</option>
-        <option value="admin">Administrator</option>
-        <option value="repairer">Repairer</option>
-        <option value="user">User</option>
+        <option id="admin" value="admin">Administrator</option>
+        <option id="repairer" value="repairer">Repairer</option>
+        <option id="user" value="user">User</option>
       </select><br/>
-      <a style="color:red;">*</a>Are they a Member?: <select id="member" name="member" required>
-        <option>===SELECT AN OPTION===</option>
-        <option value="Yes">Yes</option>
-        <option value="No">No</option>
-      </select><br/>
-      <input type="submit" />
+      
+        <div id="ifUser" style="display: none;">
+            <a style="color:red;">*</a><label for="member"> Are they a Member?: </label><select id="member" name="member" required>
+                <option>===SELECT AN OPTION===</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select><br/>
+        </div>
+        <input type="submit" />
     </form>
   </div>
     <script>
-      var date = new Date();
-      date.setDate(date.getDate() - 13);
-
-      console.log(date);
+      function yesnoCheck(that) {
+    if (that.value == "other") {
+        alert("check");
+        document.getElementById("ifUser").style.display = "block";
+    } else {
+        document.getElementById("ifUser").style.display = "none";
+    }
+}
     </script>
   </body>
 </html>
