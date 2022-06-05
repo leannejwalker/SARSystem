@@ -94,6 +94,7 @@ $singleRow = mysqli_fetch_assoc($result);
     float: right;
     font-size: 28px;
     font-weight: bold;
+    padding: 1em;
   }
 
   .close:hover,
@@ -118,6 +119,7 @@ $singleRow = mysqli_fetch_assoc($result);
   .navbar {
     overflow: hidden;
     background-color: rgb(0, 0, 0);
+    padding: -1em;
   }
 
 </style>
