@@ -85,7 +85,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   </div>
     <script>
       function yesnoCheck(that) {
-    if (that.value == "other") {
+    if (that.value == "user") {
         alert("check");
         document.getElementById("ifUser").style.display = "block";
     } else {
