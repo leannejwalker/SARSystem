@@ -75,17 +75,10 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
       
         <div id="ifUser" style="display: none;">
             <a style="color:red;">*</a><label for="member"> Are they a Member? </label><select id="member" name="member" onchange="yesnoCheck(this)" required>
-                <option>===SELECT AN OPTION===</option>
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
-            </select><br/>
-        </div>
-
-        <div id="ifMember" style="display: none;">
-            <a style="color:red;">*</a><label for="level"> What Membership Level do they have? </label><select id="level" name="level" required>
-                <option>===SELECT AN OPTION===</option>
+                <option disabled>===SELECT AN OPTION===</option>
+                <option value="No">No Membership</option>
                 <option value="Regular">Bath Library of Things Gift Membership</option>
-                <option value="Super Supporter">Bath Library of Things Gift Membership - Super Supporter</option>
+                <option value="Super">Bath Library of Things Gift Membership</option>
             </select><br/>
         </div>
         <input type="checkbox" id="welcome" name="welcome" value="yes">
@@ -101,13 +94,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             document.getElementById("ifUser").style.display = "none";
         }
     }
-    function yesnoCheck(that) {
-        if (that.value == "Yes") {
-            document.getElementById("ifMember").style.display = "block";
-        } else {
-            document.getElementById("ifMember").style.display = "none";
-        }
-    }   
     var inputBox = document.getElementById('fname');
 
     inputBox.onkeyup = function(){
