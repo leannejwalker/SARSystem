@@ -81,7 +81,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             </select><br/>
         </div>
         <input type="checkbox" id="welcome" name="welcome" value="yes">
-        <label for="welcome"> Do you want to send <div class='printfname' id='printfname'></div> a welcome email?</label><br>
+        <label for="welcome"> Do you want to send<div class='printfname' id='printfname'></div>a welcome email?</label><br>
         <input type="submit" />
     </form>
   </div>
