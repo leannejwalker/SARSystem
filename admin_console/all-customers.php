@@ -44,7 +44,7 @@ $singleRow = mysqli_fetch_assoc($result);
     border-collapse: collapse;
     border-spacing: 0;
     width: 100%;
-    border: 1px solid #ddd;
+    border: 3px solid #ddd;
     margin-left: -4.5em;
   }
 
@@ -168,8 +168,8 @@ $singleRow = mysqli_fetch_assoc($result);
         filter = input.value.toUpperCase();
         table = document.getElementById("custtable");
         tr = table.getElementsByTagName("tr");
-        for (i = 0, 1, 2; i < tr.length; i++) {
-          td = tr[i].getElementsByTagName("td")[0, 1, 2];
+        for (i = 0, 1; i < tr.length; i++) {
+          td = tr[i].getElementsByTagName("td")[0, 1];
           if (td) {
             txtValue = td.textContent || td.innerText;
             if (txtValue.toUpperCase().indexOf(filter) > -1) {
