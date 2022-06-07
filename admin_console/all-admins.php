@@ -43,7 +43,7 @@ $singleRow = mysqli_fetch_assoc($result);
     border-collapse: collapse;
     border-spacing: 0;
     width: 100%;
-    border: 1px solid #ddd;
+    border: 3px solid #ddd;
     margin-left: -4.5em;
     }
 
