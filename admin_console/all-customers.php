@@ -38,7 +38,7 @@ $singleRow = mysqli_fetch_assoc($result);
     padding-bottom: 3em;
     padding-left: 5em;
     border-radius: 1em;
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.9);
   }
   table {
     border-collapse: collapse;
@@ -51,10 +51,6 @@ $singleRow = mysqli_fetch_assoc($result);
   th, td {
     text-align: left;
     padding: 16px;
-  }
-
-  tr:nth-child(even) {
-    background-color: #f2f2f2;
   }
   
   #myInput {

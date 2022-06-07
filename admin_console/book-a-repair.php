@@ -27,7 +27,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
       padding-bottom: 3em;
       padding-left: 5em;
       border-radius: 1em;
-      background: rgba(255, 255, 255, 0.7);
+      background: rgba(255, 255, 255, 0.9);
     }
     input[type=text], select {
       width: 100%;
