@@ -54,6 +54,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     input[type=submit]:hover {
       background-color: #45a049;
     }
+    
   </style>
   <body>
   <?php include "header.php"?>

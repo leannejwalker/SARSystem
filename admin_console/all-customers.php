@@ -52,6 +52,10 @@ $singleRow = mysqli_fetch_assoc($result);
     text-align: left;
     padding: 16px;
   }
+
+  tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
   
   #myInput {
     background-image: url('/css/searchicon.png');
