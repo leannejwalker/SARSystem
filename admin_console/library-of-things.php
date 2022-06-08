@@ -92,9 +92,6 @@ $singleRow = mysqli_fetch_assoc($result);
 
   <body>
   <?php include "header.php"?>
-  <?php
-    foreach($result as $report) {
-  ?>
 	<div class="row">
 	  <div class="vis-products ns 1">
 	    <div class="column">
@@ -110,9 +107,6 @@ $singleRow = mysqli_fetch_assoc($result);
 	      </div>
 	    </div>
 	  </div>
-    <?php
-    }
-    ?>
     <script>
 
     </script>
