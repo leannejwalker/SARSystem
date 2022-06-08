@@ -10,7 +10,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 $sql = ("SELECT * FROM lot");
 $result = mysqli_query($link, $sql);
-$result -> mysqli_fetch_assoc($sql)
 
 
 
