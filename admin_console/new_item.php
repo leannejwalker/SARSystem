@@ -8,23 +8,25 @@ $database = "brobdingnagian_co_uk_";
 
 $mysqli = new mysqli("localhost:3306", $username, $password, $database);*/
 
+$item_picture = $link->real_escape_string($_POST['item_picture']);
+$item_name = $link->real_escape_string($_POST['item_name']);
+$fee = $link->real_escape_string($_POST['fee']);
+$item_condition = $link->real_escape_string($_POST['item_condition']);
 $category = $link->real_escape_string($_POST['category']);
-$itemname = $link->real_escape_string($_POST['itemname']);
-$make = $link->real_escape_string($_POST['make']);
-$model = $link->real_escape_string($_POST['model']);
-$age = $link->real_escape_string($_POST['age']);
-$cost = $link->real_escape_string($_POST['cost']);
-$dof = $link->real_escape_string($_POST['dof']);
-$oow = $link->real_escape_string($_POST['oow']);
-$prevrepair = $link->real_escape_string($_POST['prevrepair']);
-$userid = $link->real_escape_string($_POST['userid']);
+$sub_category = $link->real_escape_string($_POST['sub_category']);
+$item_code = $link->real_escape_string($_POST['item_code']);
+$serial_number = $link->real_escape_string($_POST['serial_number']);
+$item_notes = $link->real_escape_string($_POST['item_notes']);
+$consumables = $link->real_escape_string($_POST['consumables']);
+$item_location = $link->real_escape_string($_POST['item_location']);
 
-$sql = "INSERT INTO repairs (category, itemname, make, model, age, cost, dof, oow, prevrepair, userid)
-            VALUES ('$category','$itemname','$make','$model','$age','$cost','$dof','$oow','$prevrepair','$userid')";
+
+$sql = "INSERT INTO lot (item_picture, item_name, fee, item_condition, category, sub_category, item_code, serial_number, item_notes, consumables, item_location)
+            VALUES ('$item_picture','$item_name','$fee','$item_condition','$category','$sub_category','$item_code','$serial_number','$item_notes','$consumables','$item_location')";
 
 // print_r($sql)
 $link->query($sql);
 $link->close();
-header("location: my-repair-sessions.php");
+header("location: library-of-things.php");
 exit;
 ?>

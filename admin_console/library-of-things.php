@@ -8,6 +8,10 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     exit;
 }
 
+$sql = ("SELECT * FROM lot");
+$result = mysqli_query($link, $sql);
+$singleRow = mysqli_fetch_assoc($result);
+
 
 ?>
 <!DOCTYPE html>
@@ -45,13 +49,13 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   background: rgba(255, 255, 255, 0.9);
 }
 
-.container#repair {
+.container {
   padding: 0 22px;
   text-align: center;
   background: rgba(255, 255, 255, 0.9);
 }
 
-.container#repair::after, .row::after {
+.container::after, .row::after {
   content: "";
   clear: both;
   display: table;
@@ -75,34 +79,39 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   width: 100%;
 }
 
-#img1{
+#img{
   float: none;
   position: none;
   block-size: auto;
   padding: 0px;
   margin-left: 0px;
   margin-right:0px;
+  width:100%
 }
   </style>
 
   <body>
   <?php include "header.php"?>
-
+  <?php
+    foreach($result as $report) {
+  ?>
   <div class="row">
 	  <div class="vis-products ns 1">
 	    <div class="column">
 	      <div class="card">
-	        <img src="../img/tmb.png" id="img1" style="width:100%">
-	        <div class="container" id="repair">
-	          <h2>Thermal Paste Re-application &amp; Deep Clean</h2>
-	          <p class="title">For Nintendo Switch</p>
-	          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-	          <p>£10</p>
+	        <img src=<?php echo $report['item_picture']; ?> id="img">
+	        <div class="container">
+	          <h2><?php echo $report['item_name']; ?></h2>
+	          <p class="title"><?php echo $report['fee']; ?> per 7 days</p>
+	          <p><?php echo $report['item_category']; ?>/<?php echo $report['sub_category']; ?>/<?php echo $report['item_code']; ?></p>
+	          <p><?php echo $report['item_location']; ?></p>
 	          <p><button class="button">Add to Basket</button></p>
 	        </div>
 	      </div>
 	    </div>
-  
+    <?php
+    }
+    ?>
     <script>
 
     </script>

@@ -71,20 +71,20 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
       <option value="c">C - Poor</option>
     </select><br/>
 
-    <a style="color:red;">*</a>Item Category: <select id="category" name="item_category" required>
+    <a style="color:red;">*</a>Item Category: <select id="category" name="category" required>
       <option>===SELECT AN OPTION===</option>
       <option value="HOM">Home</option>
       <option value="GAR">Garden and Outdoors</option>
     </select><br/>
 
     <a style="color:red;">*</a>Item Sub-Category: <select id="subcategory_gar" name="sub_category">
-      <option selected>No Sub-Category</option>
+      <option value="" selected>No Sub-Category</option>
       <option value="CAM">Camping</option>
       <option value="DIY">Garden and Outdoors</option>
     </select><br/>
 
-    <a style="color:red;">*</a>Item Category: <select id="subcategory_hom" name="sub_category">
-      <option selected>No Sub-Category</option>
+    <a style="color:red;">*</a>Item Sub-Category: <select id="subcategory_hom" name="sub_category">
+      <option value="" selected>No Sub-Category</option>
       <option value="PAR">Parties & Events </option>
       <option value="DIY">DIY</option>
     </select><br/>
@@ -101,7 +101,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
       <option value="yes">Yes</option>
     </select><br/>
 
-    <a style="color:red;">*</a>Item Location: <select id="location" name="location" required>
+    <a style="color:red;">*</a>Item Location: <select id="item_location" name="item_location" required>
       <option value="shop">Shop Floor</option>
       <option value="basement" selected>Basement</option>
       <option value="upstairs">Upstairs</option>
