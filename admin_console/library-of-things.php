@@ -27,6 +27,7 @@ $singleRow = mysqli_fetch_assoc($result);
     body {
     background-image: url('img/background.jpg');
   }
+
   .column {
   float: left;
   width: 19%;
@@ -46,16 +47,15 @@ $singleRow = mysqli_fetch_assoc($result);
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  background: rgba(255, 255, 255, 0.9);
 }
 
-.container#item {
+.container#repair {
   padding: 0 22px;
   text-align: center;
   background: rgba(255, 255, 255, 0.9);
 }
 
-.container#item::after, .row::after {
+.container#repair::after, .row::after {
   content: "";
   clear: both;
   display: table;
@@ -79,15 +79,15 @@ $singleRow = mysqli_fetch_assoc($result);
   width: 100%;
 }
 
-#img{
+#img1{
   float: none;
   position: none;
   block-size: auto;
   padding: 0px;
   margin-left: 0px;
   margin-right:0px;
-  width:100%
 }
+
   </style>
 
   <body>
@@ -101,7 +101,7 @@ $singleRow = mysqli_fetch_assoc($result);
 	      <div class="card">
 	        <img src="../img/tmb.png" id="img1" style="width:100%">
 	        <div class="container" id="repair">
-	          <h1>poo</h1>
+	          <h1><?php echo $report['item_name']; ?></h1>
 	          <p class="title">For Nintendo Switch</p>
 	          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
 	          <p>£10</p>
