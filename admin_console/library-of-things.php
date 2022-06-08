@@ -99,7 +99,7 @@ $singleRow = mysqli_fetch_assoc($result);
 	  <div class="vis-products ns 1">
 	    <div class="column">
 	      <div class="card">
-	        <img src=<?php echo $report['item_picture']; ?> id="img">
+	        <img src="<?php echo $report['item_picture']; ?>" id="img">
 	        <div class="container" id="item">
 	          <h2><?php echo $report['item_name']; ?></h2>
 	          <p class="title"><?php echo $report['fee']; ?> per 7 days</p>
