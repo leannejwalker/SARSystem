@@ -85,7 +85,7 @@ $singleRow = mysqli_fetch_assoc($result);
         ?>
         <tr>
           <td><?php echo $report['item_name']; ?></td>
-          <td><?php echo $report['fee']; ?></td>
+          <td>£<?php echo $report['fee']; ?> per 7 days</td>
           <td><?php echo $report['category']; ?>/<?php echo $report['sub_category']; ?>/<?php echo $report['item_code
 ']; ?></td>
           <td><?php echo $report['item_notes']; ?></td>
