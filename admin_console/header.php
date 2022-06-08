@@ -151,7 +151,7 @@ h1{
 			<div class="subnav-content">
         <a href="/underconstruction/index.html">All Library of Things Items</a>
 				<a href="/underconstruction/index.html">Manage Library of Things Items</a>
-				<a href="/underconstruction/index.html">Create Library of Things Item</a>
+				<a href="create_lot_item.php">Create Library of Things Item</a>
 			</div>
 		</div>
     

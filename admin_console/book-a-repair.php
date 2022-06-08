@@ -107,10 +107,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     </form>
   </div>
     <script>
-      var date = new Date();
-      date.setDate(date.getDate() - 13);
-
-      console.log(date);
     </script>
   </body>
 </html>
