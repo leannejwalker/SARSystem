@@ -8,113 +8,113 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     exit;
 }
 
+require_once "config.php";
+
 $sql = ("SELECT * FROM lot");
 $result = mysqli_query($link, $sql);
-
-
+$singleRow = mysqli_fetch_assoc($result);
+//print_r($singleRow);
+//print_r($result);
+//print_r($userid);
 
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <script language="JavaScript" type="text/javascript" src="/js/jquery-3.6.0.js"></script>
-  <head>
-      <meta charset="UTF-8">
-      <title>Library Of Things - Share and Repair</title>
-      <link rel="icon" type="image/x-icon" href="img/favicon.ico">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
-  <style>
-    body {
+<head>
+  <meta charset="UTF-8">
+  <title>All Repair Sessions - Share and Repair</title>
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+  body {
     background-image: url('img/background.jpg');
   }
-
-  .column {
-  float: left;
-  width: 19%;
-  margin-bottom: 16px;
-  padding: 2em 2em;
-  text-align: center;
-  justify-content: center;
-  padding-left: 4em;
-}
-
-@media screen and (max-width: 650px) {
-  .column {
-    width: 100%;
-    display: block;
-  }
-}
-
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-
-.container#repair {
-  padding: 0 22px;
-  text-align: center;
-  background: rgba(255, 255, 255, 0.9);
-}
-
-.container#repair::after, .row::after {
-  content: "";
-  clear: both;
-  display: table;
-  margin: auto;
-  width: 80%;
-}
-
-.title {
-  color: grey;
-}
-
-.button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-}
-
-#img1{
-  float: none;
-  position: none;
-  block-size: auto;
-  padding: 0px;
-  margin-left: 0px;
-  margin-right:0px;
-}
-
-  </style>
-
-  <body>
-  <?php include "header.php"?>
-  <?php
-    foreach($result as $report) {
-  ?>
-	<div class="row">
-	  <div class="vis-products ns 1">
-	    <div class="column">
-	      <div class="card">
-	        <img src="../img/tmb.png" id="img1" style="width:100%">
-	        <div class="container" id="repair">
-	          <h1><?php echo $report['item_name']; ?></h1>
-	          <p class="title">For Nintendo Switch</p>
-	          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-	          <p>£10</p>
-	          <p><button class="button">Add to Basket</button></p>
-	        </div>
-	      </div>
-	    </div>
-	  </div>
-    <?php
+  .main{
+      border: 0.1em solid #ffffff;
+      margin: 5em;
+      padding-bottom: 3em;
+      padding-left: 5em;
+      border-radius: 1em;
+      background: rgba(255, 255, 255, 0.9);
     }
-    ?>
-    <script>
+    table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    margin-left: -4.5em;
+    }
 
+    th, td {
+      text-align: left;
+      padding: 16px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    #myInput {
+      background-image: url('/css/searchicon.png');
+      background-position: 10px 10px;
+      background-repeat: no-repeat;
+      width: 100%;
+      font-size: 16px;
+      padding: 12px 20px 12px 40px;
+      border: 1px solid #ddd;
+      margin-bottom: 12px;
+    }
+
+</style>
+<body>
+    <?php include "header.php"?>
+    <div class="main">
+    <input type="text" id="search" onkeyup="myFunction()" placeholder="Search for repairs.." title="Type in a repair">
+      <table id="listrepairs">
+        <tr>
+          <th>Item Name</th>
+          <th>Fee</th>
+          <th>Item Code</th>
+          <th>Item Notes</th>
+          <th>Item Location</th>
+        </tr>
+        <?php
+          foreach($result as $report) {
+        ?>
+        <tr>
+          <td><?php echo $report['item_name']; ?></td>
+          <td><?php echo $report['fee']; ?></td>
+          <td><?php echo $report['category']; ?>/<?php echo $report['sub_category']; ?>/<?php echo $report['item_code
+']; ?></td>
+          <td><?php echo $report['item_notes']; ?></td>
+          <td><?php echo $report['item_location']; ?></td>
+        </tr>
+        <?php
+          }
+        ?>
+      </table>
+    </div>
+    <script>
+    function myFunction() {
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("search");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("listrepairs");
+      tr = table.getElementsByTagName("tr");
+      for (i = 0, 1, 2, 3; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0, 1, 2, 3];
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }       
+      }
+    }
     </script>
-  </body>
+</body>
 </html>
