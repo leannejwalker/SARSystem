@@ -95,20 +95,21 @@ $singleRow = mysqli_fetch_assoc($result);
   <?php
     foreach($result as $report) {
   ?>
-  <div class="row">
+	<div class="row">
 	  <div class="vis-products ns 1">
 	    <div class="column">
 	      <div class="card">
-	        <!--<img src="<?php echo $report['item_picture']; ?>" id="img">-->
-	        <div class="container" id="item">
+	        <img src="../img/tmb.png" id="img1" style="width:100%">
+	        <div class="container" id="repair">
 	          <h2><?php echo $report['item_name']; ?></h2>
-	          <p class="title"><?php echo $report['fee']; ?> per 7 days</p>
-	          <p><?php echo $report['item_category']; ?>/<?php echo $report['sub_category']; ?>/<?php echo $report['item_code']; ?></p>
-	          <p><?php echo $report['item_location']; ?></p>
+	          <p class="title">For Nintendo Switch</p>
+	          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+	          <p>£10</p>
 	          <p><button class="button">Add to Basket</button></p>
 	        </div>
 	      </div>
 	    </div>
+	  </div>
     <?php
     }
     ?>
