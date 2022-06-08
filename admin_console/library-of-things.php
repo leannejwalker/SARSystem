@@ -23,6 +23,64 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     body {
     background-image: url('img/background.jpg');
   }
+  .column {
+  float: left;
+  width: 19%;
+  margin-bottom: 16px;
+  padding: 2em 2em;
+  text-align: center;
+  justify-content: center;
+  padding-left: 4em;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container#repair {
+  padding: 0 22px;
+  text-align: center;
+}
+
+.container#repair::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+  margin: auto;
+  width: 80%;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+#img1{
+  float: none;
+  position: none;
+  block-size: auto;
+  padding: 0px;
+  margin-left: 0px;
+  margin-right:0px;
+}
   </style>
 
   <body>
