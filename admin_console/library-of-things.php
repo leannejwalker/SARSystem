@@ -101,7 +101,7 @@ $singleRow = mysqli_fetch_assoc($result);
 	      <div class="card">
 	        <img src="../img/tmb.png" id="img1" style="width:100%">
 	        <div class="container" id="repair">
-	          <?php echo $report['item_name']; ?>
+	          <h1>poo</h1>
 	          <p class="title">For Nintendo Switch</p>
 	          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
 	          <p>£10</p>
