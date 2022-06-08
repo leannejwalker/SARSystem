@@ -42,11 +42,13 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .container#repair {
   padding: 0 22px;
   text-align: center;
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .container#repair::after, .row::after {
