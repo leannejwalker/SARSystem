@@ -10,7 +10,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 $sql = ("SELECT * FROM lot");
 $result = mysqli_query($link, $sql);
-$singleRow = mysqli_fetch_assoc($result);
+$result ->fetchAll();
 
 
 ?>
@@ -92,21 +92,12 @@ $singleRow = mysqli_fetch_assoc($result);
 
   <body>
   <?php include "header.php"?>
-	<div class="row">
-	  <div class="vis-products ns 1">
-	    <div class="column">
-	      <div class="card">
-	        <img src="../img/tmb.png" id="img1" style="width:100%">
-	        <div class="container" id="repair">
-	          <h1><?php echo $report['item_name']; ?></h1>
-	          <p class="title">For Nintendo Switch</p>
-	          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-	          <p>£10</p>
-	          <p><button class="button">Add to Basket</button></p>
-	        </div>
-	      </div>
-	    </div>
-	  </div>
+  <?php
+    foreach($result as $report) {
+    $item_name = $report["item_name"];
+    $fee = $report["fee"];
+    }
+  ?>
     <script>
 
     </script>
