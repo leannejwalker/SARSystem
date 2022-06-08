@@ -49,13 +49,13 @@ $singleRow = mysqli_fetch_assoc($result);
   background: rgba(255, 255, 255, 0.9);
 }
 
-.container {
+.container#item {
   padding: 0 22px;
   text-align: center;
   background: rgba(255, 255, 255, 0.9);
 }
 
-.container::after, .row::after {
+.container#item::after, .row::after {
   content: "";
   clear: both;
   display: table;
@@ -100,7 +100,7 @@ $singleRow = mysqli_fetch_assoc($result);
 	    <div class="column">
 	      <div class="card">
 	        <img src=<?php echo $report['item_picture']; ?> id="img">
-	        <div class="container">
+	        <div class="container" id="item">
 	          <h2><?php echo $report['item_name']; ?></h2>
 	          <p class="title"><?php echo $report['fee']; ?> per 7 days</p>
 	          <p><?php echo $report['item_category']; ?>/<?php echo $report['sub_category']; ?>/<?php echo $report['item_code']; ?></p>
