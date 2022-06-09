@@ -6,6 +6,7 @@ define('DB_USERNAME', 'brob_brobdingnagian_co_uk_');
 define('DB_PASSWORD', 'ty%s*nNtH-jAF#%y');
 define('DB_NAME', 'brob_brobdingnagian');
 
+
 /*$sql = "CREATE TABLE users (
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     username VARCHAR(50) NOT NULL UNIQUE,
