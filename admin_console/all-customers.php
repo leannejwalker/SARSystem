@@ -143,7 +143,7 @@ $singleRow = mysqli_fetch_assoc($result);
           <td><?php echo $report['fname']; ?></td>
           <td><?php echo $report['lname']; ?></td>
           <td><?php echo $report['username']; ?></td><!--Access type later on when merge-->
-          <td><button id="moredetails">More Details</button></td>
+          <td><button onclick="openModal(<?php echo $report['username']; ?>)" id="moredetails">More Details</button></td>
         </tr>
         <?php
           }
@@ -180,6 +180,12 @@ $singleRow = mysqli_fetch_assoc($result);
           }       
         }
       }
+
+      // When the user clicks on the button, open the modal
+      function openModal(user) {
+        modal.style.display = "block";
+      }
+
       // Get the modal
       var modal = document.getElementById("detailsmodal");
 
@@ -189,10 +195,6 @@ $singleRow = mysqli_fetch_assoc($result);
       // Get the <span> element that closes the modal
       var span = document.getElementsByClassName("close")[0];
 
-      // When the user clicks on the button, open the modal
-      btn.onclick = function() {
-        modal.style.display = "block";
-      }
 
       // When the user clicks on <span> (x), close the modal
       span.onclick = function() {
