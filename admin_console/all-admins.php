@@ -42,7 +42,7 @@ $singleRow = mysqli_fetch_assoc($result);
       border-radius: 1em;
       background: rgba(255, 255, 255, 0.9);
     }
-    table {
+    /* table {
     border-collapse: collapse;
     border-spacing: 0;
     width: 100%;
@@ -57,7 +57,7 @@ $singleRow = mysqli_fetch_assoc($result);
 
     tr:nth-child(even) {
       background-color: #f2f2f2;
-    }
+    } */
 </style>
 <body>
     <?php include "header.php"?>
