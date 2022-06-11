@@ -148,7 +148,7 @@ $singleRow = mysqli_fetch_assoc($result);
             <th>Username</th><!--Access type later on when merge-->
             <th></th>
           </tr>";
-          while($row = mysqli_fetch_array($result)) {
+          while($row) {
             echo "<tr>";
             echo "<td>" . $row['fname'] . "</td>";
             echo "<td>" . $row['lname'] . "</td>";
