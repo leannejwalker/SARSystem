@@ -12,7 +12,6 @@ require_once "config.php";
 
 $sql = ("SELECT * FROM users WHERE access_id=0");
 $result = mysqli_query($link, $sql);
-$singleRow = mysqli_fetch_assoc($result);
 // print_r($singleRow);
 // print_r($result);
 // print_r($userid);
@@ -139,31 +138,24 @@ $singleRow = mysqli_fetch_assoc($result);
 </style>
 <body>
     <?php include "header.php"?>
-    <div class="main">
-    <input type="text" id="search" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
-      <table class="display" id="custtable">
-        <thread>
+    <div class="main">   
+    <?php
+    echo"<table class="display" id="custtable">
           <tr>
             <th>First Name</th>
             <th>Last Name</th>
             <th>Username</th><!--Access type later on when merge-->
             <th></th>
-          </tr>
-        </thread>
-        <tbody>
-          <?php
-            foreach($result as $report) {
-          ?>
-          <tr>
-            <td>Bob</td>
-            <td>George</td>
-            <td>bobg</td><!--Access type later on when merge-->
-          </tr>
-          <?php
+          </tr>";
+          while($row = mysqli_fetch_array($result)) {
+            echo "<tr>";
+            echo "<td>" . $row['fname'] . "</td>";
+            echo "<td>" . $row['lname'] . "</td>";
+            echo "<td>" . $row['username'] . "</td>";
+            echo "</tr>"
             }
-          ?>
-        <tbody>
-      </table>
+            echo "</table>";
+            ?>
     </div>
 
     <div id="detailsmodal" class="modal">
