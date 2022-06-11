@@ -141,7 +141,7 @@ $singleRow = mysqli_fetch_assoc($result);
     <?php include "header.php"?>
     <div class="main">
     <input type="text" id="search" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
-      <table class="custtable" id="custtable">
+      <table class="display" id="custtable">
         <thread>
           <tr>
             <th>First Name</th>
