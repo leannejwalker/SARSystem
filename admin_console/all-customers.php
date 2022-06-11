@@ -159,14 +159,6 @@ $singleRow = mysqli_fetch_assoc($result);
             <td>George</td>
             <td>bobg</td><!--Access type later on when merge-->
           </tr>
-
-
-          <!-- <tr>
-            <td><?php echo $report['fname']; ?></td>
-            <td><?php echo $report['lname']; ?></td>
-            <td><?php echo $report['username']; ?></td><!--Access type later on when merge-->
-            <td><button onclick="openModal(<?php echo $report['username']; ?>)" id="moredetails">More Details</button></td>
-          </tr> -->
           <?php
             }
           ?>
