@@ -62,7 +62,7 @@ $singleRow = mysqli_fetch_assoc($result);
 <body>
     <?php include "header.php"?>
     <div class="main">
-      <table>
+      <table class="admins">
         <tr>
           <th>First Name</th>
           <th>Last Name</th>
@@ -85,7 +85,7 @@ $singleRow = mysqli_fetch_assoc($result);
     </div>
     <script>
     $(document).ready( function () {
-      $('#myTable').DataTable();
+      $('#admins').DataTable();
     } );
     </script>
 </body>

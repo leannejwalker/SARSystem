@@ -26,6 +26,9 @@ $singleRow = mysqli_fetch_assoc($result);
   <title>All Customers - Share and Repair</title>
   <link rel="icon" type="image/x-icon" href="img/favicon.ico">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+  <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+
 </head>
 <style>
   body {
@@ -207,6 +210,10 @@ $singleRow = mysqli_fetch_assoc($result);
           modal.style.display = "none";
         }
       }
+
+      $(document).ready( function () {
+      $('#custtable').DataTable();
+    } );
     </script>
   </body>
 </html>
