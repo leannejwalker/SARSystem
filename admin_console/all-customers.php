@@ -142,24 +142,28 @@ $singleRow = mysqli_fetch_assoc($result);
     <div class="main">
     <input type="text" id="search" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
       <table class="custtable" id="custtable">
-        <tr>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Username</th><!--Access type later on when merge-->
-          <th></th>
-        </tr>
-        <?php
-          foreach($result as $report) {
-        ?>
-        <tr>
-          <td><?php echo $report['fname']; ?></td>
-          <td><?php echo $report['lname']; ?></td>
-          <td><?php echo $report['username']; ?></td><!--Access type later on when merge-->
-          <td><button onclick="openModal(<?php echo $report['username']; ?>)" id="moredetails">More Details</button></td>
-        </tr>
-        <?php
-          }
-        ?>
+        <thread>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th><!--Access type later on when merge-->
+            <th></th>
+          </tr>
+        </thread>
+        <tbody>
+          <?php
+            foreach($result as $report) {
+          ?>
+          <tr>
+            <td><?php echo $report['fname']; ?></td>
+            <td><?php echo $report['lname']; ?></td>
+            <td><?php echo $report['username']; ?></td><!--Access type later on when merge-->
+            <td><button onclick="openModal(<?php echo $report['username']; ?>)" id="moredetails">More Details</button></td>
+          </tr>
+          <?php
+            }
+          ?>
+        <tbody>
       </table>
     </div>
 
