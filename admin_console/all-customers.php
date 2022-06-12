@@ -12,6 +12,7 @@ require_once "config.php";
 
 $sql = ("SELECT * FROM users WHERE access_id=0");
 $result = mysqli_query($link, $sql);
+$singleRow = mysqli_fetch_assoc($result);
 // print_r($singleRow);
 // print_r($result);
 // print_r($userid);
@@ -138,24 +139,27 @@ $result = mysqli_query($link, $sql);
 </style>
 <body>
     <?php include "header.php"?>
-    <div class="main">   
-    <?php
-    echo"<table class="display" id="custtable">
-          <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Username</th><!--Access type later on when merge-->
-            <th></th>
-          </tr>";
-          while($singleRow = mysqli_fetch_assoc($result);) {
-            echo "<tr>";
-            echo "<td>" . $row['fname'] . "</td>";
-            echo "<td>" . $row['lname'] . "</td>";
-            echo "<td>" . $row['username'] . "</td>";
-            echo "</tr>"
-            }
-            echo "</table>";
-            ?>
+    <div class="main">
+      <table class="admins">
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Username</th>
+          <th></th>
+        </tr>
+        <?php
+          foreach($result as $report) {
+        ?>
+        <tr>
+          <td><?php echo $report['fname']; ?></td>
+          <td><?php echo $report['lname']; ?></td>
+          <td><?php echo $report['username']; ?></td>
+          <td><a href="">More Details</a></td>
+        </tr>
+        <?php
+          }
+        ?>
+      </table>
     </div>
 
     <div id="detailsmodal" class="modal">
