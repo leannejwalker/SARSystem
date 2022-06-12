@@ -12,7 +12,6 @@ require_once "config.php";
 
 $sql = ("SELECT * FROM users WHERE access_id=0");
 $result = mysqli_query($link, $sql);
-$singleRow = mysqli_fetch_assoc($result);
 // print_r($singleRow);
 // print_r($result);
 // print_r($userid);
@@ -148,7 +147,7 @@ $singleRow = mysqli_fetch_assoc($result);
             <th>Username</th><!--Access type later on when merge-->
             <th></th>
           </tr>";
-          while($row) {
+          while($singleRow = mysqli_fetch_assoc($result);) {
             echo "<tr>";
             echo "<td>" . $row['fname'] . "</td>";
             echo "<td>" . $row['lname'] . "</td>";
