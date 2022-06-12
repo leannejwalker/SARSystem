@@ -12,7 +12,7 @@ require_once "config.php";
 
 $sql = ("SELECT * FROM users WHERE access_id=0");
 $result = mysqli_query($link, $sql);
-$row = mysqli_fetch_assoc($result);
+$singleRow = mysqli_fetch_assoc($result);
 // print_r($singleRow);
 // print_r($result);
 // print_r($userid);
