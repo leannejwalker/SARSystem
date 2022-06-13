@@ -26,6 +26,9 @@ $singleRow = mysqli_fetch_assoc($result);
   <title>All Administrators - Share and Repair</title>
   <link rel="icon" type="image/x-icon" href="img/favicon.ico">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+  <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+
 </head>
 <style>
   body {
@@ -39,7 +42,7 @@ $singleRow = mysqli_fetch_assoc($result);
       border-radius: 1em;
       background: rgba(255, 255, 255, 0.9);
     }
-    table {
+    /* table {
     border-collapse: collapse;
     border-spacing: 0;
     width: 100%;
@@ -54,12 +57,12 @@ $singleRow = mysqli_fetch_assoc($result);
 
     tr:nth-child(even) {
       background-color: #f2f2f2;
-    }
+    } */
 </style>
 <body>
     <?php include "header.php"?>
     <div class="main">
-      <table>
+      <table class="admins">
         <tr>
           <th>First Name</th>
           <th>Last Name</th>
@@ -80,5 +83,10 @@ $singleRow = mysqli_fetch_assoc($result);
         ?>
       </table>
     </div>
+    <script>
+    $(document).ready( function () {
+      $('#admins').DataTable();
+    } );
+    </script>
 </body>
 </html>
