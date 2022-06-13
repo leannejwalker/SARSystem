@@ -173,6 +173,26 @@ $singleRow = mysqli_fetch_assoc($result);
     </div>
 
     <script>
+    $(document).ready(function() {
+      $('#custtable').DataTable({
+        iDisplayLength: -1,
+        bLengthChange: false,
+        order: [[0, "asc"]],
+        language: {
+          search: "_INPUT_",
+          searchPlaceholder: "Search all fields",
+          processing: 'Loading...'
+        },
+        columnDefs: [
+          { targets: 'noSort', orderable: false }
+        ],
+        stateSave: true,
+        processing: true,
+        ajax: '/api/url/here'
+      });
+    });
+
+
       function myFunction() {
         var input, filter, table, tr, td, i, txtValue;
         input = document.getElementById("search");
