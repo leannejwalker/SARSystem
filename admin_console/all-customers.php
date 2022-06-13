@@ -17,73 +17,6 @@ $singleRow = mysqli_fetch_assoc($result);
 // print_r($result);
 // print_r($userid);
 
-$table = 'users';
-
-// Table's primary key
-$primaryKey = 'id';
- 
-$columns = array(
-    array( 'db' => 'fname', 'dt' => 'fname' ),
-    array( 'db' => 'lname',  'dt' => 'lname' ),
-    array( 'db' => 'username',   'dt' => 'username' ),
-);
- 
-// SQL server connection informatio
-$sql_details = array(
-    'user' => 'brob_brobdingnagian_co_uk_',
-    'pass' => 'ty%s*nNtH-jAF#%y',
-    'db'   => 'brob_brobdingnagian',
-    'host' => 'localhost:3306'
-);
- 
- 
-require( 'ssp.class.php' );
- 
-echo json_encode(
-    SSP::simple( $_POST, $sql_details, $link, $primaryKey, $columns )
-);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -99,34 +32,6 @@ echo json_encode(
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
   <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.12.1/b-2.2.3/b-html5-2.2.3/cr-1.5.6/date-1.1.2/fh-3.2.3/kt-2.7.0/r-2.3.0/sc-2.0.6/sb-1.3.3/sp-2.0.1/sl-1.4.0/datatables.min.js"></script>
-  <script>
-    $(document).ready(function() {
-      $('#custtable').DataTable({
-        iDisplayLength: -1,
-        bLengthChange: false,
-        order: [[0, "asc"]],
-        language: {
-          search: "_INPUT_",
-          searchPlaceholder: "Search all fields",
-          processing: 'Loading...'
-        },
-        columnDefs: [
-          { targets: 'noSort', orderable: false }
-        ],
-
-        processing: true,
-        serverSide: true,
-        ajax: {
-            url: 'scripts/ajaxuser.php',
-            type: 'POST',
-        },
-        columns: [
-            { data: 'fname' },
-            { data: 'lname' },
-            { data: 'username' },
-      ]});
-    });
-  </script>
 </head>
 <style>
   body {
