@@ -49,7 +49,7 @@ $singleRow = mysqli_fetch_assoc($result);
         ],
         stateSave: true,
         processing: true,
-        ajax: '/api/url/here'
+        ajax: 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js'
       });
     });
   </script>
