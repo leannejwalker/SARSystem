@@ -28,7 +28,6 @@ $singleRow = mysqli_fetch_assoc($result);
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css"> 
   <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.12.1/b-2.2.3/b-html5-2.2.3/cr-1.5.6/date-1.1.2/fh-3.2.3/kt-2.7.0/r-2.3.0/sc-2.0.6/sb-1.3.3/sp-2.0.1/sl-1.4.0/datatables.min.css"/>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
@@ -49,7 +48,7 @@ $singleRow = mysqli_fetch_assoc($result);
         ],
         stateSave: true,
         processing: true,
-        ajax: 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js'
+        ajax: '/ajax/ajaxusers.txt'
       });
     });
   </script>
@@ -155,7 +154,7 @@ $singleRow = mysqli_fetch_assoc($result);
 <body>
     <?php include "header.php"?>
     <div class="main">
-      <table class="admins">
+      <table id="custtable">
         <thread>
           <tr>
             <th>First Name</th>
@@ -164,20 +163,6 @@ $singleRow = mysqli_fetch_assoc($result);
             <th></th>
           </tr>
         </thread>
-        <tbody>
-          <?php
-            foreach($result as $report) {
-          ?>
-            <tr>
-              <td><?php echo $report['fname']; ?></td>
-              <td><?php echo $report['lname']; ?></td>
-              <td><?php echo $report['username']; ?></td>
-              <td><a href="">More Details</a></td>
-            </tr>
-          <?php
-            }
-          ?>
-        </tbody>
       </table>
     </div>
 
