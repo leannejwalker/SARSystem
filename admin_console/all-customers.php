@@ -17,6 +17,7 @@ $singleRow = mysqli_fetch_assoc($result);
 // print_r($result);
 // print_r($userid);
 
+$table = 'users';
 
 // Table's primary key
 $primaryKey = 'id';
@@ -123,7 +124,7 @@ echo json_encode(
             { data: 'fname' },
             { data: 'lname' },
             { data: 'username' },
-      });
+      ]});
     });
   </script>
 </head>
