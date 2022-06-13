@@ -17,6 +17,22 @@ $singleRow = mysqli_fetch_assoc($result);
 // print_r($result);
 // print_r($userid);
 
+
+// Table's primary key
+$primaryKey = 'id';
+ 
+$columns = array(
+    array( 'db' => 'fname', 'dt' => 'fname' ),
+    array( 'db' => 'lname',  'dt' => 'lname' ),
+    array( 'db' => 'username',   'dt' => 'username' ),
+);
+
+require( 'ssp.class.php' );
+ 
+echo json_encode(
+    SSP::simple( $_POST, $link, $primaryKey, $columns )
+);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -46,9 +62,17 @@ $singleRow = mysqli_fetch_assoc($result);
         columnDefs: [
           { targets: 'noSort', orderable: false }
         ],
-        stateSave: true,
+
         processing: true,
-        ajax: 'ajax/ajaxusers.txt'
+        serverSide: true,
+        ajax: {
+            url: 'scripts/ajaxuser.php',
+            type: 'POST',
+        },
+        columns: [
+            { data: 'fname' },
+            { data: 'lname' },
+            { data: 'username' },
       });
     });
   </script>
