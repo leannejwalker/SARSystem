@@ -141,24 +141,28 @@ $singleRow = mysqli_fetch_assoc($result);
     <?php include "header.php"?>
     <div class="main">
       <table class="admins">
-        <tr>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Username</th>
-          <th></th>
-        </tr>
-        <?php
-          foreach($result as $report) {
-        ?>
-        <tr>
-          <td><?php echo $report['fname']; ?></td>
-          <td><?php echo $report['lname']; ?></td>
-          <td><?php echo $report['username']; ?></td>
-          <td><a href="">More Details</a></td>
-        </tr>
-        <?php
-          }
-        ?>
+        <thread>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
+            <th></th>
+          </tr>
+        </thread>
+        <tbody>
+          <?php
+            foreach($result as $report) {
+          ?>
+            <tr>
+              <td><?php echo $report['fname']; ?></td>
+              <td><?php echo $report['lname']; ?></td>
+              <td><?php echo $report['username']; ?></td>
+              <td><a href="">More Details</a></td>
+            </tr>
+          <?php
+            }
+          ?>
+        </tbody>
       </table>
     </div>
 
