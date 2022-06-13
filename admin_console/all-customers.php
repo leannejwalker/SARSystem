@@ -157,6 +157,14 @@ $singleRow = mysqli_fetch_assoc($result);
     </div>
 
     <script>
+      $(document).ready(function () {
+          $('#custtable').DataTable({
+              processing: true,
+              serverSide: true,
+              ajax: 'scripts/serversideusers.php',
+          });
+      });
+
       function myFunction() {
         var input, filter, table, tr, td, i, txtValue;
         input = document.getElementById("search");
