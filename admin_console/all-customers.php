@@ -48,7 +48,7 @@ $singleRow = mysqli_fetch_assoc($result);
         ],
         stateSave: true,
         processing: true,
-        ajax: '/ajax/ajaxusers.txt'
+        ajax: 'ajax/ajaxusers.txt'
       });
     });
   </script>
