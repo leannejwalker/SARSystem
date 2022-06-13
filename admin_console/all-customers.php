@@ -26,12 +26,62 @@ $columns = array(
     array( 'db' => 'lname',  'dt' => 'lname' ),
     array( 'db' => 'username',   'dt' => 'username' ),
 );
-
+ 
+// SQL server connection informatio
+$sql_details = array(
+    'user' => 'brob_brobdingnagian_co_uk_',
+    'pass' => 'ty%s*nNtH-jAF#%y',
+    'db'   => 'brob_brobdingnagian',
+    'host' => 'localhost:3306'
+);
+ 
+ 
 require( 'ssp.class.php' );
  
 echo json_encode(
-    SSP::simple( $_POST, $link, $primaryKey, $columns )
+    SSP::simple( $_POST, $sql_details, $link, $primaryKey, $columns )
 );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ?>
 <!DOCTYPE html>
