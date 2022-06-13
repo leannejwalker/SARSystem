@@ -149,9 +149,9 @@ h1{
     <div class="subnav">
 		  <button class="subnavbtn"><i class="fa-solid fa-books"></i> Library of Things <i class="fa fa-caret-down"></i></button>
 			<div class="subnav-content">
-        <a href="/underconstruction/index.html">All Library of Things Items</a>
+        <a href="library-of-things.php">All Library of Things Items</a>
 				<a href="/underconstruction/index.html">Manage Library of Things Items</a>
-				<a href="create_lot_item.php">Create Library of Things Item</a>
+				<a href="create-lot-item.php">Create Library of Things Item</a>
 			</div>
 		</div>
     
