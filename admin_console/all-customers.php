@@ -30,7 +30,7 @@ $singleRow = mysqli_fetch_assoc($result);
   <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
 </head>
 <style>
-  body {
+  /* body {
     background-image: url('img/background.jpg');
     overflow: auto;
   }
@@ -55,7 +55,7 @@ $singleRow = mysqli_fetch_assoc($result);
     overflow: hidden;
     background-color: rgb(0, 0, 0);
     padding: -1em;
-  }
+  } */
 
 </style>
 <body>
@@ -72,7 +72,7 @@ $singleRow = mysqli_fetch_assoc($result);
         </thread>
       </table>
     </div>
-
+<!-- 
     <div id="detailsmodal" class="modal">
       <div class="modal-content">
         <div class="navbar">
@@ -81,7 +81,7 @@ $singleRow = mysqli_fetch_assoc($result);
         </div>
         <p>Some text in the Modal..</p>
       </div>
-    </div>
+    </div> -->
 
     <script>
       $(document).ready(function () {
@@ -92,51 +92,32 @@ $singleRow = mysqli_fetch_assoc($result);
           });
       });
 
-      function myFunction() {
-        var input, filter, table, tr, td, i, txtValue;
-        input = document.getElementById("search");
-        filter = input.value.toUpperCase();
-        table = document.getElementById("custtable");
-        tr = table.getElementsByTagName("tr");
-        for (i = 0; i < tr.length; i++) {
-          td = tr[i].getElementsByTagName("td")[0];
-          if (td) {
-            txtValue = td.textContent || td.innerText;
-            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-              tr[i].style.display = "";
-            } else {
-              tr[i].style.display = "none";
-            }
-          }       
-        }
-      }
+      // // When the user clicks on the button, open the modal
+      // function openModal(user) {
+      //   modal.style.display = "block";
+      // }
 
-      // When the user clicks on the button, open the modal
-      function openModal(user) {
-        modal.style.display = "block";
-      }
+      // // Get the modal
+      // var modal = document.getElementById("detailsmodal");
 
-      // Get the modal
-      var modal = document.getElementById("detailsmodal");
+      // // Get the button that opens the modal
+      // var btn = document.getElementById("moredetails");
 
-      // Get the button that opens the modal
-      var btn = document.getElementById("moredetails");
-
-      // Get the <span> element that closes the modal
-      var span = document.getElementsByClassName("close")[0];
+      // // Get the <span> element that closes the modal
+      // var span = document.getElementsByClassName("close")[0];
 
 
-      // When the user clicks on <span> (x), close the modal
-      span.onclick = function() {
-        modal.style.display = "none";
-      }
+      // // When the user clicks on <span> (x), close the modal
+      // span.onclick = function() {
+      //   modal.style.display = "none";
+      // }
 
-      // When the user clicks anywhere outside of the modal, close it
-      window.onclick = function(event) {
-        if (event.target == modal) {
-          modal.style.display = "none";
-        }
-      }
+      // // When the user clicks anywhere outside of the modal, close it
+      // window.onclick = function(event) {
+      //   if (event.target == modal) {
+      //     modal.style.display = "none";
+      //   }
+      // }
     </script>
   </body>
 </html>
