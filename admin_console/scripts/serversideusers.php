@@ -29,9 +29,9 @@ $primaryKey = 'id';
 // parameter represents the DataTables column identifier. In this case simple
 // indexes
 $columns = array(
-	array( 'db' => 'fname', 'dt' => 'fname' ),
-	array( 'db' => 'lname',  'dt' => 'lname'),
-	array( 'db' => 'username',   'dt' => 'username')
+	array( 'db' => 'fname', 'dt' => 0),
+	array( 'db' => 'lname',  'dt' => 1),
+	array( 'db' => 'username',   'dt' => 2)
 );
 
 // SQL server connection information
