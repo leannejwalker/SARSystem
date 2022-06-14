@@ -20,17 +20,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
       processing: true,
       serverSide: true,
       ajax: 'scripts/users.php',
-      buttons: [
-        {
-            extend: 'csvHtml5',
-            text: 'Copy all data',
-            exportOptions: {
-                modifier: {
-                    search: 'none'
-                }
-            }
-        }
-    ]
     });
   });
 </script>

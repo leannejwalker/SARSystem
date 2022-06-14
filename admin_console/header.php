@@ -45,7 +45,6 @@ img{
   overflow: hidden;
   background-color: rgb(0, 0, 0);
   text-align: left;
-  position:sticky;
 }
 
 .subnav#userpanel {
