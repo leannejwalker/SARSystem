@@ -31,7 +31,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   .main{
     border: 0.1em solid #ffffff;
     margin: 5em;
-    padding: 3em;
+    padding: 1.5em;
     border-radius: 1em;
     background: rgba(255, 255, 255, 0.9);
   }
