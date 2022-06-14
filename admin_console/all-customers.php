@@ -27,11 +27,11 @@ $singleRow = mysqli_fetch_assoc($result);
   <link rel="icon" type="image/x-icon" href="img/favicon.ico">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css"> 
-  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
   <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.js"></script>
 </head>
 <style>
-  /* body {
+  body {
     background-image: url('img/background.jpg');
     overflow: auto;
   }
@@ -56,13 +56,12 @@ $singleRow = mysqli_fetch_assoc($result);
     overflow: hidden;
     background-color: rgb(0, 0, 0);
     padding: -1em;
-  } */
+  }
 
 </style>
 <body>
     <?php include "header.php"?>
-    <div class="main">
-      <table id="custtable">
+      <table id="custtable" class="display" style="width:100%">
         <thread>
           <tr>
             <th>First Name</th>
@@ -72,7 +71,6 @@ $singleRow = mysqli_fetch_assoc($result);
           </tr>
         </thread>
       </table>
-    </div>
 <!-- 
     <div id="detailsmodal" class="modal">
       <div class="modal-content">
