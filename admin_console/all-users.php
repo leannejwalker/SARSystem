@@ -11,7 +11,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<?php include "scripts/linksandscripts.php"?>
+<?php include "./scripts/linksandscripts.php"?>
 <script>
   $(document).ready(function () {
     $('#users').DataTable({
