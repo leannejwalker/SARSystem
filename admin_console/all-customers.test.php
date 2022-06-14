@@ -60,6 +60,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 <th>First name</th>
                 <th>Last name</th>
                 <th>Username</th>
+                <th>Access Type</th>
             </tr>
         </thead>
     </table>

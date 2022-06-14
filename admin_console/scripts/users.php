@@ -31,7 +31,8 @@ $primaryKey = 'id';
 $columns = array(
 	array( 'db' => 'fname', 'dt' => 0),
 	array( 'db' => 'lname',  'dt' => 1),
-	array( 'db' => 'username',   'dt' => 2)
+	array( 'db' => 'username',   'dt' => 2),
+	array( 'db' => 'access_id',   'dt' => 3)
 );
 
 // SQL server connection information
