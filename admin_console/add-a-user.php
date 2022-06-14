@@ -78,8 +78,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             <a style="color:red;">*</a><label for="member"> Are they a Member? </label><select id="member" name="member" onchange="yesnoCheck(this)" required>
                 <option value="" selected="true" disabled>===SELECT AN OPTION===</option>
                 <option value="No">No Membership</option>
-                <option value="Regular">Bath Library of Things Gift Membership</option>
-                <option value="Super">Bath Library of Things Gift Membership</option>
+                <option value="Regular">Bath Library of Things Regular Gift Membership</option>
+                <option value="Super">Bath Library of Things Super Gift Membership</option>
             </select><br/>
         </div>
         <input type="checkbox" id="welcome" name="welcome" value="yes">
