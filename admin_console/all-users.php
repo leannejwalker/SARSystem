@@ -18,8 +18,30 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
       processing: true,
       serverSide: true,
       ajax: 'scripts/users.php',
+      dom: 'Bfrtip',
+      buttons: [
+        {
+          extend: 'alert',
+          text: 'My button 1'
+        },
+        {
+          extend: 'alert',
+          text: 'My button 2'
+        },
+        {
+          extend: 'alert',
+          text: 'My button 3'
+        }
+        ]
     });
   });
+$.fn.dataTable.ext.buttons.alert = {
+  className: 'buttons-alert',
+ 
+  action: function ( e, dt, node, config ) {
+    alert( this.text() );
+  }
+};
 </script>
 <style>
   body {
