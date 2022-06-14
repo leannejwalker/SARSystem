@@ -19,7 +19,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     $('#users').DataTable({
       processing: true,
       serverSide: true,
-      ajax: 'scripts/serversideusers.php',
+      ajax: 'scripts/users.php',
     });
   });
 </script>
