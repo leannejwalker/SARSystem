@@ -16,33 +16,20 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <script language="JavaScript" type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
 <script>
   $(document).ready(function () {
-    $('#example').DataTable({
+    $('#users').DataTable({
       processing: true,
       serverSide: true,
       ajax: 'scripts/serversideusers.php',
     });
   });
 </script>
-<table id="example" class="display" style="width:100%">
+<table id="users" class="display" style="width:100%">
         <thead>
             <tr>
                 <th>First name</th>
                 <th>Last name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Start date</th>
-                <th>Salary</th>
+                <th>Username</th>
             </tr>
         </thead>
-        <tfoot>
-            <tr>
-                <th>First name</th>
-                <th>Last name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Start date</th>
-                <th>Salary</th>
-            </tr>
-        </tfoot>
     </table>
 </html>
