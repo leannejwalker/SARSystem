@@ -67,6 +67,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   } */
 
 </style>
+<body>
     <?php include "header.php"?>
       <table id="custtable" class="display" style="width:100%">
         <thread>
@@ -78,4 +79,5 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
           </tr>
         </thread>
       </table>
+  </body>
 </html>
