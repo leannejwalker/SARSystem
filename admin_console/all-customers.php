@@ -20,7 +20,6 @@ $singleRow = mysqli_fetch_assoc($result);
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<script language="JavaScript" type="text/javascript" src="/js/jquery-3.6.0.js"></script>
 <head>
   <meta charset="UTF-8">
   <title>All Customers - Share and Repair</title>
@@ -29,9 +28,18 @@ $singleRow = mysqli_fetch_assoc($result);
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css"> 
   <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
   <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#custtable').DataTable({
+        processing: true,
+        serverSide: true,
+        ajax: 'scripts/serversideusers.php',
+      });
+     });
+  </script>
 </head>
 <style>
-  body {
+  /* body {
     background-image: url('img/background.jpg');
     overflow: auto;
   }
@@ -56,7 +64,7 @@ $singleRow = mysqli_fetch_assoc($result);
     overflow: hidden;
     background-color: rgb(0, 0, 0);
     padding: -1em;
-  }
+  } */
 
 </style>
 <body>
@@ -67,7 +75,7 @@ $singleRow = mysqli_fetch_assoc($result);
             <th>First Name</th>
             <th>Last Name</th>
             <th>Username</th>
-            <th></th>
+            <th>More</th>
           </tr>
         </thread>
       </table>
@@ -83,13 +91,6 @@ $singleRow = mysqli_fetch_assoc($result);
     </div> -->
 
     <script>
-      $(document).ready(function () {
-          $('#custtable').DataTable({
-              processing: true,
-              serverSide: true,
-              ajax: 'scripts/serversideusers.php',
-          });
-      });
 
       // // When the user clicks on the button, open the modal
       // function openModal(user) {
