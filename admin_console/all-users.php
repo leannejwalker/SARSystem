@@ -20,10 +20,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
       processing: true,
       serverSide: true,
       ajax: 'scripts/users.php',
-      lengthMenu: [
-        [10, 25, 50, -1],
-        [10, 25, 50, 'All'],
-      ],
       dom: 'Bfrtip',
       buttons: [
         {
