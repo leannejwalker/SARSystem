@@ -20,7 +20,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
       processing: true,
       serverSide: true,
       ajax: 'scripts/users.php',
-      dom: 'Bfrtip',
       buttons: [
         {
             extend: 'csvHtml5',
@@ -31,7 +30,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 }
             }
         }
-      ]
+    ]
     });
   });
 </script>
