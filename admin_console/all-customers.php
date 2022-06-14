@@ -8,14 +8,14 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     exit;
 }
 
-require_once "config.php";
+// require_once "config.php";
 
-$sql = ("SELECT * FROM users WHERE access_id=0");
-$result = mysqli_query($link, $sql);
-$singleRow = mysqli_fetch_assoc($result);
-// print_r($singleRow);
-// print_r($result);
-// print_r($userid);
+// $sql = ("SELECT * FROM users WHERE access_id=0");
+// $result = mysqli_query($link, $sql);
+// $singleRow = mysqli_fetch_assoc($result);
+// // print_r($singleRow);
+// // print_r($result);
+// // print_r($userid);
 
 ?>
 <!DOCTYPE html>
@@ -67,7 +67,6 @@ $singleRow = mysqli_fetch_assoc($result);
   } */
 
 </style>
-<body>
     <?php include "header.php"?>
       <table id="custtable" class="display" style="width:100%">
         <thread>
@@ -79,5 +78,4 @@ $singleRow = mysqli_fetch_assoc($result);
           </tr>
         </thread>
       </table>
-  </body>
 </html>
