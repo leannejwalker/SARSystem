@@ -24,6 +24,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         [10, 25, 50, -1],
         [10, 25, 50, 'All'],
       ],
+      dom: 'Bfrtip',
       buttons: [
         'Create .csv'
       ]
