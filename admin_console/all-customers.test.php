@@ -23,6 +23,36 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     });
   });
 </script>
+<style>
+  body {
+    background-image: url('img/background.jpg');
+    overflow: auto;
+  }
+  .main{
+    border: 0.1em solid #ffffff;
+    margin: 5em;
+    padding-bottom: 3em;
+    padding-left: 5em;
+    border-radius: 1em;
+    background: rgba(255, 255, 255, 0.9);
+  }
+  
+  img{
+    float: left;
+    position: relative;
+    block-size: 3em;
+    margin-left: 18px;
+    margin-right:24px;
+  }
+
+  .navbar {
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+    padding: -1em;
+  } 
+
+</style>
+
 <table id="users" class="display" style="width:100%">
         <thead>
             <tr>
