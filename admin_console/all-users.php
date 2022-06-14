@@ -26,7 +26,15 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
       ],
       dom: 'Bfrtip',
       buttons: [
-        'Create .csv'
+        {
+            extend: 'csvHtml5',
+            text: 'Copy all data',
+            exportOptions: {
+                modifier: {
+                    search: 'none'
+                }
+            }
+        }
       ]
     });
   });
