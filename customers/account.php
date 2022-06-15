@@ -85,8 +85,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   <style>
     .main#together{
       margin: 1em;
-            padding: 2em;
-            border-radius: 1em;
+      padding: 2em;
+      border-radius: 1em;
       border-radius: 1em;
     }
     .main#orange{
