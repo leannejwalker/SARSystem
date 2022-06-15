@@ -185,6 +185,6 @@ h1{
       }
     ?>
 </div>
-<?php print_r($report1); ?>
+<?php print_r($result1); ?>
 </body>
 </html>
