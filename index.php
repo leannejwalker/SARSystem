@@ -9,9 +9,9 @@
       <script language="JavaScript" type="text/javascript" src="/js/jquery-3.6.0.js"></script>
     </head>
     <body>
-        <?php include "/src/misc/simple-header.php"?>
-        <?php include "/src/auth/register.php"?>
-        <?php include "/src/auth/login.php"?>
-        <?php include "/src/misc/footer.php"?>
+        <?php include($_SERVER['DOCUMENT_ROOT']."/src/misc/simple-header.php")?>
+        <?php include($_SERVER['DOCUMENT_ROOT']."/src/auth/register.php")?>
+        <?php include($_SERVER['DOCUMENT_ROOT']."/src/auth/login.php")?>
+        <?php include($_SERVER['DOCUMENT_ROOT']."/src/misc/footer.php")?>
     </body>
 </html>
