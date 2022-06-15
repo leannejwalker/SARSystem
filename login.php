@@ -63,9 +63,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["loggedin"] = true;
                             $_SESSION["id"] = $id;
                             $_SESSION["username"] = $username;                            
-                                                        
-                            // Redirect user to welcome page
-                            header("location: account.php");
+                        
+                        if($access_id= 'Administrator'){
+                            // Redirect user to admin page
+                            header("location: admin_console/account.php");
+                        }
+                        if($access_id='Volunteer'){
+                            // Redirect user to volunteer page
+                            header("location: volunteer/account.php");
+                        }
+                        if($access_id='Customer'){
+                            // Redirect user to volunteer page
+                            header("location: customer/account.php");
+                        }
 
                         } else{
                             // Password is not valid, display a generic error message
