@@ -20,6 +20,3 @@ if(isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     exit;
 }
 ?>
-
-
-<?php include($_SERVER['DOCUMENT_ROOT']."/src/misc/footer.php")?>
