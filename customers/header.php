@@ -1,5 +1,5 @@
 <?php
-ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_reporting(E_ALL);
+// ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_reporting(E_ALL);
 // Initialize the session
 session_start();
  
@@ -156,7 +156,7 @@ img{
 		</div>
 
     <?php
-      if(isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === true) {
+      if(!empty($result1)) {
         print_r($currentid);
         ?>
         <div class="subnav" id="userpanel">
@@ -170,6 +170,5 @@ img{
           }
     ?>
 </div>
-<?php print_r($result1); ?>
 </body>
 </html>
