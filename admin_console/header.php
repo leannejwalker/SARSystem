@@ -172,7 +172,7 @@ h1{
 			</div>
 		</div>
     <?php
-      foreach($result1 as $report1) {
+      if(isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === true) {
     ?>
     <div class="subnav" id="userpanel">
       <button class="subnavbtn"><?php echo $report1['fname']; ?> <?php echo $report1['lname']; ?> <i class="fa-solid fa-circle-user"></i></button>
