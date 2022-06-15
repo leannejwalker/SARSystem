@@ -8,7 +8,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     exit;
 }
 $currentid=$_SESSION['id'];
-$sql = ("SELECT * FROM users WHERE id=".$currentid."");
+$sql = ("SELECT * FROM users WHERE id=".trim($currentid)."");
 $result1 = mysqli_query($link, $sql);
 $report1 = mysqli_fetch_assoc($result1);
 
@@ -166,5 +166,6 @@ img{
           }
     ?>
 </div>
+<?php print_r($currentid); ?>
 </body>
 </html>

@@ -8,7 +8,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     exit;
 }
 $currentid=$_SESSION['id'];
-$sql1 = ("SELECT fname, lname FROM users WHERE id=".$currentid."");
+$sql1 = ("SELECT fname, lname FROM users WHERE id=".trim($currentid)."");
 $result1 = mysqli_query($link, $sql1);
 $report1 = mysqli_fetch_assoc($result1);
 
@@ -172,7 +172,6 @@ h1{
 			</div>
 		</div>
     <?php
-        print_r($currentid);
       if(isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === true) {
     ?>
     <div class="subnav" id="userpanel">
@@ -186,5 +185,6 @@ h1{
       }
     ?>
 </div>
+<?php print_r($currentid); ?>
 </body>
 </html>
