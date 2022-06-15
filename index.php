@@ -1,19 +1,17 @@
-<?php require($_SERVER['DOCUMENT_ROOT']."/scripts/config.php")?>
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-      <meta charset="UTF-8">
-      <title>Your Account - Share and Repair</title>
-      <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
-      <?php require($_SERVER['DOCUMENT_ROOT']."/scripts/css.php")?>
-    </head>
-    <body>
-        <?php require($_SERVER['DOCUMENT_ROOT']."/src/misc/simple-header.php")
-        require($_SERVER['DOCUMENT_ROOT']."/src/auth/register.php")
-        require($_SERVER['DOCUMENT_ROOT']."/src/auth/login.php")?>
-        <?php require($_SERVER['DOCUMENT_ROOT']."/src/misc/footer.php")?>
-    </body>
-    <footer>
-        <?php require($_SERVER['DOCUMENT_ROOT']."/src/misc/footer.php")?>
-    </footer>
-</html>
+<?php
+// Initialize the session
+session_start();
+ 
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: /src/auth/login.php");
+    exit;
+}
+
+// Check if the user is logged in, if so then redirect him to the main page
+if(isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+
+    header("location: /src/all/account.php");
+    exit;
+}
+?>
