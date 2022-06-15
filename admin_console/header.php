@@ -10,7 +10,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 $currentid=$_SESSION['id'];
 $sql1 = ("SELECT fname, lname FROM users WHERE id=".$currentid."");
 $result1 = mysqli_query($link, $sql1);
-$singleRow1 = mysqli_fetch_assoc($result1);
+$report1 = mysqli_fetch_assoc($result1);
 
 ?>
 <!DOCTYPE html>
