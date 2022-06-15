@@ -166,6 +166,6 @@ img{
           }
     ?>
 </div>
-<?php print_r($currentid); ?>
+<?php print_r($report1); ?>
 </body>
 </html>
