@@ -70,11 +70,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         }
                         if($access_id='Volunteer'){
                             // Redirect user to volunteer page
-                            header("location: volunteer/account.php");
+                            header("location: volunteers/account.php");
                         }
                         if($access_id='Customer'){
                             // Redirect user to volunteer page
-                            header("location: customer/account.php");
+                            header("location: customers/account.php");
                         }
 
                         } else{
