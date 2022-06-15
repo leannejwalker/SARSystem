@@ -9,7 +9,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     exit;
 }
 
-require_once "../config.php";
+require_once "config.php";
 
 $currentid=$_SESSION['id'];
 $sql = ("SELECT * FROM users WHERE id=".trim($currentid)."");
@@ -50,12 +50,12 @@ img{
   background-color: rgb(0, 0, 0);
 }
 
-.subnav#user {
+.subnav#userpanel {
   float: right;
   text-align: left;
   display: block;
 }
-.subnav-content#user{
+.subnav-content#userpanel{
   right:0em;
 }
 
