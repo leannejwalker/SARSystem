@@ -152,7 +152,7 @@ img{
 		</div>
 
     <?php
-      foreach($result1 as $report1) {
+      if(!empty($singleRow1)) {
     ?>
     <div class="subnav" id="user">
       <button class="subnavbtn"><?php echo $report1['fname']; ?> <?php echo $report1['lname']; ?> <i class="fa-solid fa-circle-user"></i></button>
