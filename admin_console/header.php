@@ -173,7 +173,7 @@ h1{
 		</div>
     <?php
       if(isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === true) {
-        print_r($report1);
+        print_r($currentid);
     ?>
     <div class="subnav" id="userpanel">
       <button class="subnavbtn"><?php echo $report1['fname']; ?> <?php echo $report1['lname']; ?> <i class="fa-solid fa-circle-user"></i></button>
