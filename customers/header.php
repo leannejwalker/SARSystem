@@ -153,6 +153,7 @@ img{
 
     <?php
       if(!empty($singleRow1)) {
+      echo $singleRow1;
     ?>
     <div class="subnav" id="user">
       <button class="subnavbtn"><?php echo $report1['fname']; ?> <?php echo $report1['lname']; ?> <i class="fa-solid fa-circle-user"></i></button>
