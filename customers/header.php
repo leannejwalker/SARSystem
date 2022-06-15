@@ -160,7 +160,7 @@ img{
     <div class="subnav" id="user">
       <button class="subnavbtn"><?php echo $report1['fname']; ?> <?php echo $report1['lname']; ?> <i class="fa-solid fa-circle-user"></i></button>
 			<div class="subnav-content" id="user">
-        <a href="account.php">Account Details</a>
+        <a href="account.php">Account Details test</a>
 				<a href="logout.php">Log Out</a>
 			</div>
     </div>
