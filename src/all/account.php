@@ -1,15 +1,4 @@
 <?php
-// Initialize the session
-session_start();
- 
-// Check if the user is logged in, if not then redirect him to login page
-if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-    header("location: login.php");
-}
-
-// Include config file
-require_once "config.php";
-
 $currentid=$_SESSION['id'];
 $sql1 = ("SELECT * FROM users WHERE id=".$currentid."");
 $result = mysqli_query($link, $sql1);
@@ -85,8 +74,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   <style>
     .main#together{
       margin: 1em;
-            padding: 2em;
-            border-radius: 1em;
+      padding: 2em;
+      border-radius: 1em;
       border-radius: 1em;
     }
     .main#orange{
@@ -119,7 +108,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
   </style>
   <body>
-    <?php include "header.php"?>
     <div class ="main" id="together">
         <div class="main" id="purple">
             <div> 
@@ -188,7 +176,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <h3>Privacy and Security</h3>
         </div>
     </div>
-    <?php include "footer.php"?>
     <script>
 
     </script>
