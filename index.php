@@ -24,6 +24,8 @@ if(isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === true){
     include "./scripts/css.php";
     include "./scripts/js.php";
     include "./pages/customers/account.php";
+    include "./pages/customers/header.php";
+    include "./pages/customers/footer.php";
     // header("location: /src/all/account.php");
 }
 

@@ -1,5 +1,4 @@
 <?php
-
 $currentid=$_SESSION['id'];
 $sql1 = ("SELECT * FROM users WHERE id=".$currentid."");
 $result = mysqli_query($link, $sql1);
@@ -109,7 +108,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
   </style>
   <body>
-    <?php include "header.php"?>
     <div class ="main" id="together">
         <div class="main" id="purple">
             <div> 
@@ -178,7 +176,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <h3>Privacy and Security</h3>
         </div>
     </div>
-    <?php include "footer.php"?>
     <script>
 
     </script>
