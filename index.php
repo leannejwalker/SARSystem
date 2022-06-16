@@ -26,24 +26,4 @@ if(isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === true  || $access_id
     include "./src/all/footer.php";
     // header("location: /src/all/account.php");
 }
-
-// Check if the user is logged in, if so then redirect him to the main page
-if(isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === true  || $access_id='volunteer'){
-
-    include "./pages/volunteers/header.php";
-    include "./pages/volunteers/account.php";
-    include "./src/all/footer.php";
-    // header("location: /src/all/account.php");
-}
-
-// Check if the user is logged in, if so then redirect him to the main page
-if(isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === true  || $access_id='admin'){
-
-    include "./pages/admin/header.php";
-    include "./pages/admin/account.php";
-    include "./src/all/footer.php";
-    // header("location: /src/all/account.php");
-}
-
-
 ?>
