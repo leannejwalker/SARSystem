@@ -10,10 +10,7 @@ $report1 = mysqli_fetch_assoc($result1);
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<?php //include "./scripts/css.php";
-      include "./scripts/js.php";
-      
-?>
+<?php include "./scripts/js.php"; ?>
 <style>
 body {
   font-family: Arial, Helvetica, sans-serif;
