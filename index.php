@@ -12,7 +12,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 }
 
 // Check if the user is logged in, if so then redirect him to the main page
-if(isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+if(isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === true){
 
     include ($_SERVER['DOCUMENT_ROOT']."/pages/all/account.php");
     // header("location: /src/all/account.php");
