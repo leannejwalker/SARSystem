@@ -10,7 +10,9 @@ require_once "./scripts/config.php";
 // Check if the user is logged in, if not then redirect him to login page
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
+    include "/src/misc/simple-header.php";
     include "./src/auth/login.php";
+    include "./src/auth/register.php";
     // header("location: /src/auth/login.php");
 }
 
@@ -20,4 +22,6 @@ if(isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === true){
     include "./pages/customers/account.php";
     // header("location: /src/all/account.php");
 }
+
+
 ?>
