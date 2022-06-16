@@ -1,14 +1,5 @@
 <?php
-// ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_reporting(E_ALL);
-// Initialize the session
-session_start();
-require_once "../config.php";
- 
-// Check if the user is logged in, otherwise redirect to login page
-if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-  header("location: login.php");
-    exit;
-}
+
 $currentid=$_SESSION['id'];
 $sql1 = ("SELECT fname, lname FROM users WHERE id=".trim($currentid)."");
 $result1 = mysqli_query($link, $sql1);
