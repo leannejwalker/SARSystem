@@ -11,7 +11,6 @@ $report1 = mysqli_fetch_assoc($result1);
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <?php include "./scripts/js.php"?>
-<?php include "./scripts/css.php"?>
 <style>
 body {
   font-family: Arial, Helvetica, sans-serif;
