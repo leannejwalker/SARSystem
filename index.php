@@ -26,4 +26,18 @@ if(isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === true  || $access_id
     include "./src/all/footer.php";
     // header("location: /src/all/account.php");
 }
+if(isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === true  || $access_id='volunteer'){
+
+    include "./src/all/volunteer.php";
+    include "./src/all/account.php";
+    include "./src/all/footer.php";
+    // header("location: /src/all/account.php");
+}
+if(isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === true  || $access_id='admin'){
+
+    include "./src/all/adminheader.php";
+    include "./src/all/account.php";
+    include "./src/all/footer.php";
+    // header("location: /src/all/account.php");
+}
 ?>
