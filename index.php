@@ -21,23 +21,23 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 // Check if the user is logged in, if so then redirect him to the main page
 if(isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === true  || $access_id='customer'){
 
-    include "./src/all/header.php";
-    include "./src/all/account.php";
-    include "./src/all/footer.php";
+    include "./src/misc/header.php";
+    include "./src/misc/account.php";
+    include "./src/misc/footer.php";
     // header("location: /src/all/account.php");
 }
 if(isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === true  || $access_id='volunteer'){
 
-    include "./src/all/volunteer.php";
-    include "./src/all/account.php";
-    include "./src/all/footer.php";
+    include "./src/misc/volunteer.php";
+    include "./src/misc/account.php";
+    include "./src/misc/footer.php";
     // header("location: /src/all/account.php");
 }
 if(isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === true  || $access_id='admin'){
 
-    include "./src/all/adminheader.php";
-    include "./src/all/account.php";
-    include "./src/all/footer.php";
+    include "./src/misc/adminheader.php";
+    include "./src/misc/account.php";
+    include "./src/misc/footer.php";
     // header("location: /src/all/account.php");
 }
 ?>
