@@ -21,8 +21,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 // Check if the user is logged in, if so then redirect him to the main page
 if(isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === true  || $access_id='customer'){
 
-    include "./pages/customers/header.php";
-    include "./pages/customers/account.php";
+    include "./src/all/header.php";
+    include "./src/all/account.php";
     include "./src/all/footer.php";
     // header("location: /src/all/account.php");
 }
