@@ -108,7 +108,7 @@ img{
 </head>
 <body>
 <div class="navbar">
-		<img href="https://shareandrepair.org.uk" src="img/sar.png" alt="Share and Repair">
+		<img href="https://shareandrepair.org.uk" src="/src/img/sar.png" alt="Share and Repair">
 		<!--<a href="account.php">Account Details</a>-->
 		
     <div class="subnav">
