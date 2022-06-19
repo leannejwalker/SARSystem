@@ -69,9 +69,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
       <br/>
       <a style="color:red;">*</a>Required Access Type: <select id="access_id" name="access" onchange="yesnoCheck(this)" required>
         <option value="" selected="true" disabled>===SELECT AN OPTION===</option>
-        <option id="user" value="Customer">User</option>
-        <option id="repairer" value="Volunteer">Volunteer</option>
-        <option id="admin" value="Administrator">Administrator</option>
+        <option id="user" value="customer">User</option>
+        <option id="repairer" value="volunteer">Volunteer</option>
+        <option id="admin" value="admin">Administrator</option>
       </select><br/>
       
         <div id="ifUser" style="display: none;">
