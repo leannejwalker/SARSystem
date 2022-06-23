@@ -8,5 +8,12 @@ include "./src/misc/simple-header.php";
 include "./src/auth/login.php";
 $loginpage = ob_get_contents(); ob_end_clean();
 
+//Logged In
+ob_start();
+include "./src/misc/header.php";
+include "./src/misc/account.php";
+include "./src/misc/footer.php";
+$loggedin = ob_get_contents(); ob_end_clean();
+
 ?>
  
