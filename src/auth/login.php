@@ -1,6 +1,4 @@
 <?php
-// Initialize the session
-session_start();
 
 // Define variables and initialize with empty values
 $username = $password = "";
@@ -47,27 +45,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     if(mysqli_stmt_fetch($stmt)){
                         if(password_verify($password, $hashed_password)){
 
-                            // Password is correct, so start a new session
-                            session_start();
-                            
                             // Store data in session variables
                             $_SESSION["loggedin"] = true;
                             $_SESSION["id"] = $id;
-                            $_SESSION["username"] = $username;                            
-                        
-                        if($access_id= 'Administrator'){
-                            // Redirect user to admin page
-                            header("location: admin_console/account.php");
-                        }
-                        if($access_id='Volunteer'){
-                            // Redirect user to volunteer page
-                            header("location: volunteers/account.php");
-                        }
-                        if($access_id='Customer'){
-                            // Redirect user to volunteer page
-                            header("location: customers/account.php");
-                        }
-
+                            $_SESSION["username"] = $username;
+                            
                         } else{
                             // Password is not valid, display a generic error message
                             $login_err = "Invalid username or password.";
@@ -97,12 +79,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <meta charset="UTF-8">
     <title>Login</title>
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body{
             font: 14px sans-serif; 
-            background-image: url('img/background.jpg');
+            background-image: url('/src/img/background.jpg');
             overflow: hidden;
+            width: 30%;
+            position:left;
         }
         .wrapper{
             border: 0.5em solid #F36F21;

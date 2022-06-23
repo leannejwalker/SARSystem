@@ -1,8 +1,8 @@
 <?php
 
 $currentid=$_SESSION['id'];
-$sql = ("SELECT * FROM users WHERE id=".trim($currentid)."");
-$result1 = mysqli_query($link, $sql);
+$sql1 = ("SELECT fname, lname FROM users WHERE id=".trim($currentid)."");
+$result1 = mysqli_query($link, $sql1);
 $report1 = mysqli_fetch_assoc($result1);
 
 ?>
@@ -10,7 +10,7 @@ $report1 = mysqli_fetch_assoc($result1);
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<?php include "./scripts/js.php"; ?>
+<?php include "./scripts/js.php"?>
 <style>
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -36,6 +36,7 @@ img{
 .navbar {
   overflow: hidden;
   background-color: rgb(0, 0, 0);
+  text-align: left;
 }
 
 .subnav#userpanel {
@@ -104,58 +105,76 @@ img{
   display: flex;
   flex-direction: column;
 }
+h1{
+  text-align: left;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  color: #F36F21;
+}
 </style>
 </head>
 <body>
 <div class="navbar">
-		<img href="https://shareandrepair.org.uk" src="img/sar.png" alt="Share and Repair">
+		<img href="https://shareandrepair.org.uk" src="/src/img/sar.png" alt="Share and Repair">
+    <h1>Volunteer Network</h1>
 		<!--<a href="account.php">Account Details</a>-->
-		
+		<a href="summary.php"><i class="fa-solid fa-house"></i> Summary </a>
+
+    <div class="subnav">
+		  <button class="subnavbtn"><i class="fa-solid fa-circle-user"></i> Users <i class="fa fa-caret-down"></i></button>
+			<div class="subnav-content">
+        <a href="all-users.php">All Users</a>
+				<a href="add-a-user.php">Add Users</a>
+			</div>
+		</div>
+
     <div class="subnav">
 		  <button class="subnavbtn"><i class="fa-solid fa-handshake"></i> Borrow <i class="fa fa-caret-down"></i></button>
 			<div class="subnav-content">
-        <a href="my-borrowed-items.php">My Borrowed Items</a>
-				<a href="borrow-an-item.php">Borrow an Item</a>
+        <a href="/underconstruction/index.html">All Borrowed Items</a>
+				<a href="/underconstruction/index.html">Currently Borrowed Items</a>
+				<a href="/underconstruction/index.html">Create a Borrow</a>
+			</div>
+		</div>
+
+    <div class="subnav">
+		  <button class="subnavbtn"><i class="fa-solid fa-books"></i> Library of Things <i class="fa fa-caret-down"></i></button>
+			<div class="subnav-content">
+        <a href="library-of-things.php">All Library of Things Items</a>
+				<a href="/underconstruction/index.html">Manage Library of Things Items</a>
+				<a href="create-lot-item.php">Create Library of Things Item</a>
 			</div>
 		</div>
     
     <div class="subnav">
 		  <button class="subnavbtn"><i class="fa-solid fa-wrench"></i> Repair <i class="fa fa-caret-down"></i></button>
 			<div class="subnav-content">
-				<a href="my-repair-sessions.php">My Repair Sessions</a>
-				<a href="book-a-repair.php">Book a Repair Session</a>
+        <a href="/underconstruction/index.html">Today's Repair Sessions</a>
+			  <a href="all-repair-sessions.php">All Repair Sessions</a>
+        <a href="/underconstruction/index.html">Create a Repair Session</a>
 		  </div>
 		</div>
     
     <div class="subnav">
 		  <button class="subnavbtn"><i class="fa-solid fa-chalkboard-user"></i> How To <i class="fa fa-caret-down"></i></button>
 			<div class="subnav-content">
-				<a href="my-booked-howto.php">My Booked HowTos Sessions</a>
-				<a href="book-a-howto.php">Book a HowTo Session</a>
+				<a href="/underconstruction/index.html">All How To Sessions</a>
+        <a href="/underconstruction/index.html">Reserve a How To Session</a>
+				<a href="/underconstruction/index.html">Create a How To Session</a>
+
 			</div>
 		</div>
-
-    <div class="subnav">
-		  <button class="subnavbtn"><i class="fa-solid fa-circle-info"></i> Help <i class="fa fa-caret-down"></i></button>
-			<div class="subnav-content">
-        <a href="faq.php">FAQ</a>
-				<a href="support.php">Contact Support</a>
-			</div>
-		</div>
-
     <?php
       if(!empty($result1)) {
-        print_r($currentid);
-        ?>
-        <div class="subnav" id="userpanel">
-          <button class="subnavbtn"><?php echo $report1['fname']; ?> <?php echo $report1['lname']; ?> <i class="fa-solid fa-circle-user"></i></button>
-          <div class="subnav-content" id="userpanel">
-            <a href="account.php">Account Details</a>
-            <a href="logout.php">Log Out</a>
-          </div>
-        </div>
-        <?php
-          }
+    ?>
+    <div class="subnav" id="userpanel">
+      <button class="subnavbtn"><?php echo $report1['fname']; ?> <?php echo $report1['lname']; ?> <i class="fa-solid fa-circle-user"></i></button>
+			<div class="subnav-content" id="userpanel">
+        <a href="account.php">Account Details</a>
+				<a href="logout.php">Log Out</a>
+			</div>
+    </div>
+    <?php
+      }
     ?>
 </div>
 </body>

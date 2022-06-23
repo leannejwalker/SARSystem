@@ -2,7 +2,6 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<?php include "/scripts/linksandscripts.php"?>
 <style>
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -94,7 +93,7 @@ img{
 </head>
 <body>
 <div class="navbar">
-		<img href="https://shareandrepair.org.uk" src="img/sar.png" alt="Share and Repair">
+		<img href="https://shareandrepair.org.uk" src="/src/img/sar.png" alt="Share and Repair">
 </div>
 </body>
 </html>
