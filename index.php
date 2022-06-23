@@ -20,19 +20,20 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 if(isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === true){
 
     $currentid=$_SESSION['id'];
-    $sql1 = ("SELECT access_id FROM users WHERE id=".$currentid."" );
+    $sql = ("SELECT access_id FROM users WHERE id=".$currentid."" );
 
-    if $access_id ==='customer'{
 
-        echo $loggedin;
-
-    }
-    if $access_id ==='volunteer'{
+    if ($sql["access_id"] =='customer'){
 
         echo $loggedin;
 
     }
-    if $access_id ==='admin'{
+    if ($sql["access_id"] == 'volunteer'){
+
+        echo $loggedin;
+
+    }
+    if ($sql["access_id"] =='admin'){
 
         echo $loggedin;
 
