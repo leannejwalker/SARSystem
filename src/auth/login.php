@@ -84,8 +84,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             font: 14px sans-serif; 
             background-image: url('/src/img/background.jpg');
             overflow: hidden;
-            width: 30%;
-            position:left;
+            width: 100%;
         }
         .wrapper{
             border: 0.5em solid #F36F21;
