@@ -25,19 +25,16 @@ if(isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === true){
     if $access_id ==='customer'{
 
         echo $loggedin;
-        end();
 
     }
     if $access_id ==='volunteer'{
 
         echo $loggedin;
-        end();
 
     }
     if $access_id ==='admin'{
 
         echo $loggedin;
-        end();
 
     }
 }
