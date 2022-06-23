@@ -21,21 +21,21 @@ $currentid=$_SESSION['id'];
 $sql1 = ("SELECT access_id FROM users WHERE id=".$currentid."" );
 
 // Check if the user is logged in, if so then redirect him to the main page
-if $access_id ==='customer'){
+if $access_id ==='customer'{
 
     include "./src/misc/header.php";
     include "./src/misc/account.php";
     include "./src/misc/footer.php";
     // header("location: /src/all/account.php");
 }
-if $access_id ==='volunteer'){
+if $access_id ==='volunteer'{
 
     include "./src/misc/volunteer.php";
     include "./src/misc/account.php";
     include "./src/misc/footer.php";
     // header("location: /src/all/account.php");
 }
-if $access_id ==='admin'){
+if $access_id ==='admin'{
 
     include "./src/misc/adminheader.php";
     include "./src/misc/account.php";
