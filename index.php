@@ -11,6 +11,7 @@ require_once "./scripts/echo.php";
 // Check if the user is logged in, if not then redirect him to login page
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
+    header("Refresh:0");
     echo $loginpage;
     // header("location: /src/auth/login.php");
 }
@@ -19,7 +20,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 // Check if the user is logged in
 if(isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === true){
 
+    header("Refresh:0");
     echo $loggedin;
-    
+
 }
 ?>
