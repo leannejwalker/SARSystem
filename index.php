@@ -23,17 +23,17 @@ if(isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === true){
     $sql = ("SELECT access_id FROM users WHERE id=".$currentid."" );
 
 
-    if ($sql["access_id"] =='customer'){
+    if $access_id == 'customer'{
 
         echo $loggedin;
 
     }
-    if ($sql["access_id"] == 'volunteer'){
+    if $access_id == 'volunteer'{
 
         echo $loggedin;
 
     }
-    if ($sql["access_id"] =='admin'){
+    if $access_id == 'admin'{
 
         echo $loggedin;
 
