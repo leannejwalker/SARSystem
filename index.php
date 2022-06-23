@@ -14,7 +14,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     include "./scripts/js.php";
     include "./src/misc/simple-header.php";
     include "./src/auth/login.php";
-    include "./src/auth/register.php";
     // header("location: /src/auth/login.php");
 }
 
