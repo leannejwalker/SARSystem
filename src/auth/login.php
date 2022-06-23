@@ -49,22 +49,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["loggedin"] = true;
                             $_SESSION["id"] = $id;
                             $_SESSION["username"] = $username;
-
-                            if $access_id === 'customer'{
-
-                                echo $loggedin;
-                        
-                            }
-                            if $access_id === 'volunteer'{
-                        
-                                echo $loggedin;
-                        
-                            }
-                            if $access_id === 'admin'{
-                        
-                                echo $loggedin;
-                        
-                            }
                             
                         } else{
                             // Password is not valid, display a generic error message
