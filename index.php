@@ -19,24 +19,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 // Check if the user is logged in
 if(isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === true){
 
-    $currentid=$_SESSION['id'];
-    $sql = ("SELECT access_id FROM users WHERE id=".$currentid."" );
-
-
-    if $access_id == 'customer'{
-
-        echo $loggedin;
-
-    }
-    if $access_id == 'volunteer'{
-
-        echo $loggedin;
-
-    }
-    if $access_id == 'admin'{
-
-        echo $loggedin;
-
-    }
+    echo $loggedin;
+    
 }
 ?>
