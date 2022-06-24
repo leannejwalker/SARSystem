@@ -4,7 +4,7 @@ session_start();
  
 // Check if the user is already logged in, if yes then redirect him to welcome page
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-    header("location: account.php");
+    header("location: /customer/account.php");
     exit;
 }
  
@@ -66,15 +66,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         
                         if($access_id= 'Administrator'){
                             // Redirect user to admin page
-                            header("location: admin_console/account.php");
+                            header("location: /admin_console/account.php");
                         }
                         if($access_id='Volunteer'){
                             // Redirect user to volunteer page
-                            header("location: volunteers/account.php");
+                            header("location: /volunteers/account.php");
                         }
                         if($access_id='Customer'){
                             // Redirect user to volunteer page
-                            header("location: customers/account.php");
+                            header("location: /customers/account.php");
                         }
 
                         } else{
