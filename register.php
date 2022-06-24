@@ -113,6 +113,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             font: 14px sans-serif;
             background-image: url('img/background.jpg');
             /*overflow: hidden;*/
+<<<<<<< HEAD:register.php
+=======
+            width: 100%;
+>>>>>>> 9b83225d5fdf0597e3721657d108934744c689bf:src/auth/register.php
         }
         .wrapper{
             border: 0.1em solid #FFFFFF;
