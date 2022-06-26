@@ -4,7 +4,7 @@ session_start();
  
 // Check if the user is already logged in, if yes then redirect him to welcome page
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-    header("location: /customers/account.php");
+    header("location: customers/account.php");
     exit;
 }
  
@@ -76,7 +76,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         //     header("location: /volunteers/account.php");
                         // }
                             // Redirect user to volunteer page
-                            header("location: /customers/account.php");
+                            header("location: customers/account.php");
 
                         } else{
                             // Password is not valid, display a generic error message
