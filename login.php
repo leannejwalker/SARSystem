@@ -64,15 +64,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["id"] = $id;
                             $_SESSION["username"] = $username;                            
                         
-                        if($access_id= 'Administrator'){
+                        $sql = ("SELECT access_id FROM users WHERE currentid=$_SESSION['id'];");
+                        $result = mysqli_query($link, $sql);
+
+                        if($result= 'Administrator'){
                             // Redirect user to admin page
                             header("location: /admin_console/account.php");
                         }
-                        if($access_id='Volunteer'){
+                        if($result='Volunteer'){
                             // Redirect user to volunteer page
                             header("location: /volunteers/account.php");
                         }
-                        if($access_id='Customer'){
+                        if($result='Customer'){
                             // Redirect user to volunteer page
                             header("location: /customers/account.php");
                         }
