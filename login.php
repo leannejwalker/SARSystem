@@ -66,15 +66,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         
                         if($access_id= 'Administrator'){
                             // Redirect user to admin page
-                            header("location: admin_console/account.php");
+                            header("location: /admin_console/account.php");
                         }
                         if($access_id='Volunteer'){
                             // Redirect user to volunteer page
-                            header("location: volunteers/account.php");
+                            header("location: /volunteers/account.php");
                         }
                         if($access_id='Customer'){
                             // Redirect user to volunteer page
-                            header("location: customers/account.php");
+                            header("location: /customers/account.php");
                         }
 
                         } else{
@@ -105,12 +105,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body{
             font: 14px sans-serif; 
-            background-image: url('img/background.jpg');
+            background-image: url('/img/background.jpg');
             overflow: hidden;
         }
         .wrapper{
