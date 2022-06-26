@@ -2,9 +2,9 @@
 /* Database credentials. Assuming you are running MySQL
 server with default setting (user 'root' with no password) */
 define('DB_SERVER', 'localhost:3306');
-define('DB_USERNAME', 'brob_brobdingnagian_co_uk_');
-define('DB_PASSWORD', 'ty%s*nNtH-jAF#%y');
-define('DB_NAME', 'brob_brobdingnagian');
+define('DB_USERNAME', 'brob_sar');
+define('DB_PASSWORD', '7Nsbf3dyp8O2k259');
+define('DB_NAME', 'brob_sar');
 
 /*$sql = "CREATE TABLE users (
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
