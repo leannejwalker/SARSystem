@@ -5,11 +5,11 @@ session_start();
  
 // Check if the user is logged in, otherwise redirect to login page
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-    header("location: /login.php");
+    header("location: login.php");
     exit;
 }
 
-require_once "/config.php";
+require_once "config.php";
 
 $currentid=$_SESSION['id'];
 $sql = ("SELECT * FROM users WHERE id=".trim($currentid)."");
@@ -120,30 +120,30 @@ img{
 </head>
 <body>
 <div class="navbar">
-		<img href="https://shareandrepair.org.uk" src="/img/sar.png" alt="Share and Repair">
+		<img href="https://shareandrepair.org.uk" src="img/sar.png" alt="Share and Repair">
 		<!--<a href="account.php">Account Details</a>-->
 		
     <div class="subnav">
 		  <button class="subnavbtn"><i class="fa-solid fa-handshake"></i> Borrow <i class="fa fa-caret-down"></i></button>
 			<div class="subnav-content">
-        <a href="./library/my-borrowed-items.php">My Borrowed Items</a>
-				<a href="./library/borrow-an-item.php">Borrow an Item</a>
+        <a href="my-borrowed-items.php">My Borrowed Items</a>
+				<a href="borrow-an-item.php">Borrow an Item</a>
 			</div>
 		</div>
     
     <div class="subnav">
 		  <button class="subnavbtn"><i class="fa-solid fa-wrench"></i> Repair <i class="fa fa-caret-down"></i></button>
 			<div class="subnav-content">
-				<a href="./repair/my-repair-sessions.php">My Repair Sessions</a>
-				<a href="./repair/book-a-repair.php">Book a Repair Session</a>
+				<a href="my-repair-sessions.php">My Repair Sessions</a>
+				<a href="book-a-repair.php">Book a Repair Session</a>
 		  </div>
 		</div>
     
     <div class="subnav">
 		  <button class="subnavbtn"><i class="fa-solid fa-chalkboard-user"></i> How To <i class="fa fa-caret-down"></i></button>
 			<div class="subnav-content">
-				<a href="./howto/my-booked-howto.php">My Booked HowTos Sessions</a>
-				<a href="./howto/book-a-howto.php">Book a HowTo Session</a>
+				<a href="my-booked-howto.php">My Booked HowTos Sessions</a>
+				<a href="book-a-howto.php">Book a HowTo Session</a>
 			</div>
 		</div>
 
@@ -162,8 +162,8 @@ img{
         <div class="subnav" id="userpanel">
           <button class="subnavbtn"><?php echo $report1['fname']; ?> <?php echo $report1['lname']; ?> <i class="fa-solid fa-circle-user"></i></button>
           <div class="subnav-content" id="userpanel">
-            <a href="./account.php">Account Details</a>
-            <a href="/logout.php">Log Out</a>
+            <a href="account.php">Account Details</a>
+            <a href="logout.php">Log Out</a>
           </div>
         </div>
         <?php
