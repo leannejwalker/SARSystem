@@ -163,7 +163,7 @@ img{
           <button class="subnavbtn"><?php echo $report1['fname']; ?> <?php echo $report1['lname']; ?> <i class="fa-solid fa-circle-user"></i></button>
           <div class="subnav-content" id="userpanel">
             <a href="account.php">Account Details</a>
-            <a href="logout.php">Log Out</a>
+            <a href="/logout.php">Log Out</a>
           </div>
         </div>
         <?php
