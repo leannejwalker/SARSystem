@@ -1,13 +1,13 @@
-<?php include "../scripts/initialize.php"?>
+<?php include "/scripts/initialize.php"?>
 <!DOCTYPE html>
 <html lang="en">
-<?php include "../scripts/linksandscripts.php"?>
+<?php include "/scripts/linksandscripts.php"?>
 <script>
   $(document).ready(function () {
     $('#users').DataTable({
       processing: true,
       serverSide: true,
-      ajax: 'scripts/users.php',
+      ajax: '/scripts/users.php',
       dom: 'Bfrtip',
       buttons: [
         {
