@@ -9,7 +9,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
 }
  
 // Include config file
-require_once "/scripts/config.php";
+require_once "config.php";
  
 // Define variables and initialize with empty values
 $username = $password = "";
@@ -168,7 +168,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Login">
             </div>
-            <p>Don't have an account? <a href="register.php">Sign up now</a>.</p>
+            <p>Don't have an account? <a href="/register.php">Sign up now</a>.</p>
         </form>
     </div>
 </body>
