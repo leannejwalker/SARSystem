@@ -58,7 +58,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["id"] = $id;
                             $_SESSION["username"] = $username;
                             
-                            header("location: validate.php");
+                            header("location: customers/account.php");
 
                         }else{
                             // Password is not valid, display a generic error message
