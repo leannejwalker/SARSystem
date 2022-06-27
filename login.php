@@ -2,24 +2,6 @@
 // Initialize the session
 session_start();
  
-// Check if the user is already logged in, if yes then redirect him to welcome page
-if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-
-    
-    if(isset($_SESSION['username'])){
-                                
-        if ($_SESSION['access_id'] =="admin"){
-
-            header("location: admin_console/account.php");
-
-        }else if($_SESSION['access_id'] =="USER"){
-
-            header("location: customers/account.php");
-
-        }
-    exit;
-}
- 
 // Include config file
 require_once "config.php";
  
@@ -75,20 +57,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["loggedin"] = true;
                             $_SESSION["id"] = $id;
                             $_SESSION["username"] = $username;
-                            $_SESSION['access_id'] = $access_id;
-
-                            if(isset($_SESSION['username'])){
-                                
-                                if ($_SESSION['access_id'] =="admin"){
-
-                                    header("location: admin_console/account.php");
-    
-                                }else if($_SESSION['access_id'] =="USER"){
-    
-                                    header("location: customers/account.php");
-    
-                                }
-                            }
+                            
+                            header("location: validate.php");
 
                         }else{
                             // Password is not valid, display a generic error message
