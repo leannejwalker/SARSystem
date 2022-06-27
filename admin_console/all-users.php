@@ -7,7 +7,7 @@
     $('#users').DataTable({
       processing: true,
       serverSide: true,
-      ajax: './scripts/users.php',
+      ajax: 'users.php',
       dom: 'Bfrtip',
       buttons: [
         {
@@ -62,7 +62,7 @@ function format(d) {
  
 $(document).ready(function () {
     var table = $('#example').DataTable({
-        ajax: './scripts/users.php',
+        ajax: 'users.php',
         columns: [
             {
                 className: 'dt-control',
