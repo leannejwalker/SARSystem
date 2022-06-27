@@ -62,22 +62,24 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             // Store data in session variables
                             $_SESSION["loggedin"] = true;
                             $_SESSION["id"] = $id;
-                            $_SESSION["username"] = $username;                            
+                            $_SESSION["username"] = $username;
                         
-                        if($access_id= 'Administrator'){
-                            // Redirect user to admin page
-                            header("location: admin_console/account.php");
-                        }
-                        if($access_id='Volunteer'){
-                            // Redirect user to volunteer page
-                            header("location: volunteers/account.php");
-                        }
-                        if($access_id='Customer'){
-                            // Redirect user to volunteer page
-                            header("location: customers/account.php");
-                        }
+                        $sql = mysql_query("SELECT * FROM users WHERE username='$username' AND password='$password'");
+                        if(mysql_num_rows($sql)==1){
+                            $qry = mysql_fetch_array($sql);
+                            $_SESSION['username'] = $qry['username'];
+                            $_SESSION['access_id'] = $qry['access_id'];
+                            if($qry['access_id']=="admin"){
 
-                        } else{
+                                header("location: admin_console/account.php");
+
+                            }else if($qry['access_id']=="user"){
+
+                                header("location: customers/account.php");
+
+                            }
+
+                        }else{
                             // Password is not valid, display a generic error message
                             $login_err = "Invalid username or password.";
                         }
