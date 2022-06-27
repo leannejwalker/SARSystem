@@ -69,11 +69,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $qry = mysql_fetch_array($sql);
                             $_SESSION['username'] = $qry['username'];
                             $_SESSION['access_id'] = $qry['access_id'];
-                            if($qry['access_id']==="admin"){
+                            if($qry['access_id']=="admin"){
 
                                 header("location: admin_console/account.php");
 
-                            }else if($qry['access_id']==="user"){
+                            }else if($qry['access_id']=="user"){
 
                                 header("location: customers/account.php");
 
