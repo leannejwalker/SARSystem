@@ -1,6 +1,8 @@
 
-<?php include "/scripts/initialize.php"
-error_reporting(E_ALL);?>
+<?php include "/scripts/initialize.php"?>
+
+<?php error_reporting(E_ALL);?>
+
 <!DOCTYPE html>
 <html lang="en">
 <?php include "/scripts/linksandscripts.php"?>
