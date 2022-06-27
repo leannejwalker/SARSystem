@@ -1,5 +1,7 @@
 <?php
 
+require_once "/scripts/config.php";
+
 $currentid=$_SESSION['id'];
 $sql = ("SELECT * FROM users WHERE id=".trim($currentid)."");
 $result1 = mysqli_query($link, $sql);
