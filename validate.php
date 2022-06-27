@@ -1,5 +1,7 @@
 <?php
 
+error_reporting(E_ALL);
+
 // Initialize the session
 session_start();
  
