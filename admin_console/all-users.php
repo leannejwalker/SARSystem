@@ -7,7 +7,7 @@
     $('#users').DataTable({
       processing: true,
       serverSide: true,
-      ajax: '/scripts/users.php',
+      ajax: './scripts/users.php',
       dom: 'Bfrtip',
       buttons: [
         {
@@ -62,7 +62,7 @@ function format(d) {
  
 $(document).ready(function () {
     var table = $('#example').DataTable({
-        ajax: '/scripts/users.php',
+        ajax: './scripts/users.php',
         columns: [
             {
                 className: 'dt-control',
@@ -137,7 +137,7 @@ $(document).ready(function () {
 </script>
 <style>
   body {
-    background-image: url('img/background.jpg');
+    background-image: url('/img/background.jpg');
     overflow: auto;
   }
   .main{
