@@ -63,17 +63,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["loggedin"] = true;
                             $_SESSION["id"] = $id;
                             $_SESSION["username"] = $username;
-                        
-                        $sql = mysql_query("SELECT * FROM users WHERE username='$username' AND password='$password'");
-                        if(mysql_num_rows($sql)==1){
-                            $qry = mysql_fetch_array($sql);
-                            $_SESSION['username'] = $qry['username'];
-                            $_SESSION['access_id'] = $qry['access_id'];
-                            if($qry['access_id']=="admin"){
+                            $_SESSION['access_id'] = $access_id
+
+                            if $access_id =="admin"{
 
                                 header("location: admin_console/account.php");
 
-                            }else if($qry['access_id']=="user"){
+                            }else if $access_id =="user"{
 
                                 header("location: customers/account.php");
 
