@@ -9,14 +9,12 @@ $report1 = mysqli_fetch_assoc($result1);
 
 //My borrowed
 ob_start();
-include "./src/misc/header.php";
 include "./pages/customer/borrow/myborrowed.php";
 include "./src/misc/footer.php";
 $myborrowed = ob_get_contents(); ob_end_clean();
 
 //Borrow an item
 ob_start();
-include "./src/misc/header.php";
 include "./pages/customer/borrow/borrow.php";
 include "./src/misc/footer.php";
 $borrow = ob_get_contents(); ob_end_clean();
