@@ -14,9 +14,9 @@ $page = (isset($_GET['page'])) ? $_GET['page'] : 0;
       case 'borrow':
         echo $borrow;
       case 'myborrowed':
-        echo $borrow;
-      default:
-        include '/pages/404.php';
+        echo $myborrow;
+      // default:
+      //   include '/pages/404.php';
   }
 
 ?>
