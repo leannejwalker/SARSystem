@@ -12,11 +12,9 @@ $page = (isset($_GET['page'])) ? $_GET['page'] : 0;
     switch ($_GET['page']){
 
       case 'borrow':
-        echo '/pages/customers/borrow/borrow.php';
-        break;
+        echo $borrow;
       case 'myborrowed':
-        echo '/pages/customers/borrow/myborrowed.ph';
-        break;
+        echo $borrow;
       default:
         include '/pages/404.php';
   }
