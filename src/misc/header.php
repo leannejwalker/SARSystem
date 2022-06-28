@@ -7,7 +7,7 @@ $sql = ("SELECT * FROM users WHERE id=".trim($currentid)."");
 $result1 = mysqli_query($link, $sql);
 $report1 = mysqli_fetch_assoc($result1);
 
-require_once "/scripts/echo.php";
+require_once "./scripts/echo.php";
 
 if (isset($_GET['page'])){
 
