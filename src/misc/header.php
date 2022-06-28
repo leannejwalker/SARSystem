@@ -13,38 +13,6 @@ if(isset($_GET['page']))
 
    // process depending on $page
 }
-if(isset($_GET['page']))
-{
-   $page = $_GET['page'];
-
-   // process depending on $page
-}
-if(isset($_GET['page']))
-{
-   $page = $_GET['page'];
-
-   // process depending on $page
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ?>
 <!DOCTYPE html>
