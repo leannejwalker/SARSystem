@@ -1,24 +1,23 @@
 <?php
 
 require_once "./scripts/config.php";
-require_once "./scripts/js.php";
 
 $currentid=$_SESSION['id'];
 $sql = ("SELECT * FROM users WHERE id=".trim($currentid)."");
 $result1 = mysqli_query($link, $sql);
 $report1 = mysqli_fetch_assoc($result1);
 
-switch ($_GET['page']){
+// switch ($_GET['page']){
 
-    case 'borrow':
-        echo '/pages/customers/borrow/borrow.php';
-        break;
-    case 'myborrowed':
-        echo '/pages/customers/borrow/myborrowed.ph';
-        break;
-    // default:
-    //     include '/pages/404.php';
-}
+//     case 'borrow':
+//         echo '/pages/customers/borrow/borrow.php';
+//         break;
+//     case 'myborrowed':
+//         echo '/pages/customers/borrow/myborrowed.ph';
+//         break;
+//     // default:
+//     //     include '/pages/404.php';
+// }
 
 ?>
 <!DOCTYPE html>
