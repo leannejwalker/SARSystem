@@ -15,8 +15,8 @@ switch($_GET['page'])
     case 'myborrowed':
         include '/pages/customers/borrow/myborrowed.ph';
         break;
-    default:
-        include '/pages/404.php';
+    // default:
+    //     include '/pages/404.php';
 
 }
 
