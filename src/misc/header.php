@@ -7,9 +7,9 @@ $sql = ("SELECT * FROM users WHERE id=".trim($currentid)."");
 $result1 = mysqli_query($link, $sql);
 $report1 = mysqli_fetch_assoc($result1);
 
-if(isset($_GET['page']))
+if(isset($_GET['borrow']))
 {
-   $page = $_GET['page'];
+   $page = $_GET['borrow'];
 
    // process depending on $page
 }
