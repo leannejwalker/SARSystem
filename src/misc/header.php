@@ -7,19 +7,17 @@ $sql = ("SELECT * FROM users WHERE id=".trim($currentid)."");
 $result1 = mysqli_query($link, $sql);
 $report1 = mysqli_fetch_assoc($result1);
 
-switch($_GET['page']) 
-{
+switch ($_GET['page']){
+  
     case 'borrow':
-        include '/pages/customers/borrow/borrow.php';
+        echo '/pages/customers/borrow/borrow.php';
         break;
     case 'myborrowed':
-        include '/pages/customers/borrow/myborrowed.ph';
+        echo '/pages/customers/borrow/myborrowed.ph';
         break;
     // default:
     //     include '/pages/404.php';
-
 }
-
 
 ?>
 <!DOCTYPE html>
