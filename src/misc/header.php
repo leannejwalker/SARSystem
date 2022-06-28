@@ -10,13 +10,13 @@ $report1 = mysqli_fetch_assoc($result1);
 switch($_GET['page']) 
 {
     case 'borrow':
-        include '/customers/borrow/borrow.php';
+        include '/pages/customers/borrow/borrow.php';
         break;
     case 'myborrowed':
-        include '/customers/borrow/myborrowed.ph';
+        include '/pages/customers/borrow/myborrowed.ph';
         break;
     default:
-        include '404.php';
+        include '/pages/404.php';
 
 }
 
