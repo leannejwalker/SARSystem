@@ -7,7 +7,7 @@ $sql = ("SELECT * FROM users WHERE id=".trim($currentid)."");
 $result1 = mysqli_query($link, $sql);
 $report1 = mysqli_fetch_assoc($result1);
 
-$page = (isset($_GET['page'])) ? $_GET['page'] : 0;
+if (isset($_GET['page'])){
 
     switch ($_GET['page']){
 
@@ -18,6 +18,7 @@ $page = (isset($_GET['page'])) ? $_GET['page'] : 0;
       // default:
       //   include '/pages/404.php';
   }
+}
 
 ?>
 <!DOCTYPE html>
