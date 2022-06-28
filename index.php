@@ -12,7 +12,6 @@ require_once "./scripts/echo.php";
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
     echo $loginpage;
-    // header("location: /src/auth/login.php");
 }
 
 
