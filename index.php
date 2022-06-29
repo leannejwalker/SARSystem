@@ -8,16 +8,14 @@ require_once "scripts/echo.php";
 // Check if the user is logged in, if not then redirect him to login page
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
-    echo $loginpage,
-    end();
+    echo $loginpage;
 }
 
 
 // Check if the user is logged in
 if(isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === true){
 
-    echo $loggedin,
-    end();
+    echo $loggedin;
 }
 
 ?>
