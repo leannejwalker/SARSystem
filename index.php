@@ -22,10 +22,14 @@ $loggedin = ob_get_contents(); ob_end_clean();
 // Check if the user is logged in
 if(isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === true){
 
-    echo $loggedin;
+    echo $loggedin,
+    end();
+
 }else{
 
     // If noy logged in, redirect to login page
-    echo $loginpage;
+    echo $loginpage,
+    end();
+    
 };
 ?>
