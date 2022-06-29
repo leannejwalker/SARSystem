@@ -1,6 +1,6 @@
 <?php
 
-require_once "/scripts/config.php";
+require_once "./scripts/config.php";
 
 $currentid=$_SESSION['id'];
 $sql = ("SELECT * FROM users WHERE id=".trim($currentid)."");
@@ -141,8 +141,8 @@ img{
     <div class="subnav">
 		  <button class="subnavbtn"><i class="fa-solid fa-handshake"></i> Borrow <i class="fa fa-caret-down"></i></button>
 			<div class="subnav-content">
-        <a href="?page=myborrowed">My Borrowed Items</a>
-				<a href="?page=borrow">Borrow an Item</a>
+        <!-- <a href="?page=myborrowed">My Borrowed Items</a>
+				<a href="?page=borrow">Borrow an Item</a> -->
 			</div>
 		</div>
     
