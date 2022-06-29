@@ -19,16 +19,17 @@ include "./src/misc/account.php";
 include "./src/misc/footer.php";
 $loggedin = ob_get_contents(); ob_end_clean();
 
-isset($loggedin, $loginpage);
-
 // Check if the user is logged in
 if(isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === true){
 
+    // If loggined in, redirect to summary/account page
+    isset($loggedin);
     echo $loggedin;
 
 }else{
 
-    // If noy logged in, redirect to login page
+    isset($loginpage);
+    // If not logged in, redirect to login page
     echo $loginpage;
 
 };
