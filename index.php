@@ -7,11 +7,14 @@ session_start();
 if(isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === true){
 
     // If loggined in, redirect to summary/account page
-    header('./src/misc/account.php')
+    isset($loggedin);
+    echo $loggedin;
 
 }else{
 
-    header('./pages/customers/cust-account.php')
+    isset($loginpage);
+    // If not logged in, redirect to login page
+    echo $loginpage;
 
 };
 ?>
