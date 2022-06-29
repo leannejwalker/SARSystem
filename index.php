@@ -9,13 +9,15 @@ require_once "scripts/echo.php";
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
     echo $loginpage;
+    end();
 }
 
 
 // Check if the user is logged in
 if(isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === true){
 
-     echo $loggedin;
-
+    echo $loggedin;
+    end();
 }
+
 ?>
