@@ -23,14 +23,16 @@ $loggedin = ob_get_contents(); ob_end_clean();
 if(isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === true){
 
     // If loggined in, redirect to summary/account page
-    isset($loggedin);
-    echo $loggedin;
+    if(isset($loggedin)){
+        echo $loggedin;
+    };
 
 }else{
 
-    isset($loginpage);
     // If not logged in, redirect to login page
-    echo $loginpage;
+    if(isset($loginpage)){
+        echo $loginpage;
+    };
 
 };
 ?>
