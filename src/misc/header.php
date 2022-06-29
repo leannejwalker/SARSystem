@@ -1,11 +1,11 @@
 <?php
 
-// require_once "./scripts/config.php";
+require_once "./scripts/config.php";
 
-// $currentid=$_SESSION['id'];
-// $sql = ("SELECT * FROM users WHERE id=".trim($currentid)."");
-// $result1 = mysqli_query($link, $sql);
-// $report1 = mysqli_fetch_assoc($result1);
+$currentid=$_SESSION['id'];
+$sql = ("SELECT * FROM users WHERE id=".trim($currentid)."");
+$result1 = mysqli_query($link, $sql);
+$report1 = mysqli_fetch_assoc($result1);
 
 //My borrowed
 ob_start();
