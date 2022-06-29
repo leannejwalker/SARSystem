@@ -178,7 +178,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <div> 
                 <h3>Membership</h3>
                 <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
-                <stripe-pricing-table pricing-table-id="prctbl_1LG9DbCw0LHBjO9dUVd3nSSG" publishable-key="pk_test_51K421WCw0LHBjO9dpHtZvzpIilsMjfcVE304UiZE7u4T2UxfmwXaIMH8nsY8DEv4AAz0f4MvIsGnAJ0PdC45Z3bG00NFkwP8yY"></stripe-pricing-table>
+                <stripe-pricing-table pricing-table-id="prctbl_1LG9htIkrQfMAKQFRV7MdC4x" publishable-key="pk_test_51LEstuIkrQfMAKQFGYvUdcdmLM9nK18IcddJDzCra9aSIiw6STv8oKHNpo9udEEq4PIVSv7rwmcdqa2dbJ4h0CeN00uBb4oIo1"></stripe-pricing-table>
             </div>
         </div>
         <div class="main" id="orange">
