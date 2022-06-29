@@ -1,11 +1,9 @@
 <?php
-ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_reporting(E_ALL);
 
 // Initialize the session
 session_start();
 
 require_once "./scripts/config.php";
-require_once "./scripts/echo.php";
 
 // Login Page
 ob_start();
