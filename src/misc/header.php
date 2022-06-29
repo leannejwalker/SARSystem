@@ -1,36 +1,36 @@
 <?php
 
-require_once "./scripts/config.php";
+// require_once "./scripts/config.php";
 
-$currentid=$_SESSION['id'];
-$sql = ("SELECT * FROM users WHERE id=".trim($currentid)."");
-$result1 = mysqli_query($link, $sql);
-$report1 = mysqli_fetch_assoc($result1);
+// $currentid=$_SESSION['id'];
+// $sql = ("SELECT * FROM users WHERE id=".trim($currentid)."");
+// $result1 = mysqli_query($link, $sql);
+// $report1 = mysqli_fetch_assoc($result1);
 
-// //My borrowed
-// ob_start();
-// include "./pages/customers/borrow/myborrowed.php";
-// include "./src/misc/footer.php";
-// $myborrowed = ob_get_contents(); ob_end_clean();
+//My borrowed
+ob_start();
+include "./pages/customers/borrow/myborrowed.php";
+include "./src/misc/footer.php";
+$myborrowed = ob_get_contents(); ob_end_clean();
 
-// //Borrow an item
-// ob_start();
-// include "./pages/customers/borrow/borrow.php";
-// include "./src/misc/footer.php";
-// $borrow = ob_get_contents(); ob_end_clean();
+//Borrow an item
+ob_start();
+include "./pages/customers/borrow/borrow.php";
+include "./src/misc/footer.php";
+$borrow = ob_get_contents(); ob_end_clean();
 
-// if (isset($_GET['page'])){
+if (isset($_GET['page'])){
 
-//     switch ($_GET['page']){
+    switch ($_GET['page']){
 
-//       case 'borrow':
-//         echo $borrow;
-//       case 'myborrowed':
-//         echo $myborrowed;
-//       // default:
-//       //   include '/pages/404.php';
-//   }
-// }
+      case 'borrow':
+        echo $borrow;
+      case 'myborrowed':
+        echo $myborrowed;
+      // default:
+      //   include '/pages/404.php';
+  }
+}
 
 ?>
 <!DOCTYPE html>
@@ -141,8 +141,8 @@ img{
     <div class="subnav">
 		  <button class="subnavbtn"><i class="fa-solid fa-handshake"></i> Borrow <i class="fa fa-caret-down"></i></button>
 			<div class="subnav-content">
-        <!-- <a href="?page=myborrowed">My Borrowed Items</a>
-				<a href="?page=borrow">Borrow an Item</a> -->
+        <a href="?page=myborrowed">My Borrowed Items</a>
+				<a href="?page=borrow">Borrow an Item</a>
 			</div>
 		</div>
     
