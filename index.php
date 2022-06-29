@@ -21,9 +21,5 @@ if(isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === true){
     echo $loggedin;
 
 }
-if else{
 
-    header('404.php')
-
-}
 ?>
