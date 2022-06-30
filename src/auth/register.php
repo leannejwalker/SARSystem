@@ -71,9 +71,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         
         $fname = $link->real_escape_string($_POST['fname']);
         $lname = $link->real_escape_string($_POST['lname']);
-        $email = $link->real_escape_string($_POST['email']);
-        $phone = $link->real_escape_string($_POST['phone']);
-        $access_id == 0;
         
         // Prepare an insert statement
         $sql = "INSERT INTO users (username, password, fname, lname, email, phone, access_id) VALUES (?, ?, '$fname','$lname','$email','$phone','$access_id')";
@@ -102,6 +99,33 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
      // Close connection
     mysqli_close($link);
 }
+
+$fname = $link->real_escape_string($_POST['fname']);
+$lname = $link->real_escape_string($_POST['lname']);
+$email = $link->real_escape_string($_POST['fname']);
+$phone = $link->real_escape_string($_POST['lname']);
+$line1 = $link->real_escape_string($_POST['address.line1']);
+$line2 = $link->real_escape_string($_POST['address.line2']);
+$city = $link->real_escape_string($_POST['address.city']);
+$state = $link->real_escape_string($_POST['address.state']);
+$postal_code = $link->real_escape_string($_POST['postal_code']);
+
+$stripe = new \Stripe\StripeClient(
+    'sk_test_51K421WCw0LHBjO9dIAJNNGNcRjffMkysypm5pGPiPivDhymhBknaiJu601mH17q3rKsNi0KH8ykR4SBYM61mp6Fu00WgblnesL'
+  );
+  $stripe->customers->create([
+    'name' => $fname . ' ' . $lname;,
+    'description' => 'Customer created through Share and Repair Portal (via Stripe API)',
+    'email' => $email,
+    'phone' => $phone,
+    'address.line1' => $line1,
+    'address.line2' => $line2,
+    'address.city' => $city,
+    'address.state' => $state,
+    'address.postal_code' => $postal_code,
+
+  ]);
+
 ?>
  
 <!DOCTYPE html>
@@ -164,7 +188,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <span class="invalid-feedback"><?php echo $username_err; ?></span>
             </div>
             <a style="color:red;">*</a>Email Address: <input type="text" name = "email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required/><br/>
-            <a style="color:red;">*</a>Telephone or Mobile number: <input type="text" name="tel" pattern="[+ 0-9]{11}" required><br/>
+            <a style="color:red;">*</a>Telephone or Mobile number: <input type="text" name="tel" pattern="[+ 0-9]{11}" required><br/><br/>
+            <a style="color:red;">*</a>Address Line 1: <input type="text" name = "address.line1" required/><br/>
+            <a style="color:red;">*</a>Address Line 2: <input type="text" name = "address.line2" required/><br/>
+            <a style="color:red;">*</a>City: <input type="text" name = "address.city" required/><br/>
+            <a style="color:red;">*</a>County: <input type="text" name = "address.state" required/><br/>
+            <a style="color:red;">*</a>Postcode: <input type="text" name = "address.postal_code" required/><br/><br/>
+
             <div class="form-group">
                 <label>Password</label>
                 <input type="password" name="password" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $password; ?>" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
