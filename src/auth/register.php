@@ -79,22 +79,22 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $state = $link->real_escape_string($_POST['address.state']);
         $postal_code = $link->real_escape_string($_POST['postal_code']);
 
-        // Prepare Stripe integration
-        $stripe = new \Stripe\StripeClient(
-            'sk_test_51K421WCw0LHBjO9dIAJNNGNcRjffMkysypm5pGPiPivDhymhBknaiJu601mH17q3rKsNi0KH8ykR4SBYM61mp6Fu00WgblnesL'
-        );
-        // Create new customer in Stripe based on customer details
-        $stripe->customers->create([
-            'name' => $fname . ' ' . $lname,
-            'description' => 'Created through Share and Repair Portal (via Stripe API)',
-            'email' => $email,
-            'phone' => $phone,
-            'address.line1' => $line1,
-            'address.line2' => $line2,
-            'address.city' => $city,
-            'address.state' => $state,
-            'address.postal_code' => $postal_code
-        ]);
+        // // Prepare Stripe integration
+        // $stripe = new \Stripe\StripeClient(
+        //     'sk_test_51K421WCw0LHBjO9dIAJNNGNcRjffMkysypm5pGPiPivDhymhBknaiJu601mH17q3rKsNi0KH8ykR4SBYM61mp6Fu00WgblnesL'
+        // );
+        // // Create new customer in Stripe based on customer details
+        // $stripe->customers->create([
+        //     'name' => $fname . ' ' . $lname,
+        //     'description' => 'Created through Share and Repair Portal (via Stripe API)',
+        //     'email' => $email,
+        //     'phone' => $phone,
+        //     'address.line1' => $line1,
+        //     'address.line2' => $line2,
+        //     'address.city' => $city,
+        //     'address.state' => $state,
+        //     'address.postal_code' => $postal_code
+        // ]);
         
         // Prepare an insert statement
         $sql = "INSERT INTO users (username, password, fname, lname, email, phone, access_id) VALUES (?, ?, '$fname','$lname','$email','$phone','$access_id')";
