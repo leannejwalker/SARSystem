@@ -114,7 +114,7 @@ $stripe = new \Stripe\StripeClient(
     'sk_test_51K421WCw0LHBjO9dIAJNNGNcRjffMkysypm5pGPiPivDhymhBknaiJu601mH17q3rKsNi0KH8ykR4SBYM61mp6Fu00WgblnesL'
   );
   $stripe->customers->create([
-    'name' => $fname . ' ' . $lname;,
+    'name' => $fname . ' ' . $lname,
     'description' => 'Customer created through Share and Repair Portal (via Stripe API)',
     'email' => $email,
     'phone' => $phone,
@@ -122,8 +122,7 @@ $stripe = new \Stripe\StripeClient(
     'address.line2' => $line2,
     'address.city' => $city,
     'address.state' => $state,
-    'address.postal_code' => $postal_code,
-
+    'address.postal_code' => $postal_code
   ]);
 
 ?>
@@ -206,7 +205,7 @@ $stripe = new \Stripe\StripeClient(
                 <span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
             </div>
             <div class="form-group">
-                <input type="submit" class="btn btn-primary" id="index" value="Register">
+                <input type="submit" class="btn btn-primary" id="login" value="Register">
             </div>
             <p>Already have an account? <a href="/index.php">Login here</a>.</p>
         </form>
