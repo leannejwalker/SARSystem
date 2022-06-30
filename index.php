@@ -1,21 +1,38 @@
 <?php
 
-ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_reporting(E_ALL);
-
 // Initialize the session
 session_start();
+require_once "scripts/config.php";
 
-// Check if the user is logged in, if not then redirect him to login page
-if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+// Login Page
+ob_start();
+include "./scripts/css.php";
+include "./scripts/js.php";
+include "./src/misc/simple-header.php";
+include "./src/auth/login.php";
+$loginpage = ob_get_contents(); ob_end_clean();
 
-    header("location: ./src/auth/login.php");
-}
-
+//Logged In
+ob_start();
+include "./src/misc/header.php";
+include "./pages/customers/cust-account.php";
+include "./src/misc/footer.php";
+$loggedin = ob_get_contents(); ob_end_clean();
 
 // Check if the user is logged in
 if(isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === true){
 
-    header("location: ./pages/customers/cust-account.php");
+    // If loggined in, redirect to summary/account page
+    if(isset($loggedin)){
+        echo $loggedin;
+    };
 
-}
+}else{
+
+    // If not logged in, redirect to login page
+    if(isset($loginpage)){
+        echo $loginpage;
+    };
+
+};
 ?>
