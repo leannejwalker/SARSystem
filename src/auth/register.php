@@ -206,9 +206,9 @@ $stripe = new \Stripe\StripeClient(
                 <span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
             </div>
             <div class="form-group">
-                <input type="submit" class="btn btn-primary" id="login" value="Register">
+                <input type="submit" class="btn btn-primary" id="index" value="Register">
             </div>
-            <p>Already have an account? <a href="login.php">Login here</a>.</p>
+            <p>Already have an account? <a href="/index.php">Login here</a>.</p>
         </form>
     </div>
 </body>
