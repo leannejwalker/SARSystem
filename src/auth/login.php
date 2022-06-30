@@ -1,5 +1,10 @@
 <?php
 
+require_once "/scripts/config.php";
+
+// Initialize the session
+session_start();
+
 // Define variables and initialize with empty values
 $username = $password = "";
 $username_err = $password_err = $login_err = "";
