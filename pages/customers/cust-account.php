@@ -1,7 +1,4 @@
 <?php
-
-// Initialize the session
-session_start();
  
 // Check if the user is logged in, if not then redirect him to login page
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
@@ -115,7 +112,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
   </style>
   <body>
-  <?php include "header.php"?>
     <div class ="main" id="together">
         <div class="main" id="purple">
             <div> 
