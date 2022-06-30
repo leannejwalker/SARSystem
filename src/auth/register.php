@@ -97,7 +97,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         // ]);
         
         // Prepare an insert statement
-        $sql = "INSERT INTO users (username, password, fname, lname, email, phone, access_id) VALUES (?, ?, '$fname','$lname','$email','$phone','$access_id')";
+        $sql = "INSERT INTO users (username, password, fname, lname, email, phone) VALUES (?, ?, '$fname','$lname','$email','$phone')";
 
          
         if($stmt = mysqli_prepare($link, $sql)){
