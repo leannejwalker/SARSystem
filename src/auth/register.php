@@ -1,9 +1,9 @@
 <?php
 
-require_once "/scripts/config.php";
-
 // Initialize the session
 session_start();
+
+require_once "./scripts/config.php";
  
 // Define variables and initialize with empty values
 $username = $password = $confirm_password = "";
