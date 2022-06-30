@@ -74,7 +74,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       <meta charset="UTF-8">
       <title>Your Account - Share and Repair</title>
       <?php include "./scripts/js.php"?>
-      <?php include "./scripts/css.php"?>
     </head>
     <style>
     .main#together{
@@ -113,6 +112,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
   </style>
   <body>
+  <?php include "./scripts/css.php"?>
     <div class ="main" id="together">
         <div class="main" id="purple">
             <div> 
