@@ -112,7 +112,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
   </style>
   <body>
-  <?php include "./scripts/css.php"?>
     <div class ="main" id="together">
         <div class="main" id="purple">
             <div> 
