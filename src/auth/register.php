@@ -73,11 +73,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $lname = $link->real_escape_string($_POST['lname']);
         $email = $link->real_escape_string($_POST['email']);
         $phone = $link->real_escape_string($_POST['phone']);
-        $line1 = $link->real_escape_string($_POST['address.line1']);
-        $line2 = $link->real_escape_string($_POST['address.line2']);
-        $city = $link->real_escape_string($_POST['address.city']);
-        $state = $link->real_escape_string($_POST['address.state']);
-        $postal_code = $link->real_escape_string($_POST['postal_code']);
+        // $line1 = $link->real_escape_string($_POST['address.line1']);
+        // $line2 = $link->real_escape_string($_POST['address.line2']);
+        // $city = $link->real_escape_string($_POST['address.city']);
+        // $state = $link->real_escape_string($_POST['address.state']);
+        // $postal_code = $link->real_escape_string($_POST['postal_code']);
 
         // // Prepare Stripe integration
         // $stripe = new \Stripe\StripeClient(
@@ -133,6 +133,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <head>
     <meta charset="UTF-8">
     <title>Sign Up</title>
+    <?php include "./scripts/js.php"?>
+    <?php include "./scripts/css.php"?>
     <style>
         body{
             font: 14px sans-serif;
