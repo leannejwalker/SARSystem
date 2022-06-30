@@ -69,8 +69,29 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Check input errors before inserting in database
     if(empty($username_err) && empty($password_err) && empty($confirm_password_err)){
         
-        $fname = $link->real_escape_string($_POST['fname']);
         $lname = $link->real_escape_string($_POST['lname']);
+        $email = $link->real_escape_string($_POST['fname']);
+        $phone = $link->real_escape_string($_POST['lname']);
+        $line1 = $link->real_escape_string($_POST['address.line1']);
+        $line2 = $link->real_escape_string($_POST['address.line2']);
+        $city = $link->real_escape_string($_POST['address.city']);
+        $state = $link->real_escape_string($_POST['address.state']);
+        $postal_code = $link->real_escape_string($_POST['postal_code']);
+
+        $stripe = new \Stripe\StripeClient(
+            'sk_test_51K421WCw0LHBjO9dIAJNNGNcRjffMkysypm5pGPiPivDhymhBknaiJu601mH17q3rKsNi0KH8ykR4SBYM61mp6Fu00WgblnesL'
+        );
+        $stripe->customers->create([
+            'name' => $fname . ' ' . $lname,
+            'description' => 'Customer created through Share and Repair Portal (via Stripe API)',
+            'email' => $email,
+            'phone' => $phone,
+            'address.line1' => $line1,
+            'address.line2' => $line2,
+            'address.city' => $city,
+            'address.state' => $state,
+            'address.postal_code' => $postal_code
+        ]);
         
         // Prepare an insert statement
         $sql = "INSERT INTO users (username, password, fname, lname, email, phone, access_id) VALUES (?, ?, '$fname','$lname','$email','$phone','$access_id')";
@@ -99,31 +120,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
      // Close connection
     mysqli_close($link);
 }
-
-$fname = $link->real_escape_string($_POST['fname']);
-$lname = $link->real_escape_string($_POST['lname']);
-$email = $link->real_escape_string($_POST['fname']);
-$phone = $link->real_escape_string($_POST['lname']);
-$line1 = $link->real_escape_string($_POST['address.line1']);
-$line2 = $link->real_escape_string($_POST['address.line2']);
-$city = $link->real_escape_string($_POST['address.city']);
-$state = $link->real_escape_string($_POST['address.state']);
-$postal_code = $link->real_escape_string($_POST['postal_code']);
-
-$stripe = new \Stripe\StripeClient(
-    'sk_test_51K421WCw0LHBjO9dIAJNNGNcRjffMkysypm5pGPiPivDhymhBknaiJu601mH17q3rKsNi0KH8ykR4SBYM61mp6Fu00WgblnesL'
-  );
-  $stripe->customers->create([
-    'name' => $fname . ' ' . $lname,
-    'description' => 'Customer created through Share and Repair Portal (via Stripe API)',
-    'email' => $email,
-    'phone' => $phone,
-    'address.line1' => $line1,
-    'address.line2' => $line2,
-    'address.city' => $city,
-    'address.state' => $state,
-    'address.postal_code' => $postal_code
-  ]);
 
 ?>
  
