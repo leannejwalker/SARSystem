@@ -69,21 +69,24 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Check input errors before inserting in database
     if(empty($username_err) && empty($password_err) && empty($confirm_password_err)){
         
+        $fname = $link->real_escape_string($_POST['fname']);
         $lname = $link->real_escape_string($_POST['lname']);
-        $email = $link->real_escape_string($_POST['fname']);
-        $phone = $link->real_escape_string($_POST['lname']);
+        $email = $link->real_escape_string($_POST['email']);
+        $phone = $link->real_escape_string($_POST['phone']);
         $line1 = $link->real_escape_string($_POST['address.line1']);
         $line2 = $link->real_escape_string($_POST['address.line2']);
         $city = $link->real_escape_string($_POST['address.city']);
         $state = $link->real_escape_string($_POST['address.state']);
         $postal_code = $link->real_escape_string($_POST['postal_code']);
 
+        // Prepare Stripe integration
         $stripe = new \Stripe\StripeClient(
             'sk_test_51K421WCw0LHBjO9dIAJNNGNcRjffMkysypm5pGPiPivDhymhBknaiJu601mH17q3rKsNi0KH8ykR4SBYM61mp6Fu00WgblnesL'
         );
+        // Create new customer in Stripe based on customer details
         $stripe->customers->create([
             'name' => $fname . ' ' . $lname,
-            'description' => 'Customer created through Share and Repair Portal (via Stripe API)',
+            'description' => 'Created through Share and Repair Portal (via Stripe API)',
             'email' => $email,
             'phone' => $phone,
             'address.line1' => $line1,
@@ -107,6 +110,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
+
+                
                 // Redirect to login page
                 header("location: /index.php");
             } else{
