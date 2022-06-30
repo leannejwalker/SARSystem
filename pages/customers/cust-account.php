@@ -1,7 +1,4 @@
 <?php
-
-require_once "./scripts/config.php";
-
 // Initialize the session
 session_start();
  
@@ -10,6 +7,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     header("location: ./index.php");
     exit;
 }
+
+require_once "./scripts/config.php";
 
 $currentid=$_SESSION['id'];
 $sql1 = ("SELECT * FROM users WHERE id=".$currentid."");
