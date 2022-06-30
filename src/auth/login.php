@@ -79,8 +79,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <meta charset="UTF-8">
     <title>Login</title>
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
-    <?php include "/scripts/js.php"?>
-    <?php include "/scripts/css.php"?>
     <style>
         body{
             font: 14px sans-serif; 
