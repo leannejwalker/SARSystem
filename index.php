@@ -12,11 +12,14 @@ if(isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === true){
 
     // If loggined in, redirect to summary/account page
     header('./pages/customers/cust-account.php');
+    exit;
 
-}else{
+}
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
     // If not logged in, redirect to login page
     header('./src/auth/login.php');
+    exit;
 
 };
 ?>
