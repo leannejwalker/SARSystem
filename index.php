@@ -6,7 +6,7 @@ ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_report
 // Check if the user is logged in, if not then redirect him to login page
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
-    header("location: ./src/misc/simple-header.php");
+    header("location: ./src/auth/login.php");
 }
 
 
